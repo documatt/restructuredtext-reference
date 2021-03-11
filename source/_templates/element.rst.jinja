@@ -1,0 +1,55 @@
+################################################################################
+{{ data['title'] }}
+################################################################################
+
+.. container:: desc
+
+   {{ data['desc'] }}
+
+.. container:: info
+
+   {% if data['in_collections'] is defined %}
+
+   .. container:: in-collections
+
+      {{ data['in_collections'] }}
+
+   {% endif %}
+
+   .. container:: reference
+
+      {{ data['url'] }}
+
+{% for example in data['examples'] %}
+
+********************************************************************************
+{{ example.name }}
+********************************************************************************
+
+{% if data['example.tags'] is defined %}
+
+.. container:: tags
+
+   {{ example.tags }}
+
+{% endif %}
+
+.. container:: desc
+
+   {{ example.desc }}
+
+.. container:: source
+
+   .. code-block:: rst
+
+      {% for line in example.rst %}
+      {{ line }}
+      {% endfor %}
+
+.. container:: result
+
+   {% for line in example.rst %}
+   {{ line }}
+   {% endfor %}
+
+{% endfor %}
