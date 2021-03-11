@@ -1,0 +1,70 @@
+title: admonition
+
+desc: |
+  admonition is |rst|'s so-called generic :doc:`admonition </admonitions>`. It is visually bold block often rendered in neutral colors. Unlike specific admonitions like :doc:`/element/danger`, :doc:`/element/note`, or :doc:`/element/tip`, generic admonition has a title and usually neutral appearance.
+
+collections:
+  - admonitions
+  - body-elements
+  
+url: "https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions"
+
+examples:
+  - name: "Requires title and content"
+    desc: |
+      admonition has strict syntax. You need to pass a title after ``admonition::`` (note the space after ``::``), and a content bellow the blank line.
+    source: |
+      .. admonition:: Generic admonitions has a title
+
+         A content follows under the blank line.
+    more: |
+      All the following variants are **invalid**:
+
+      .. code-block:: rst
+         :linenos:
+         :class: bad
+      
+         .. admonition:: title
+      
+      .. code-block:: rst
+         :linenos:
+         :class: bad
+
+         .. admonition::
+            content
+
+      .. code-block:: rst
+         :linenos:
+         :class: bad
+
+         .. admonition::
+            
+            content
+      
+      .. code-block:: rst
+         :linenos:
+         :class: bad
+      
+         .. admonition:: title
+            content
+
+  - name: Directive name in uppercase
+    desc: "Directive name is case insensitive (like all directive and role names). Most documentation and book authors prefer typing directives and roles all in lowercase. However, writing directive name in uppercase corresponds with their “raise attention” objective and improves |rst| code readability."
+    source: |
+      .. ADMONITION:: Uppercase title
+        
+         However writing admonitions uppercase can be considered as reasonable exception to "all-lowercase" rule.
+         
+  - name: Complex content
+    desc: Any |rst| elements can be in admonition content. As always, you need only to keep correct indentation.
+    source: |
+      .. admonition:: Complex content
+          
+         This is the admonition with complex body containing
+
+         - two items
+         - bullet list
+
+         And, code example::
+
+             $ nano ~/.bash_aliases

@@ -1,0 +1,16 @@
+source: |
+  * list item #1
+  * item #2 is on three lines
+    in the source but they are
+    all the same indented
+  * item #3
+  * item #4 contain sublist
+
+    * sublist must be intended
+      on the same level as
+      parent item
+    * also, item #4 and sublist must be
+      separated by the blank line
+
+  * item #5 returns back to the
+    original indentation

@@ -1,0 +1,22 @@
+{% set class = data['class'] if data['class'] is defined else "" %}
+{% set source_file = data['source_file'] %}
+
+.. raw:: html
+
+   <div class="snippet">
+   <div class="source {{ class }}">
+
+.. literalinclude:: {{ source_file }}.rst
+   :language: rst
+
+.. raw:: html
+
+   </div>{#. source #}
+   <div class="result-in-new-window">
+
+:doc:`open example <{{ source_file }}>`
+
+.. raw:: html
+
+   </div>{#. result-in-a-new-window #}
+   </div>{#. snippet #}

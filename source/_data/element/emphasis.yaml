@@ -1,0 +1,63 @@
+title: emphasis
+
+desc: |
+  (Also known as *italic* or *cursive*.)
+
+  Emphasis element is for words that have a stressed emphasis compared to surrounding text. Emphasis is typically displayed in italic.
+
+collections:
+  - inline-elements
+
+url: https://docutils.sourceforge.io/docs/ref/rst/roles.html#emphasis
+
+examples:
+  - name: Emphasis syntax
+    desc: |
+      Emphasis syntax is simple: wrap the text between two ``*``.
+    source: |
+      Get out of bed *now*, John!
+
+  - name: Alternative syntax
+    desc: |
+      Alternative to enclosing into ``*`` is to use a full role syntax: ``:emphasis:`text to emphasis```.
+    source: |
+      Get out of bed :emphasis:`now`, John!
+  
+  - name: No inline element nesting
+    desc: |
+      The annoying |rst| limitation is  you :ref:`can't nest inline element <no-nested-inlines>` into another, e.g. emphasis into strong emphasis, etc. Unfortunately, there is no workaround.
+
+      Some examples of inline markup nesting that *don't work*:
+
+      .. datatemplate:yaml:: /_data/snippet/no-nested-inlines.yaml
+         :template: snippet.rst.jinja
+
+  - name: Requires whitespace or punctuation around
+    desc: |
+      The emphasis :ref:`requires whitespace or punctuation around <inline-markup-recognition>` (as all inline-level elements). Without the delimiter, |rst| will not recognize markup properly from a surrounding text.
+
+      The following examples miss delimiter at the end, the beginning, and at the both. They will all cause the ``WARNING: Inline emphasis start-string without end-string``.
+
+      .. code-block:: rst
+         :linenos:
+         :class: bad
+
+         Don't get out of bed *before*six.
+
+         Don't get out of bed*before* six.
+         
+         Don't get out of bed*before*six.
+
+         Available parameters (required with *)
+      
+      Fortunately, two inline elements without no whitespace/punctuation in-between are possible with *escaping mechanism* using backslash-escaped whitespace (backslash is ``\``). Backslash-escaped whitespace will be removed from the output document.
+
+      Previous example fixed:
+    source: |
+      Don't get out of bed *before*\ six.
+
+      Don't get out of bed\ *before* six.
+
+      Don't get out of bed\ *before*\ six.
+
+      Available parameters (required with \*)

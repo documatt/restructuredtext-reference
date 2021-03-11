@@ -1,0 +1,18 @@
+class: bad
+source: |
+  *You can't have **bold** inside italic.*
+
+  **A |substitution| inside bold.**
+
+  *A :subscript:`subscripts` inside italic.*
+
+  ``Or, *italic* within literals.``
+
+  :ref:`link with ``literal`` inside`
+
+result_html: |
+  <p><em>You can’t have **bold*</em> inside italic.*</p>
+  <p><strong>A |substitution| inside bold.</strong></p>
+  <p><em>A :subscript:`subscripts` inside italic.</em></p>
+  <p><code>Or, *italic* within literals.</code></p>
+  <p>link with ``literal` inside`</p>

@@ -1,0 +1,7 @@
+source: |
+  * list item #1
+  * item #2 is on three lines
+    in the source but they are
+    all the same indented
+  * item #3
+  * item #4 contain sublist

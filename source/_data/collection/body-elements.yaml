@@ -1,0 +1,19 @@
+elements:
+  - admonition
+  - attention
+  - caution
+  - danger
+  - error
+  - hint
+  - important
+  - note
+  - seealso
+  - sidebar
+  - tip
+  - topic
+  - warning
+  - image
+  - figure
+  - paragraph
+  - enumerated-list
+  - substitution

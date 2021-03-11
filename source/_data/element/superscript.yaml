@@ -1,0 +1,45 @@
+title: superscript
+
+desc: |
+  Superscript role displays its text as superscript (with a raised baseline using smaller text). Superscript is used in e.g., math equations.
+
+collections:
+  - inline-elements
+
+url: https://docutils.sourceforge.io/docs/ref/rst/roles.html#superscript
+
+examples:
+  - name: Superscript syntax
+    desc: |
+      Superscript syntax itself is simple: ``:sup:`text as subscript```.
+    source: |
+      The E = mc\ :sup:`2` explains everything.
+    more: |
+      .. note:: See bellow the meaning of awkward :samp:`\\\\{space}`.
+  
+  - name: No inline element nesting
+    desc: |
+      The annoying |rst| limitation is  you :ref:`can't nest inline element <no-nested-inlines>` into another, e.g. superscript into strong emphasis, etc. Unfortunately, there is no workaround.
+
+      Some examples of inline markup nesting that *don't work*:
+
+      .. datatemplate:yaml:: /_data/snippet/no-nested-inlines.yaml
+         :template: snippet.rst.jinja
+
+  - name: Requires whitespace or punctuation around
+    desc: |
+      The inline literal :ref:`requires whitespace or punctuation around <inline-markup-recognition>` (as all inline-level elements). Without the delimiter, |rst| will not recognize markup properly from a surrounding text.
+
+      The following examples miss a delimiter at the beginning. It will even not cause any warning and prints ``The E = mc:sup:2 explains everything.``.
+
+      .. code-block::
+         :class: bad
+         :linenos:
+
+         The E = mc:sup:`2` explains everything.
+      
+      Fortunately, two inline elements without no whitespace/punctuation in-between are possible with *escaping mechanism* using backslash-escaped whitespace (backslash is ``\``). Backslash-escaped whitespace will be removed from the output document.
+
+      Previous example fixed:
+    source: |
+      The E = mc\ :sup:`2` explains everything.

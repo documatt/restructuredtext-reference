@@ -1,0 +1,16 @@
+source: |
+  Wrong indented sublist:
+
+  #. list #1
+
+   #. not a sublist of #1 but a block quote!
+
+  #. another list #2, not related to the previous one
+
+  Above fixed:
+
+  #. list #1
+
+     #. sublist of #1 because it's indented as parent item
+
+  #. still list #1, the second item

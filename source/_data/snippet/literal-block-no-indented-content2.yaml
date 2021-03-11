@@ -1,0 +1,17 @@
+class: bad
+source: |
+  When showing examples like
+
+  ::
+
+  def add(one, two):
+    return one + two
+
+  don't forgot to content indentation.
+result_html: |
+  <p>When showing examples like</p>
+  <dl class="simple">
+  <dt>def add(one, two):</dt><dd><p>return one + two</p>
+  </dd>
+  </dl>
+  <p>don’t forgot to content indentation.</p>

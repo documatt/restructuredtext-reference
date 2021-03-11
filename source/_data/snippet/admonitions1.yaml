@@ -1,0 +1,20 @@
+source: |
+   .. attention:: I'm attention.
+
+   .. caution:: I'm caution.
+
+   .. danger:: I'm danger.
+
+   .. error:: I'm error.
+
+   .. hint:: I'm hint.
+
+   .. important:: I'm important.
+
+   .. note:: I'm note.
+
+   .. tip:: I'm tip.
+
+   .. warning:: I'm warning.
+
+   .. seealso:: I'm seealso.

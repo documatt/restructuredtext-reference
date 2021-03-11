@@ -1,0 +1,15 @@
+source: |
+  Blank lines separates paragraphs and other elements.
+
+  In normal text, multiple successive blank lines are
+  considered as a single blank line.
+
+  ::
+
+     They are only
+
+
+     preserved in the
+
+
+     literal blocks.

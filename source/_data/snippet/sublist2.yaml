@@ -1,0 +1,9 @@
+source: |
+  * item #1
+    * sublist without separating blank line is continuation of previous element
+
+  * item #2
+
+    * sublist has to be started with the blank line
+
+  * item #3

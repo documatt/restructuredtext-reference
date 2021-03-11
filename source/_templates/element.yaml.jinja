@@ -1,0 +1,27 @@
+{# Element description #}
+{# ! not actual Jinja template, at this moment just an example ! #}
+
+title: literal-block
+
+desc: |
+  Sunt dolor non ullamco nostrud ullamco officia fugiat elit incididunt pariatur aute pariatur cupidatat consequat. Qui aliquip aute voluptate mollit. Commodo quis pariatur id velit nulla.
+
+collections:
+  - code-examples
+
+examples:
+  - name: Empty line between ``::`` and content
+    desc: |
+      Pariatur do elit magna non qui deserunt enim officia. Ad duis pariatur anim ex reprehenderit aliqua duis magna.
+
+      .. code-block::
+         :class: bad
+
+         ::
+            $ make html
+
+      Previous example fixed:
+    source: |
+      ::
+
+            $ make html

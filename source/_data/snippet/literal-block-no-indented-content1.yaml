@@ -1,0 +1,13 @@
+class: bad
+source: |
+  When showing examples like
+
+  ::
+
+  return one + two
+
+  don't forgot to content indentation.
+result_html: |
+  <p>When showing examples like</p>
+  <p>return one + two</p>
+  <p>don’t forgot to content indentation.</p>

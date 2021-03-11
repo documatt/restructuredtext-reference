@@ -1,0 +1,9 @@
+elements:
+  - sidebar
+  - topic
+  - section
+  - rubric
+  - transition
+  - toctree
+  - contents
+  # - document-title

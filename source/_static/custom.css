@@ -1,0 +1,54 @@
+/* === Snippets ======================================================= */
+
+/* Snippet source and result displayed as columns */
+.snippet {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.snippet .source pre {
+  white-space: pre-wrap;
+  padding: 1em;
+}
+
+/* Split source/result to exact horizontal halves */
+.snippet .source,
+.snippet .result,
+.snippet .result-in-new-window {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 50%;
+}
+
+/* 1rem margin between source and result halves */
+.snippet .source {
+  margin-right: 0.5rem;
+}
+.snippet .result,
+.snippet .result-in-new-window {
+  margin-left: 0.5rem;
+}
+
+/* === Bad code-blocks ================================================== */
+
+.bad [class^="highlight"] pre {
+  border-color: red;
+  background-color: #f5e4e4;
+  position: relative;
+}
+
+.bad [class^="highlight"] pre::before {
+  content: "☹︎";
+  font-size: 3em;
+  color: lightgray;
+  position: absolute;
+  right: 0.2em;
+  top: 40%;
+}
+
+/* === Sidebar with collection members ================================ */
+
+article section h1 + aside {
+  margin-top: 0 !important;
+}

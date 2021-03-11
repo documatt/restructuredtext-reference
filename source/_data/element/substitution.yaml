@@ -1,0 +1,51 @@
+title: substitution
+
+desc: |
+  Actually there are "subsitution definition" and "subsitution reference" (usage) that uses it.
+
+collections:
+  - body-elements
+
+url: "https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#paragraphs"
+
+examples:
+  - name: Definition and reference
+    desc: |
+      For example, if some product has a really long name:
+    source: |
+      .. |product-name| replace:: Compliance recording for Microsoft Teams
+
+      The |product-name| is software that enables organizations that adopted online calling to manage recordings according their corporate or regulatory policies.
+
+  - name: Reference in unusual places
+    desc: |
+      In section titles, rubrics.
+    source: |
+      |product-name|
+      ##############
+
+      .. rubric:: |product-name|
+
+      #. Install |product-name|
+      #. Import users to |product-name|
+      #. Enjoy |product-name|
+
+  - name: References not allowed
+    desc: |
+      Image alt:
+
+      .. code-block:: rst
+         :class: bad
+
+         .. image:: /img/cupcake.png
+            :width: 25%
+            :alt: |product-name| has the same taste.
+
+  - name: Global subsitutions available everywhere
+    desc: |
+      conf.py::
+
+        rst_epilog = f'''
+        .. |project| replace:: {project}
+        .. |rst| replace:: reStructuredText
+        '''

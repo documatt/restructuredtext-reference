@@ -1,0 +1,111 @@
+title: inline literal
+
+desc: |
+  Inline literal element is typically used for short code examples displayed in monospace font.
+
+collections:
+  - inline-elements
+  - code-examples
+
+url: https://docutils.sourceforge.io/docs/ref/rst/roles.html#literal
+
+examples:
+  - name: Inline literal syntax
+    desc: |
+      Inline literal syntax is simple: wrap the text between two ``````.
+    source: |
+      To search on your disk, use ``find`` command.
+
+  - name: Tricky examples
+    desc: |
+      Writing inline literals containing ````` seems complicated, but it is not if you realize everything starting `````` and ending `````` is rendered as-is - no need to doubling ``````, no backslash-escaping ``\```, etc.
+    source: |
+      Single backtick: `````
+
+      Double backtick: ``````
+
+  - name: Alternative syntax
+    desc: |
+      Alternative to enclosing into `````` is to use a full role syntax: ``:literal:`text```.
+    source: |
+      To search on your disk, use :literal:`find` command.
+
+  - name: Backslashes in alternative syntax
+    desc: |
+      ````Basic```` and alternative ``:literal:`syntax``` are treat backslashes (``\``) differently.
+
+      For strings not contaings backslashes, they are equivalent::
+
+        ``text``
+        :literal:`text`
+
+      In the basic syntax, backslashes are preserved. In alternative syntax backslash is the escaping character. Backslash alone escape immediatelly following character, e.g. the space. To use backslash, you must escaped it too, which results in doubled backslash.
+
+    source: |
+      Not escaped backslashes:
+      :literal:`C:\Users\matt\AppData`
+
+      Properly escaped:
+      :literal:`C:\\Users\\matt\\AppData`
+
+      Or, easiest use classic syntax:
+      ``C:\Users\matt\AppData``
+
+      That preserves backslashes as-is
+      ``text \ and \ backslashes``
+
+      While in :literal:, even spaces must be escaped:
+      :literal:`text \ and \ backslashes`
+
+  - name: No inline element nesting
+    desc: |
+      The annoying |rst| limitation is  you :ref:`can't nest inline element <no-nested-inlines>` into another, e.g. inline literal into strong emphasis, etc. Unfortunately, there is no workaround.
+
+      Some examples of inline markup nesting that *don't work*:
+
+      .. datatemplate:yaml:: /_data/snippet/no-nested-inlines.yaml
+         :template: snippet.rst.jinja
+
+  - name: Requires whitespace or punctuation around
+    desc: |
+      The inline literal :ref:`requires whitespace or punctuation around <inline-markup-recognition>` (as all inline-level elements). Without the delimiter, |rst| will not recognize markup properly from a surrounding text.
+
+      The following examples miss a delimiter at the end, the beginning, and at the both. They will cause the ``WARNING: Inline literal start-string without end-string``.
+
+      .. code-block:: rst
+         :linenos:
+         :class: bad
+
+         Any ``array``s will suffice.
+
+         Any``array`` will suffice.
+
+         Any``array``s will suffice.
+
+      Fortunately, two inline elements without no whitespace/punctuation in-between are possible with *escaping mechanism* using backslash-escaped whitespace (backslash is ``\``). Backslash-escaped whitespace will be removed from the output document.
+
+      Previous example fixed:
+    source: |
+      Any ``array``\ s will suffice.
+
+      Any\ ``array`` will suffice.
+
+      Any\ ``array``\ s will suffice.
+
+issues:
+  - name: Don't interchange ````` and ``````
+    desc: |
+      There is a big difference between ```code example``` and ````code example````! Only the latter with double `````` is inline code example! Text wrapped in single ````` is so-called default role interpreted text.
+
+      This is tricky part of |rst| because in Markdown, code examples are in wrapped in single backtick.
+
+      .. code-block::
+         :class: bad
+
+         I am `not a code example` anyway.
+
+      Fixed:
+
+      .. code-block::
+
+         I am ``a code example`` anyway.

@@ -1,0 +1,48 @@
+title: hint
+
+desc: |
+  hint is one of |rst|'s specific :doc:`admonitions </admonitions>`. They are all visually bold blocks often rendered in colors according to their type. Readers will appreciate if you spice up your text with admonitions like this for extra information or to raise their attention.
+
+collections:
+  - admonitions
+  - body-elements
+
+url: "https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions"
+
+examples:
+  - name: "Content on the same line"
+    desc: "Short text can be typed right after ``hint::`` (note the space after ``::``)."
+    source: |
+      .. hint:: I'm hint
+
+  - name: Content bellow the directive
+    desc: "For longer text more fits to put it the line bellow."
+    source: |
+      .. hint::
+         I'm hint
+
+  - name: Content bellow the directive with blank line
+    desc: "Optionally, you can place a blank line before the text itself."
+    source: |
+      .. hint::
+
+         I'm hint
+
+  - name: Directive name in uppercase
+    desc: "Directive name is case insensitive (like all directive and role names). Most documentation and book authors prefer typing directives and roles all in lowercase. However, writing directive name in uppercase corresponds with their “raise attention” objective and improves |rst| code readability."
+    source: |
+      .. HINT:: However writing admonitions uppercase can be considered as reasonable exception to "all-lowercase" rule.
+      
+  - name: Complex content
+    desc: Any |rst| elements can be in admonition content. As always, you need only to keep correct indentation.
+    source: |
+      .. hint::
+          
+         This is the admonition with complex body containing
+
+         - two items
+         - bullet list
+
+         And, code example::
+
+             $ nano ~/.bash_aliases

@@ -1,0 +1,10 @@
+# ide
+.vscode
+# python
+venv
+.venv
+# sphinx
+build
+_build
+# GitLab Pages folder
+public

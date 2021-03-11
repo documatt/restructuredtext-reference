@@ -1,0 +1,7 @@
+elements:
+  - emphasis
+  - strong-emphasis
+  - subscript
+  - superscript
+  - inline-literal
+  - inline-image

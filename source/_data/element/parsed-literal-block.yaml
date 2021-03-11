@@ -1,0 +1,37 @@
+title: parsed-literal-block
+
+desc: |
+  Another option for showing code examples is parsed-literal directive. It can't highlight code as :doc:`code-block </element/code-block>`, but allows you to use |rst| inline markup (emphasis, hyperlinks, etc.).
+
+url: https://docutils.sourceforge.io/docs/ref/rst/directives.html#parsed-literal-block
+
+collections:
+  - code-examples
+
+examples:
+  - name: Basic usage
+    desc: |
+      Ability of parsed-literal to use inline markup is great for e.g.,
+      terminal session examples. The following example shows emphasis, strong emphasis and external hyperlink.
+    source: |
+      .. parsed-literal::
+
+         *# Prints date only*
+         **$ date -I**
+         2020-03-03
+
+         Search for date in `man pages <https://manpages.ubuntu.com>`_.
+
+  - name: Escaping inline markup
+    desc: |
+      If you want to prevent recognizing inline markup in parsed-literal-block, you must protect it with backslash before it.
+
+      For example,       For example, to render find *foo* instead of find *foo* you must type ``find \*foo\*``. Compare the difference:
+    source: |
+      .. parsed-literal::
+
+         # Escaped emphasis
+         $ find \*foo\*
+
+         # Not escaped emphasis
+         $ find *foo*

@@ -1,0 +1,39 @@
+{% set class = data['class'] if data['class'] is defined else "" %}
+
+.. raw:: html
+   
+   <div class="snippet">
+   <div class="source {{ class }}">
+
+.. code-block:: rst
+   :linenos:
+
+   {% for line in data['source'].split('\n') %}
+   {{ line -}}
+   {% endfor %}
+
+.. raw:: html
+   
+   </div>{#. source #}
+   <div class="result">
+
+{% if data['result_html'] %}
+
+.. raw:: html
+
+   {% for line in data['result_html'].split('\n') %}
+   {{ line -}}
+   {% endfor %}
+
+{% else %}
+
+{% for line in data['source'].split('\n') %}
+{{ line -}}
+{% endfor %}
+
+{% endif %}
+
+.. raw:: html
+   
+   </div>{#. result #}
+   </div>{#. snippet #}

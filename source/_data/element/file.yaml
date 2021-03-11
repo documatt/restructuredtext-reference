@@ -1,0 +1,25 @@
+title: file
+
+desc: |
+  Figure is formal more "formal" variant of :doc:`/element/image` used often in academic publications or text books. Unlike the image, it allows to add a caption, be referenced from the other text, etc.
+
+collections:
+  - code-examples
+  - sphinx
+  - semantic
+
+url: https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-file
+
+examples:
+  - name: Troubles with backslash
+    desc: |
+      Text inside ``:file`` as in all :ref:`roles <role-anatomy>`, backslashes (``\``) are maybe treat differently than you expect.
+
+      Because backslash is the :ref:`escaping character <role-escaping>`. Backslash alone escape immediatelly following character, e.g. the space. To use backslash, you must escaped it too, which results in doubled backslash.
+
+    source: |
+      Not escaped backslashes:
+      :file:`C:\Users\matt\AppData`
+
+      Properly escaped:
+      :file:`C:\\Users\\matt\\AppData`

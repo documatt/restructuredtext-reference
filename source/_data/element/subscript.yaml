@@ -1,0 +1,46 @@
+title: subscript
+
+desc: |
+  Subscript role displays its text as subscript (with a lowered baseline using smaller text). Subscript is used in e.g., chemical formulas.
+
+collections:
+  - inline-elements
+
+url: https://docutils.sourceforge.io/docs/ref/rst/roles.html#subscript
+
+# cspell:words sanitas
+examples:
+  - name: Subscript syntax
+    desc: |
+      Subscript syntax itself is simple: ``:sub:`text as subscript```.
+    source: |
+      In vino veritas, in H\ :sub:`2`\ O sanitas.
+    more: |
+      .. note:: See bellow the meaning of awkward ``\<space>``.
+
+  - name: No inline element nesting
+    desc: |
+      The annoying |rst| limitation is  you :ref:`can't nest inline element <no-nested-inlines>` into another, e.g. subscript into strong emphasis, etc. Unfortunately, there is no workaround.
+
+      Some examples of inline markup nesting that *don't work*:
+
+      .. datatemplate:yaml:: /_data/snippet/no-nested-inlines.yaml
+         :template: snippet.rst.jinja
+
+  - name: Requires whitespace or punctuation around
+    desc: |
+      The subscript :ref:`requires whitespace or punctuation around <inline-markup-recognition>` (as all inline-level elements). Without the delimiter, |rst| will not recognize markup properly from a surrounding text.
+
+      The following examples miss a delimiter both at the and beginning and end. It will cause the ``WARNING: Inline interpreted text or phrase reference start-string without end-string.``.
+
+      .. code-block::
+         :linenos:
+         :class: bad
+
+         In vino veritas, in H:sub:`2`O sanitas.
+      
+      Fortunately, two inline elements without no whitespace/punctuation in-between are possible with *escaping mechanism* using backslash-escaped whitespace (backslash is ``\``). Backslash-escaped whitespace will be removed from the output document.
+
+      Previous example fixed:
+    source: |
+      In vino veritas, in H\ :sub:`2`\ O sanitas.

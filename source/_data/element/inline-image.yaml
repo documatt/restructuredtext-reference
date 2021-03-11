@@ -1,0 +1,89 @@
+title: inline image
+
+desc: |
+  Inline images are used for showing small images as part of the line of a text - for example, an icons. They are similar to normal block-level :doc:`image </element/image>`.
+
+collections:
+  - inline-elements
+  - images
+
+url: https://docutils.sourceforge.io/docs/ref/rst/roles.html#literal
+
+examples:
+  - name: Inline image syntax
+    desc: |
+      Inline image is actually the :doc:`/element/substitution`, i.e. it has two parts -- the definition and usage:
+    source: |
+        .. |ico1| image:: /img/small-banana.png
+
+        Click to the |ico1| to return home.
+
+  - name: Image definition and usage
+    desc: |
+      The inline image usage may even come before the image definition.
+    source: |
+      The inline image |ico2| usage may even come before the image definition.
+
+      .. |ico2| image:: /img/small-banana.png
+
+  - name: Setting image options
+    desc: |
+      Inline image accepts all options as their block :doc:`/element/image` counterpart.
+
+      For example, to limit icon height to fit text line height, use ``ex`` unit:
+    source: |
+      .. |ico3| image:: /img/small-banana.png
+         :height: 2ex
+
+      Click to the |ico3| to return home.
+    more: |
+      .. note::
+
+         Resized images are by default links to original image files. This is usually undesired for inline images like icons. To prevent it for a particular icon, add ``:class: no-scaled-link`` option to the ``image::`` directive.
+
+         ::
+
+            .. |ico3| image:: /img/small-banana.png
+               :height: 2ex
+               :class: no-scaled-link
+
+            Click to the |ico3| to return home.
+
+         See more at :ref:`Resized image without a link to the original file <no-scaled-image-link>`.
+
+  - name: No inline element nesting
+    desc: |
+      The annoying |rst| limitation is  you :ref:`can't nest inline element <no-nested-inlines>` into another, e.g. inline image into strong emphasis, etc. Unfortunately, there is no workaround.
+
+      Some examples of inline markup nesting that *don't work*:
+
+      .. datatemplate:yaml:: /_data/snippet/no-nested-inlines.yaml
+         :template: snippet.rst.jinja
+
+  - name: Requires whitespace or punctuation around
+    desc: |
+      The inline image :ref:`requires whitespace or punctuation around <inline-markup-recognition>` (as all inline-level elements). Without the delimiter, |rst| will not recognize markup properly from a surrounding text.
+
+      The following examples miss a delimiter at the end, the beginning, and at the both. They will cause the ``WARNING: Inline substitution_reference start-string without end-string.``.
+
+      .. code-block::
+         :class: bad
+
+         Click to the |ico|to return home.
+
+         Click to the|ico| to return home.
+
+         Click to the|ico|to return home.
+
+      Fortunately, two inline elements without no whitespace/punctuation in-between are possible with *escaping mechanism* using backslash-escaped whitespace (backslash is ``\``). Backslash-escaped whitespace will be removed from the output document.
+
+      Previous example fixed:
+    source: |
+      .. |ico4| image:: /img/small-banana.png
+         :height: 1em
+
+      Click to the |ico4|\ to return home.
+
+      Click to the\ |ico4| to return home.
+
+      Click to the\ |ico4|\ to return home.

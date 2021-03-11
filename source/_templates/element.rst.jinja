@@ -1,0 +1,140 @@
+################################################################################
+{{ data['title'] }}
+################################################################################
+
+{# INFO SIDEBAR #}
+
+.. sidebar:: In collections
+
+{% set collections = data['collections'] %}
+{% for col in collections %}
+
+   * :doc:`/{{ col }}`
+
+{% endfor %}
+
+   See `official docs <{{ data['url'] }}>`_.
+
+{# .INFO SIDEBAR #}
+
+{{ data['desc'] }}
+
+{# EXAMPLES #}
+{% for example in data['examples'] %}
+
+********************************************************************************
+{{ example.name }}
+********************************************************************************
+
+.. raw:: html
+
+   <div class="desc">
+
+{{ example.desc }}
+
+.. raw:: html
+
+   </div>
+
+{# EXAMPLE SNIPPET RENDERABLE IN THE DOCUMENT #}
+{% if example.source %}
+
+.. raw:: html
+
+   <div class="snippet">
+   <div class="source">
+
+.. code-block:: rst
+   :linenos:
+
+   {% for line in example.source.split('\n') %}
+   {{ line -}}
+   {% endfor %}
+
+.. raw:: html
+
+   </div>{#. source #}
+   <div class="result">
+
+{% for line in example.source.split('\n') %}
+{{ line -}}
+{% endfor %}
+
+.. raw:: html
+
+   </div>{#. result #}
+   </div>{#. snippet #}
+
+{% endif %}
+{# .EXAMPLE SNIPPET RENDERABLE IN THE DOCUMENT#}
+
+{# EXAMPLE SNIPPET TO OPEN IN NEW DOCUMENT #}
+{% set source_file = example.source_file %}
+{% if source_file %}
+
+.. raw:: html
+
+   <div class="snippet">
+   <div class="source">
+
+.. literalinclude:: {{ source_file }}.rst
+   :language: rst
+
+.. raw:: html
+
+   </div>{#. source #}
+   <div class="result-in-new-window">
+
+:doc:`open example <{{ source_file }}>`
+
+{#
+just a idea how to display output HTML as iframe
+
+.. raw:: html
+
+   <iframe src="..{{ source_file }}.html">
+      To see the example result, your browser must support IFRAMEs.
+   </iframe>
+#}
+
+.. raw:: html
+
+   </div>{#. result-in-a-new-window #}
+   </div>{#. snippet #}
+
+{% endif %}
+{# .EXAMPLE SNIPPET TO OPEN IN NEW DOCUMENT #}
+
+{% if example.more %}
+{{ example.more }}
+{% endif %}
+
+{% endfor %}
+{# .EXAMPLES #}
+
+{% set issues = data['issues'] %}
+{% if issues %}
+
+********************************************************************************
+Common issues
+********************************************************************************
+
+{% for issue in data['issues'] %}
+{# ISSUE #}
+
+{{ issue.name }}
+================================================================================
+
+.. raw:: html
+
+   <div class="desc">
+
+{{ issue.desc }}
+
+.. raw:: html
+
+   </div>{#. desc #}
+
+{# .ISSUE #}
+{% endfor %}
+{% endif %}
