@@ -1,7 +1,7 @@
 {
   "title": "attention",
   "desc": "description",
-  "in_collections": [
+  "collections": [
     "admonitions"
   ],
   "url": "https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions",

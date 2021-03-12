@@ -8,17 +8,19 @@
 
 .. container:: info
 
-   {% if data['in_collections'] is defined %}
+   {% if data['collections'] is defined %}
 
-   .. container:: in-collections
+   .. container:: collections
 
-      {{ data['in_collections'] }}
+      {{ data['collections'] }}
 
    {% endif %}
 
    .. container:: reference
 
-      {{ data['url'] }}
+      .. raw:: html
+
+         <a href="{{ data['url'] }}" target="_blank">docs</a>
 
 {% for example in data['examples'] %}
 

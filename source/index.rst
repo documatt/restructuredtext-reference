@@ -1,22 +1,20 @@
-=========
-|project|
-=========
-
 .. include:: ../README.rst
-
-
-.. toctree::
-   :caption: Body elements
-   :maxdepth: 1
-
-   element/attention
 
 .. toctree::
    :caption: Collections
    :maxdepth: 1
+   :hidden:
 
    admonitions
    tocs
+
+.. toctree::
+   :caption: Elements
+   :maxdepth: 1
+   :hidden:
+
+   element/attention
+   element/toctree
 
 
 Indices and tables

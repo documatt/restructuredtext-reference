@@ -1,7 +1,7 @@
 {
   "title": "toctree",
   "desc": "...",
-  "in_collections": [
+  "collections": [
     "tocs"
   ],
   "url": "https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-toctree",
