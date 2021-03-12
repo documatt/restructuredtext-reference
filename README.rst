@@ -1,4 +1,4 @@
-.. |project| replace:: Sphinx Demo Project
+.. |project| replace:: Sphinx Reference Project
 
 #########
 |project|

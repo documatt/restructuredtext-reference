@@ -16,7 +16,7 @@ sys.path.insert(0, os.path.abspath('./_extensions'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'Sphinx Demo Project'
+project = 'Sphinx Reference Project'
 copyright = '2020, Matt from Documatt'
 author = 'Matt from Documatt'
 
@@ -28,7 +28,6 @@ author = 'Matt from Documatt'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx_tabs.tabs',
     'sphinxcontrib.datatemplates'
 ]
 
@@ -60,6 +59,3 @@ show_authors = True
 # Don't copy sources, hide "Show Source"
 html_copy_source = False
 html_show_sourcelink = False
-
-# -- Options for jinja extension ----------------------------------------------
-
