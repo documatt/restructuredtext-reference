@@ -25,4 +25,4 @@ Impressum
 
 |project| is open source licensed under MIT.
 
-Project `Flip Chart icon <https://icons8.com/icon/9eafKfEKxnF0/flip-chart>`_ by `icons8 <https://icons8.com>`_.
+Project `User Manual icon <https://icons8.com/icon/45454/user-manual>`_ by `icons8 <https://icons8.com>`_.
