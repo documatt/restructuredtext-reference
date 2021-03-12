@@ -1,3 +1,7 @@
+###############
+Tips and tricks
+###############
+
 If you want to see that is actually in the variable, print it as ``<pre>``. E.g.::
 
     .. raw:: html

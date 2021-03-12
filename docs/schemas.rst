@@ -2,9 +2,12 @@
 JSON schemas
 ############
 
-ELement
+.. _element-schema:
+
+Element
 *******
 
+.. _collection-schema:
 
 Collections
 ***********
