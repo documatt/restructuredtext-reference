@@ -40,16 +40,18 @@
 
 .. container:: source
 
-   .. code-block:: rst
+   .. raw:: html
 
-      {% for line in example.rst %}
-      {{ line }}
-      {% endfor %}
+      <pre>
+      {% for line in example.rst -%}
+      {{- line }}
+      {% endfor -%}
+      </pre>
 
 .. container:: result
 
    {% for line in example.rst %}
-   {{ line }}
+   {{- line }}
    {% endfor %}
 
 {% endfor %}

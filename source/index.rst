@@ -7,8 +7,17 @@
 
 .. toctree::
    :caption: Body elements
+   :maxdepth: 1
 
-   element/attention.rst
+   element/attention
+
+.. toctree::
+   :caption: Collections
+   :maxdepth: 1
+
+   admonitions
+   tocs
+
 
 Indices and tables
 ==================

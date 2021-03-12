@@ -1,0 +1,14 @@
+################################################################################
+{{ data['title'] }}
+################################################################################
+
+.. container:: desc
+
+   {{ data['desc'] }}
+
+{% for element in data['elements'] %}
+
+.. datatemplate:json:: /_data/element/{{ element }}.json
+   :template: element.rst.jinja
+
+{% endfor %}

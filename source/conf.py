@@ -40,9 +40,7 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.rst']
 
-# rst_epilog = f'''
-# .. |project| replace:: {project}
-# '''
+highlight_language = 'none'
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -59,14 +57,9 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.rst']
 # Enables sectionauthor and codeauthor roles
 show_authors = True
 
+# Don't copy sources, hide "Show Source"
+html_copy_source = False
+html_show_sourcelink = False
+
 # -- Options for jinja extension ----------------------------------------------
 
-jinja_contexts = {
-    'first_ctx': {'topics': {'a': 'b', 'c': 'd'}},
-    'second_ctx': {'topics': {'a': 'b', 'c': 'd'}},
-    'third_ctx': {'objects': [
-        [1, 2, 3, 4],
-        'skipped_string',
-        ['a', 'b'],
-    ]},
-}

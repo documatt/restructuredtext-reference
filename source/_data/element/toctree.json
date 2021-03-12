@@ -1,0 +1,21 @@
+{
+  "title": "toctree",
+  "desc": "...",
+  "in_collections": [
+    "tocs"
+  ],
+  "url": "https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-toctree",
+  "examples": [
+    {
+      "tags": "null",
+      "name": ":maxdepth: <number>",
+      "desc": "...",
+      "rst": [
+        ".. toctree::",
+        "   :maxdepth: 2",
+        "",
+        "   /element/attention"
+      ]
+    }
+  ]
+}
