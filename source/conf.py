@@ -55,6 +55,12 @@ html_theme = "sphinx_rtd_theme"
 # so a file named "default.css" will overwrite the builtin "default.css".
 # html_static_path = ['_static']
 
+# Additional templates that should be rendered to pages, maps page names to
+# template names.
+html_additional_pages = {
+    'index': 'index.html',
+}
+
 # Enables sectionauthor and codeauthor roles
 show_authors = True
 
