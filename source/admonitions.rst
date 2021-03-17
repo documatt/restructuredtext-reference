@@ -41,6 +41,45 @@ Any |rst| elements can be in admonition content. As always, you need only to kee
 .. datatemplate:yaml:: /_data/snippet/admonitions2.yaml
    :template: snippet.rst.jinja
 
+Content on the same line, or bellow
+***********************************
+
+You can't type specific admonition incorrectly. They accept its text in on the same line, bellow (optionally separated by a blank line), or on both places (strings are concatenated).
+
+The following admonition markups are all valid. For example, attention admonition::
+
+  .. attention: I'm attention text on the same line
+
+..
+
+::
+
+  .. attention:
+     I'm attention text on the line bellow
+
+..
+
+::
+
+  .. attention:
+      
+     I'm attention text bellow separated by the blank line
+
+..
+
+::
+
+  .. attention: I'm attention text
+     that continues bellow
+
+..
+
+::
+
+  .. attention: I'm attention text
+
+     that continues bellow after the blank line
+
 Admonition reference
 ********************
 

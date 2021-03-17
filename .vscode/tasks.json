@@ -6,7 +6,7 @@
     {
         "label": "html",
         "type": "shell",
-        "command": ". ../venv/bin/activate && rm -rf _build && make html",
+        "command": ". ../venv/bin/activate && rm -rf _build && sphinx-build -b html -q . _build/html",
         "options": {
             "cwd": "source"
         },

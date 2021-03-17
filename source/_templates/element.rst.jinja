@@ -8,13 +8,16 @@
 
 .. container:: info
 
-   {% if data['collections'] is defined %}
+   {% set collections = data['collections'] %}
+   {% if collections %}
 
    .. container:: collections
 
-   {% for col in data['collection'] %}}
+      Belongs to
 
-      * {{ col }}
+   {% for col in collections %}
+
+      * :doc:`/{{ col }}`
 
    {% endfor %}
    {% endif %}
@@ -26,25 +29,31 @@
          <a href="{{ data['url'] }}" target="_blank">docs</a>
 
 {% for example in data['examples'] %}
+{# EXAMPLE #}
 
 ********************************************************************************
 {{ example.name }}
 ********************************************************************************
 
-{% if data['example.tags'] is defined %}
+{# EXAMPLE TAGS #}
+{% set tags = example.tags %}
+{% if tags %}
 
 .. container:: tags
 
-{% for tag in data['example.tags'] %}}
+{% for tag in tags %}
 
    * {{ tag }}
 
 {% endfor %}
 {% endif %}
+{# .EXAMPLE TAGS #}
 
 .. container:: desc
 
    {{ example.desc }}
+
+{# EXAMPLE SNIPPET #}
 
 .. container:: snippet
 
@@ -62,4 +71,7 @@
       {{ line -}}
       {% endfor %}
 
+{# EXAMPLE SNIPPET #}
+
+{# .EXAMPLE #}
 {% endfor %}
