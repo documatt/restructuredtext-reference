@@ -1,0 +1,8 @@
+source: |
+   .. tip:: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Aenean in dolor id massa convallis eleifend sed eu mauris.
+
+   .. admonition:: Generic admonitions has a title
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Aenean in dolor id massa convallis eleifend sed eu mauris.

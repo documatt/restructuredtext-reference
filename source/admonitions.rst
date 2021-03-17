@@ -1,2 +1,48 @@
-.. datatemplate:json:: /_data/collection/admonitions.json
+################################################################################
+Admonitions
+################################################################################
+
+Admonitions are visually bold blocks like "tip", "note", "important". They can appear anywhere an ordinary :doc:`body element` can. Readers will appreciate if you spice up your text with admonitions like tip for extra information or warning to raise their attention.
+
+Specific or generic?
+********************
+
+|rst| contains one generic and nine specific admonitions: attention, caution, danger, error, hint, important, note, tip, and warning.
+
+Specific admonitions are often rendered in colors according to their severity. Their title is their name and can't be changed. Generic admonition has a title and usually neutral appereance.
+
+For example, compare the tip and generic admonition:
+
+.. datatemplate:yaml:: /_data/snippet/admonitions1.yaml
+   :template: snippet.rst.jinja
+
+Admonitions in uppercase
+************************
+
+Admonition directives are case insensitive (like all directive and role names). Most documentation and book authors prefer typing directives and roles all in lowercase.
+
+::
+
+   .. imporant:: Most reStructuredText authors write directives like note
+      in lowercase
+
+However, writing admonitions directive in uppercase corresponds with their “raise attention” objective.
+
+::
+
+   .. IMPORTANT:: However writing admonitions uppercase can be considered as
+      reasonable exception to "everything-lowercase" rule.
+
+Complex admonition
+******************
+
+Any |rst| elements can be in admonition content. As always, you need only to keep correct indentation.
+
+.. datatemplate:yaml:: /_data/snippet/admonitions2.yaml
+   :template: snippet.rst.jinja
+
+Admonition reference
+********************
+
+.. datatemplate:yaml:: /_data/collection/admonitions.yaml
    :template: collection.rst.jinja

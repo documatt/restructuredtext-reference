@@ -1,2 +1,2 @@
-.. datatemplate:json:: /_data/element/toctree.json
+.. datatemplate:yaml:: /_data/element/toctree.yaml
    :template: element.rst.jinja

@@ -4,7 +4,9 @@ On-disk file structure
 
 Sphinx Reference knows only two types of items: Sphinx element and collections of Sphinx elemenets.
 
-Website is generated from JSON data files and Jinja templates creating RST files. Thanks to Jinja templates, all pages for the same type looks the same.
+Website is generated from YAML data files and Jinja templates creating RST files. Thanks to Jinja templates, all pages for the same type looks the same.
+
+.. important:: Data files are expected to have ``.yaml`` extension. ``.yml`` will cause error.
 
 Elements
 ********

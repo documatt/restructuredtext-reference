@@ -1,0 +1,9 @@
+source: |
+  .. note:: This is a note admonition with complex body containing
+  
+     - bullet list
+     - item two
+   
+     And code examples::
+   
+         $ nano ~/.bash_aliases

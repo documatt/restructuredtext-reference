@@ -4,17 +4,17 @@
    :caption: Collections
    :maxdepth: 1
    :hidden:
+   :glob:
 
-   admonitions
-   tocs
+   *
 
 .. toctree::
    :caption: Elements
    :maxdepth: 1
    :hidden:
+   :glob:
 
-   element/attention
-   element/toctree
+   element/*
 
 
 Indices and tables

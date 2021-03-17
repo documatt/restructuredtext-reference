@@ -1,0 +1,24 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+        "label": "html",
+        "type": "shell",
+        "command": ". ../venv/bin/activate && rm -rf _build && make html",
+        "options": {
+            "cwd": "source"
+        },
+        "presentation": {
+            "reveal": "always",
+            "panel": "shared"
+        },
+        "problemMatcher": [],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        }
+    }
+]
+}

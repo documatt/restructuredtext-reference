@@ -1,0 +1,4 @@
+{
+    "restructuredtext.confPath": "${workspaceFolder}/source",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+}

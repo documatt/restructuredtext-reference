@@ -12,11 +12,14 @@
 
    .. container:: collections
 
-      {{ data['collections'] }}
+   {% for col in data['collection'] %}}
 
+      * {{ col }}
+
+   {% endfor %}
    {% endif %}
 
-   .. container:: reference
+   .. container:: docs
 
       .. raw:: html
 
@@ -32,28 +35,31 @@
 
 .. container:: tags
 
-   {{ example.tags }}
+{% for tag in data['example.tags'] %}}
 
+   * {{ tag }}
+
+{% endfor %}
 {% endif %}
 
 .. container:: desc
 
    {{ example.desc }}
 
-.. container:: source
+.. container:: snippet
 
-   .. raw:: html
+   .. container:: source
 
-      <pre>
-      {% for line in example.rst -%}
-      {{- line }}
-      {% endfor -%}
-      </pre>
+      ::
 
-.. container:: result
+         {% for line in example.source.split('\n') %}
+         {{ line -}}
+         {% endfor %}
 
-   {% for line in example.rst %}
-   {{- line }}
-   {% endfor %}
+   .. container:: result
+      
+      {% for line in example.source.split('\n') %}
+      {{ line -}}
+      {% endfor %}
 
 {% endfor %}

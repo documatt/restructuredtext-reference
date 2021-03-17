@@ -1,2 +1,2 @@
-.. datatemplate:json:: /_data/collection/tocs.json
+.. datatemplate:yaml:: /_data/collection/tocs.yaml
    :template: collection.rst.jinja

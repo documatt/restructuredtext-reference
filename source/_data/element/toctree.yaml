@@ -1,0 +1,14 @@
+title: toctree
+desc: ...
+collections:
+  - tocs
+url: "https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-toctree"
+examples:
+  - tags: "null"
+    name: ":maxdepth: <number>"
+    desc: "..."
+    source: |
+      .. toctree::
+         :maxdepth: 2
+      
+         /element/attention

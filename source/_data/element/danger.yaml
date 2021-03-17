@@ -1,0 +1,12 @@
+title: danger
+desc: description
+collections:
+  - admonitions
+url: "https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions"
+examples:
+  - tags:
+      - default
+    name: ".. attention:: I'm attention"
+    desc: "Directive doesn't accept any arguments either options."
+    source: |
+      .. attention:: I'm attention
