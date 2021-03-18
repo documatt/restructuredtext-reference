@@ -26,7 +26,7 @@
 
       .. raw:: html
 
-         <a href="{{ data['url'] }}" target="_blank">docs</a>
+         <p><a href="{{ data['url'] }}" target="_blank">docs</a></p>
 
 {% for example in data['examples'] %}
 {# EXAMPLE #}
@@ -54,6 +54,7 @@
    {{ example.desc }}
 
 {# EXAMPLE SNIPPET #}
+{% if example.source %}
 
 .. container:: snippet
 
@@ -71,7 +72,12 @@
       {{ line -}}
       {% endfor %}
 
+{% endif %}
 {# EXAMPLE SNIPPET #}
+
+{% if example.more %}
+{{ example.more }}
+{% endif %}
 
 {# .EXAMPLE #}
 {% endfor %}

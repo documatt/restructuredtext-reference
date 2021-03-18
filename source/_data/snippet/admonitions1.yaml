@@ -1,8 +1,18 @@
 source: |
-   .. tip:: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Aenean in dolor id massa convallis eleifend sed eu mauris.
+   .. attention:: I'm attention.
 
-   .. admonition:: Generic admonitions has a title
+   .. caution:: I'm caution.
 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Aenean in dolor id massa convallis eleifend sed eu mauris.
+   .. danger:: I'm danger.
+
+   .. error:: I'm error.
+
+   .. hint:: I'm hint.
+
+   .. important:: I'm important.
+
+   .. note:: I'm note.
+
+   .. tip:: I'm tip.
+
+   .. warning:: I'm warning.

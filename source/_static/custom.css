@@ -12,7 +12,36 @@
   width: 50%;
 }
 
+/* Bad code examples */
+
+.bad [class^="highlight"] {
+  border-color: red;
+  background-color: #f5e4e4;
+  position: relative;
+}
+
+.bad [class^="highlight"]::after {
+  content: "x";
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+
 /* Maximally wide main content */
 .wy-nav-content {
   max-width: initial;
+}
+
+/* :sup: in headings show as tags */
+h1 sup,
+h2 sup,
+h3 sup,
+h4 sup,
+h5 sup,
+h6 sup {
+  background-color: yellowgreen;
+  border-radius: 0.25em;
+  padding: 0.25em;
+  font-size: 0.5em;
+  font-weight: normal;
 }

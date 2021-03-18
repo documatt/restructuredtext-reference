@@ -7,13 +7,16 @@ Admonitions are visually bold blocks like "tip", "note", "important". They can a
 Specific or generic?
 ********************
 
-|rst| contains one generic and nine specific admonitions: attention, caution, danger, error, hint, important, note, tip, and warning.
+|rst| contains one :doc:`generic </element/admonition>` and nine specific admonitions: :doc:`/element/attention`, :doc:`/element/caution`, :doc:`/element/danger`, :doc:`/element/error`, :doc:`/element/hint`, :doc:`/element/important`, :doc:`/element/note`, :doc:`/element/tip`, and :doc:`/element/warning`.
 
-Specific admonitions are often rendered in colors according to their severity. Their title is their name and can't be changed. Generic admonition has a title and usually neutral appereance.
-
-For example, compare the tip and generic admonition:
+Specific admonitions are often rendered in colors according to their severity. Their title is their name and can't be changed.
 
 .. datatemplate:yaml:: /_data/snippet/admonitions1.yaml
+   :template: snippet.rst.jinja
+
+Generic admonition has a title and usually neutral appereance.
+
+.. datatemplate:yaml:: /_data/snippet/admonitions2.yaml
    :template: snippet.rst.jinja
 
 Admonitions in uppercase
@@ -41,12 +44,14 @@ Any |rst| elements can be in admonition content. As always, you need only to kee
 .. datatemplate:yaml:: /_data/snippet/admonitions2.yaml
    :template: snippet.rst.jinja
 
-Content on the same line, or bellow
-***********************************
+Content on the same line, or bellow :sup:`specific admonitions only`
+********************************************************************
 
 You can't type specific admonition incorrectly. They accept its text in on the same line, bellow (optionally separated by a blank line), or on both places (strings are concatenated).
 
-The following admonition markups are all valid. For example, attention admonition::
+.. danger:: On the opposite, :doc:`generic admonition has very strict syntax </element/admonition>`.
+
+The following specific admonition markups are all valid. For example, attention admonition::
 
   .. attention: I'm attention text on the same line
 
