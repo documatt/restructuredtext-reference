@@ -1,9 +1,13 @@
 title: topic
+
 desc: |
   topic is a block with a title and content. Use topic to wrap ideas not strictly related the text, but useful for readers. For example, in the documentation covering authentication, it might be useful to mention that users should choose strong password.
+
 collections:
   - parts
+
 url: "https://docutils.sourceforge.io/docs/ref/rst/directives.html#topic"
+
 examples:
   - tags: []
     name: "Requires title and content"
