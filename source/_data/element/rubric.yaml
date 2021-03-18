@@ -1,0 +1,57 @@
+title: rubric
+
+desc: |
+  If you want a :doc:`section </element/section>`-like element that doesn't make up the table of contents, consider rubric. Is not actually a section, only looks like a minor section to the readers.
+
+collections:
+  - parts
+
+url: "https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions"
+
+examples:
+  - tags: []
+    name: "Rubric is simple"
+    desc: "Rubric title is typed right after ``rubric::`` (note the space after ``::``)."
+    source: |
+      Adipisicing excepteur Lorem exercitation do.
+
+      .. rubric:: Rubric looks like a minor section title
+
+      Cillum nulla fugiat dolor consectetur voluptate dolore officia ea sint ipsum.
+
+      .. rubric:: But don't make up the table of contents
+
+      Minim culpa aliqua culpa deserunt sint fugiat et.
+  
+  - name: Rubric or strong emphasis?
+    desc: |
+      :doc:`/element/strong-emphasis` looks often almost as the rubric, but it should appear only within the running text. For section-like titles, choose rubric or, minor level :doc:`section </element/section>`.
+    source: |
+      **Strong-emphasis** looks often almost as the rubric, but it should appear only within the running text.
+      
+      .. rubric:: For section-like titles, choose rubric
+      
+      or, minor level section.
+  
+  - name: Rubric or minor level section?
+    desc: |
+      Minor level :doc:`sections </element/section>` looks often almost as the rubric. Many tech writers prefer sections are more meaningul. They also provide easy navigation, because they make up the table of contents.
+    
+      For example instead
+
+      ::
+
+          .. rubric:: Hidden files
+
+             Linux doesn't have hidden files. There is only convention that...
+
+      you might use minor section
+
+      ::
+
+        Hidden files
+        ^^^^^^^^^^^^
+
+        Linux doesn't have hidden files. There is only convention that...
+    source_file: /example/rubric1
+
