@@ -7,7 +7,7 @@ Admonitions are visually bold blocks like "tip", "note", "important". They can a
 Specific or generic?
 ********************
 
-|rst| contains one :doc:`generic </element/admonition>` and nine specific admonitions: :doc:`/element/attention`, :doc:`/element/caution`, :doc:`/element/danger`, :doc:`/element/error`, :doc:`/element/hint`, :doc:`/element/important`, :doc:`/element/note`, :doc:`/element/tip`, and :doc:`/element/warning`.
+|rst| contains one :doc:`generic </element/admonition>` and ten specific admonitions: :doc:`/element/attention`, :doc:`/element/caution`, :doc:`/element/danger`, :doc:`/element/error`, :doc:`/element/hint`, :doc:`/element/important`, :doc:`/element/note`, :doc:`/element/tip`, :doc:`/element/warning`, and :doc:`/element/seealso`.
 
 Specific admonitions are often rendered in colors according to their severity. Their title is their name and can't be changed.
 
@@ -85,8 +85,8 @@ The following specific admonition markups are all valid. For example, attention 
 
      that continues bellow after the blank line
 
-Admonition reference
-********************
+List of admonitions
+*******************
 
 .. datatemplate:yaml:: /_data/collection/admonitions.yaml
    :template: collection.rst.jinja
