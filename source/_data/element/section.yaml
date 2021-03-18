@@ -3,7 +3,7 @@ title: section
 desc: |
   Document structure is hierarchy of its section elements. |rst| calls heading the *section* and takes different approach on section leveling than you probably expect. Section titles are decorated with the punctuation characters and importance (a section level) depends on its usage order in a document.
 
-  .. seealso:: If you want a section-like element that doesn't make up the table of content, consider :doc:`rubric </element/rubric>`. Is not actually a section, only looks like a minor section to the readers. 
+  .. seealso:: If you want a section-like element that doesn't make up the table of contents, consider :doc:`rubric </element/rubric>`. Is not actually a section, only looks like a minor section to the readers.
 
 collections:
   - parts
@@ -14,7 +14,7 @@ examples:
   - tags: []
     name: "Syntax"
     desc: |
-      Section is text of title that is underlined, or both underlined and overlined, with same punctuation character. Decoration character is usually one (but not limited to [#section-decoration-characters]_ ) of the following::
+      Section is text of title that is underlined, or both underlined and overlined, with same punctuation character. Decoration character is usually one of the following::
 
           = - ` : . ' " ~ ^ _ * + #
     source_file: /example/sections1
@@ -31,11 +31,7 @@ examples:
       * section with title "It's beautiful day" is underlined with ``=`` will become level 3
       * section with title "Even it's Monday" is underlined with ``-`` will become  level 4
 
-      If above example each decoration style is used just once. First style will  become level 1, second level 2 and so on.
-
-      If decoration style is used once again later, it's still the same level. Have a look at more real-life example with repeated section levels.
-
-      .. note:: Decoration style usage order to define section level has advantage you are not  limited to e.g. six nesting levels as in HTML.
+      If above example each decoration style is used just once. First style will  become level 1, second level 2 and so on. If decoration style is used once again later, it's still the same level. 
     source_file: /example/sections2
 
   - tags: []
@@ -91,3 +87,72 @@ examples:
                   '''''''
           - Paragraphs
     source_file: /example/sections3
+
+issues:
+  - name: Decoration and title length mismatch
+    desc: |
+      |rst| is very strict about decoration character that must be exactly the same length as title, or longer::
+
+      .. code-block::
+         :class: bad
+
+         #########################
+         Correct length decoration
+         #########################
+
+         ************************************************
+         Longer that title is okay too but ugly
+         ************************************************
+
+         !Shorted that title causes error!
+         ====================
+
+  - name: Overline only section
+    desc: |
+      Section title decorated only with overline is not allowed
+
+      .. code-block::
+         :class: bad
+
+          ================
+          Will cause error
+      
+      and will cause
+
+      ::
+
+          Missing matching underline for section title overline.
+  
+  - name: Under- and overline section are different levels
+    desc: |
+      Decoration style is couple of used character + underline or overline. The following decoration styles (and levels) are thus different:
+
+      ::
+
+        ################################
+        Level 1 is under- and over-lined
+        ################################
+
+        ********************************
+        Level 2 is under- and over-lined
+        ********************************
+
+        Level 3 because it's only overlined
+        ***********************************
+  
+  - name: Section on multiple single lines
+    desc: |
+      Multiline section titles are actually recognized by |rst| as paragraph so no error or warning is thrown.
+
+      .. code-block::
+         :class: bad
+
+         This is not multiline
+         section but paragraph
+         =====================
+
+  - name: Deeper levels than supported by the output format
+    desc: |
+      Despite due to |rst| section level recognition, you are not limited to e.g., six levels as in HTML, it is highly not recommended to use more then six levels.
+      
+      Levels deeper than supported by output format are rendered identically. For example, in HTML that allows six levels (``<h1>`` to ``<h6>``), the seventh and further levels are rendered as ``<h6>``.
