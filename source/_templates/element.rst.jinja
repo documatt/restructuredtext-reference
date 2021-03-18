@@ -53,7 +53,7 @@
 
    {{ example.desc }}
 
-{# EXAMPLE SNIPPET #}
+{# EXAMPLE SNIPPET RENDERABLE IN THE DOCUMENT #}
 {% if example.source %}
 
 .. container:: snippet
@@ -65,15 +65,44 @@
          {% for line in example.source.split('\n') %}
          {{ line -}}
          {% endfor %}
-
+   
    .. container:: result
-      
+   
       {% for line in example.source.split('\n') %}
       {{ line -}}
       {% endfor %}
 
 {% endif %}
-{# EXAMPLE SNIPPET #}
+{# .EXAMPLE SNIPPET RENDERABLE IN THE DOCUMENT#}
+
+{# EXAMPLE SNIPPET TO OPEN IN NEW DOCUMENT #}
+{% set source_file = example.source_file %}
+{% if source_file %}
+
+.. container:: snippet
+
+   .. container:: source
+
+      .. include:: {{ source_file }}.rst
+         :literal:
+
+   .. container:: result-in-new-window
+      
+      :doc:`open example <{{ source_file }}>`
+
+      
+      {#
+      just a idea how to display output HTML as iframe
+
+      .. raw:: html
+         
+         <iframe src="..{{ source_file }}.html">
+            To see the example result, your browser must support IFRAMEs.
+         </iframe>
+      #}
+
+{% endif %}
+{# .EXAMPLE SNIPPET TO OPEN IN NEW DOCUMENT #}
 
 {% if example.more %}
 {{ example.more }}

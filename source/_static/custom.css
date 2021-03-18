@@ -4,7 +4,8 @@
 }
 
 .snippet .source,
-.snippet .result {
+.snippet .result,
+.snippet .result-in-new-window {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;

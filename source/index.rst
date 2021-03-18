@@ -16,6 +16,12 @@
 
    element/*
 
+.. toctree:
+   :hidden:
+   :glob:
+
+   example/*
+
 
 Indices and tables
 ==================
