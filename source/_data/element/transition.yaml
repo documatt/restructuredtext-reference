@@ -33,9 +33,9 @@ examples:
 
       Para.
 
-  - name: Cannot begin or end a section
+  - name: Cannot begin a section or a document
     desc: |
-      Transition cannot appear at the beginning or end of a section
+      Transition cannot appear at the beginning of a section or a document.
 
       .. code-block::
          :class: bad
@@ -50,38 +50,19 @@ examples:
       .. code-block::
          :class: bad
 
-         Para.
-   
-         ----------
-   
-         Section title
-         =============
-
-  - name: Cannot begin or end a document
-    desc: |
-      Transition cannot appear at the beginning or end of a document
-
-      .. code-block::
-         :class: bad
-
          ##############
          Document title
          ##############
-   
+
          ----------
-   
+
          Para.
       
-      .. code-block::
-         :class: bad
+      Both above examples causes
 
-         ##############
-         Document title
-         ##############
+      ::
 
-         Para.
-   
-         ----------
+        WARNING: unknown document: body element
 
   - name: Cannot be followed by another transition
     desc: |
@@ -97,6 +78,12 @@ examples:
          ----------
 
          Para.
+
+      Above example causes
+
+      ::
+
+        WARNING: At least one body element must separate transitions; adjacent transitions are not allowed.
 
   - name: Cannot be used in sidebar, topic, etc.
     desc: |
