@@ -91,7 +91,7 @@ examples:
 issues:
   - name: Decoration and title length mismatch
     desc: |
-      |rst| is very strict about decoration character that must be exactly the same length as title, or longer::
+      |rst| is very strict about decoration character that must be exactly the same length as title, or longer:
 
       .. code-block::
          :class: bad
