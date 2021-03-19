@@ -13,7 +13,14 @@ examples:
     name: "Requires title and content"
     desc: |
       You need to pass a title after ``topic::`` (note the space after ``::``), and a content bellow the blank line.
-    source_file: /example/topic1
+    source: |
+      Nisi occaecat sit reprehenderit incididunt fugiat in sunt. Velit irure et amet aliquip sunt.
+
+      .. topic:: Topic title
+
+         Pariatur nulla officia culpa qui commodo cupidatat ea elit aliqua cillum amet elit.
+          
+      Dolor adipisicing irure et sit ullamco veniam aliqua. Non laboris duis veniam quis occaecat.
 
   - tags: []
     name: Cannot occur inside body elements or other topic

@@ -2,31 +2,43 @@
 {{ data['title'] }}
 ################################################################################
 
-.. container:: desc
+.. raw:: html
+   
+   <div class="desc">
 
-   {{ data['desc'] }}
+{{ data['desc'] }}
 
-.. container:: info
+.. raw:: html
 
-   {% set collections = data['collections'] %}
-   {% if collections %}
+   </div>
 
-   .. container:: collections
+.. raw:: html
+   
+   <div class="info">
 
-      Belongs to
+{% set collections = data['collections'] %}
+{% if collections %}
 
-   {% for col in collections %}
+.. raw:: html
+   
+   <div class="collections">
 
-      * :doc:`/{{ col }}`
+Belongs to
 
-   {% endfor %}
-   {% endif %}
+{% for col in collections %}
 
-   .. container:: docs
+* :doc:`/{{ col }}`
 
-      .. raw:: html
+{% endfor %}
+{% endif %}
 
-         <p><a href="{{ data['url'] }}" target="_blank">docs</a></p>
+.. raw:: html
+   
+   </div>{# .collections #}
+   
+   <p class="url"><a href="{{ data['url'] }}" target="_blank">docs</a></p>
+
+   </div>{# .info #}
 
 {% for example in data['examples'] %}
 {# EXAMPLE #}
@@ -39,38 +51,61 @@
 {% set tags = example.tags %}
 {% if tags %}
 
-.. container:: tags
+.. raw:: html
+   
+   <div class="tags">
 
 {% for tag in tags %}
 
-   * {{ tag }}
+* {{ tag }}
 
 {% endfor %}
+
+.. raw:: html
+   
+   </div>{#. tags #}
+
 {% endif %}
+
 {# .EXAMPLE TAGS #}
 
-.. container:: desc
+.. raw:: html
+   
+   <div class="desc">
 
-   {{ example.desc }}
+{{ example.desc }}
+
+.. raw:: html
+   
+   </div>
 
 {# EXAMPLE SNIPPET RENDERABLE IN THE DOCUMENT #}
 {% if example.source %}
 
-.. container:: snippet
-
-   .. container:: source
-
-      ::
-
-         {% for line in example.source.split('\n') %}
-         {{ line -}}
-         {% endfor %}
+.. raw:: html
    
-   .. container:: result
+   <div class="snippet">
+   <div class="source">
+
+::
+
+   {% for line in example.source.split('\n') %}
+   {{ line -}}
+   {% endfor %}
+
+.. raw:: html
    
-      {% for line in example.source.split('\n') %}
-      {{ line -}}
-      {% endfor %}
+   </div>{#. source #}
+   <div class="result">
+
+{% for line in example.source.split('\n') %}
+{{ line -}}
+{% endfor %}
+
+.. raw:: html
+   
+   </div>{#. result #}
+   </div>{#. snippet #}
 
 {% endif %}
 {# .EXAMPLE SNIPPET RENDERABLE IN THE DOCUMENT#}
@@ -79,27 +114,35 @@
 {% set source_file = example.source_file %}
 {% if source_file %}
 
-.. container:: snippet
+.. raw:: html
+   
+   <div class="snippet">
+   <div class="source">
 
-   .. container:: source
+.. include:: {{ source_file }}.rst
+   :literal:
 
-      .. include:: {{ source_file }}.rst
-         :literal:
-
-   .. container:: result-in-new-window
+.. raw:: html
+   
+   </div>{#. source #}
+   <div class="result-in-new-window">
       
-      :doc:`open example <{{ source_file }}>`
+:doc:`open example <{{ source_file }}>`
 
-      
-      {#
-      just a idea how to display output HTML as iframe
+{#
+just a idea how to display output HTML as iframe
 
-      .. raw:: html
-         
-         <iframe src="..{{ source_file }}.html">
-            To see the example result, your browser must support IFRAMEs.
-         </iframe>
-      #}
+.. raw:: html
+   
+   <iframe src="..{{ source_file }}.html">
+      To see the example result, your browser must support IFRAMEs.
+   </iframe>
+#}
+
+.. raw:: html
+   
+   </div>{#. result-in-a-new-window #}
+   </div>{#. snippet #}
 
 {% endif %}
 {# .EXAMPLE SNIPPET TO OPEN IN NEW DOCUMENT #}
@@ -125,9 +168,15 @@ Common issues
 {{ issue.name }}
 ================================================================================
 
-.. container:: desc
+.. raw:: html
+   
+   <div class="desc">
 
-   {{ issue.desc }}
+{{ issue.desc }}
+
+.. raw:: html
+   
+   </div>{#. desc #}
 
 {# .ISSUE #}
 {% endfor %}

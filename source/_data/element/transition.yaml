@@ -14,7 +14,6 @@ examples:
   - name: Transition is at least four ``-`` characters
     desc: |
       The syntax for a transition marker is a horizontal line of 4 or more repeated punctuation characters.
-    source_file: /example/transition1
     source: |
       Transition marker is 4 or more repeated ``-``.
 
@@ -27,7 +26,6 @@ examples:
       The result will be the same.
 
   - name: Requires blank lines before and after
-    source_file: /example/transition2
     source: |
       Para.
 
@@ -99,3 +97,24 @@ examples:
          ----------
 
          Para.
+
+  - name: Cannot be used in sidebar, topic, etc.
+    desc: |
+      Transition cannot appear inside some container elements like sidebar or topic.
+
+      .. code-block::
+         :class: bad
+
+         .. sidebar:: Transition
+         
+            cannot be used within some
+
+            ----------
+
+            elements like sidebar
+
+      The above will cause error
+
+      ::
+
+        WARNING: Unexpected section title or transition.
