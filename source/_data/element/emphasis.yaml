@@ -1,0 +1,20 @@
+title: emphasis
+
+desc: |
+  (Also known as *italic* or *cursive*.)
+
+  Cursive fonts mimic the style of human penmanship where the letters flow together. Letters may be joined or unjoined. The cursive handwriting style is functional and intended to be used for everyday writing. For more artistic styles, you will want to look at calligraphy or hand-lettering.
+
+collections:
+  - inline-elements
+
+url: "https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions"
+
+examples:
+  - name: "Requires title and content"
+    desc: |
+      admonition has strict syntax. You need to pass a title after ``admonition::`` (note the space after ``::``), and a content bellow the blank line.
+    source: |
+      .. admonition:: Generic admonitions has a title
+
+         A content follows under the blank line.

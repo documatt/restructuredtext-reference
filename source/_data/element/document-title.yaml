@@ -1,0 +1,27 @@
+title: document title
+desc: |
+  blalaaa
+collections:
+  - admonitions
+url: "https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions"
+examples:
+  - tags: []
+    name: "Content on the same line"
+    desc: "Short text can be typed right after ``attention::`` (note the space after ``::``)."
+    source: |
+      .. attention:: I'm attention
+
+  - tags: []
+    name: Every document should has a title
+    desc: |
+      For longer text more fits to put it the line bellow.
+
+      Document without a title causes various troubles. For example, when included in the :doc:`/element/toctree`, document without a title causes the following error:
+
+      ::
+
+        WARNING: toctree contains reference to document 'foo' that doesn't have a title: no link will be generated
+
+    source: |
+
+  

@@ -4,3 +4,6 @@ elements:
   - section
   - rubric
   - transition
+  - toctree
+  - contents
+  # - document-title
