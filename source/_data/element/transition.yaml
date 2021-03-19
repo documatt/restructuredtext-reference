@@ -1,0 +1,101 @@
+title: transition
+
+desc: |
+  (Also known as *divider* or *horizontal rule*, or *horizonal line*.)
+
+  Transitions separate body elements and section. They are commonly seen in novels, as a gap spanning one or more lines, with or without a ornament. For example, in HTML they correspond to the ``<hr>``.
+
+collections:
+  - parts
+
+url: "https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions"
+
+examples:
+  - name: Transition is at least four ``-`` characters
+    desc: |
+      The syntax for a transition marker is a horizontal line of 4 or more repeated punctuation characters.
+    source_file: /example/transition1
+    source: |
+      Transition marker is 4 or more repeated ``-``.
+
+      ----
+
+      But often you type more characters.
+
+      -----------------------------------------------
+
+      The result will be the same.
+
+  - name: Requires blank lines before and after
+    source_file: /example/transition2
+    source: |
+      Para.
+
+      ----------
+
+      Para.
+
+  - name: Cannot begin or end a section
+    desc: |
+      Transition cannot appear at the beginning or end of a section
+
+      .. code-block::
+         :class: bad
+
+         Section title
+         =============
+   
+         ----------
+   
+         Para.
+      
+      .. code-block::
+         :class: bad
+
+         Para.
+   
+         ----------
+   
+         Section title
+         =============
+
+  - name: Cannot begin or end a document
+    desc: |
+      Transition cannot appear at the beginning or end of a document
+
+      .. code-block::
+         :class: bad
+
+         ##############
+         Document title
+         ##############
+   
+         ----------
+   
+         Para.
+      
+      .. code-block::
+         :class: bad
+
+         ##############
+         Document title
+         ##############
+
+         Para.
+   
+         ----------
+
+  - name: Cannot be followed by another transition
+    desc: |
+      Two transitions may not be immediately adjacent.
+      
+      .. code-block::
+         :class: bad
+
+         Para.
+
+         ----------
+
+         ----------
+
+         Para.
