@@ -1,9 +1,20 @@
 title: toctree
 
 desc: |
-  toctree directive is the glue that constitute ``.rst`` document files into *table of contents (ToC)* of your whole documentation. By default, it also prints ToC at the location where used.
+  toctree directive is the glue that constitute ``.rst`` document files into *global* table of contents (ToC) of your whole documentation. By default, it also prints ToC at the location where used.
 
-  .. seealso:: If you want table of contents of the current document (not he whole documentation), see :doc:`/element/contents`.
+  .. L2
+
+  ********************
+  Global and local ToC
+  ********************
+
+  Many, but not all, Sphinx themes shows global table of contents in left sidebar next to the current document.
+
+  .. image:: /img/global-toc-in-sidebar.png
+     :width: 50%
+
+  If you want table of contents of the current document (not the whole documentation), see :doc:`/element/contents`.
 
 collections:
   - parts
@@ -112,6 +123,11 @@ examples:
 
         * Japan
         * South Korea
+
+      See the above illustrated:
+      
+      .. image:: /img/toctree-over-multiple-files.svg
+         :scale: 100%
 
   - name: All documents must belong to some toctree
     desc: |
