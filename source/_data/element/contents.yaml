@@ -1,18 +1,66 @@
 title: contents
 
 desc: |
-  admonition is |rst|'s so-called generic :doc:`admonition </admonitions>`. It is visually bold block often rendered in neutral colors. Unlike specific admonitions like :doc:`/element/danger`, :doc:`/element/note`, or :doc:`/element/tip`, generic admonition has a title and usually neutral appereance.
+  The contents directive searches the current document for :doc:`/element/section` and generates *local* table of contents at the place where used. The directive may appear anywhere but usually is at the top of the document.
+
+  .. L2
+
+  ********************
+  Global and local ToC
+  ********************
+  
+  Is ``contents`` what you really looking for? The directive's main purpose is to print a document's ToC in the document body, but many Sphinx themes has "on this page" sidebar that shows current document's ToC automatically.
+     
+  .. image:: /img/local-toc-in-sidebar.png
+     :width: 50%
+
+  If you want table of contents of the whole documentation (not the current document), see :doc:`/element/toctree`.
 
 collections:
   - parts
 
-url: "https://docutils.sourceforge.io/docs/ref/rst/directives.html#table-of-contents"
+url: https://docutils.sourceforge.io/docs/ref/rst/directives.html#table-of-contents
 
 examples:
-  - name: "Requires title and content"
+  - name: Local ToC with backlinks
     desc: |
-      admonition has strict syntax. You need to pass a title after ``admonition::`` (note the space after ``::``), and a content bellow the blank line.
+      In its simplest form, the contents directive generates local ToC where items are links to the particular section, and the default title text for your language ("Contents" in English).
     source: |
-      .. admonition:: Generic admonitions has a title
+      .. contents::
 
-         A content follows under the blank line.
+  - name: Explicit title
+    desc: To change a title, pass custom text as a directive argument right after ``contents::`` (note the space after ``::``).
+    source: |
+      .. contents:: Local table of contents
+
+  - name: Section depth
+    desc: |
+      The number of section levels to be printed. The default is unlimited depth (all section levels).
+    more: |
+      .. l3
+
+      Sample section
+      ==============
+
+      To show how
+      -----------
+
+      contents directive
+      ==================
+
+      works with section levels
+      -------------------------
+    source: |
+      .. contents::
+         :depth: 2
+
+  - name: Disable backlinks
+    desc: |
+      By default, contents turns sections into links pointing to the local ToC (thus the name "backlinks"). With ``:backlinks: none`` option, you can turn this off.
+
+      .. important:: Some Sphinx themes add backlinks automatically to all section headers, so the following example will not work.
+    source_file: /example/contents1
+
+  - name: No current document title
+    desc: By default, the contents directive prints all sections as sublist of document title. You might use ``:local:`` flag that will limit table of contents list to sections from current point in the document and bellow. If is contents with this flag used bellow the document title, it will skip it.
+    source_file: /example/contents2
