@@ -1,12 +1,5 @@
 {% for element in data['elements'] %}
 
-* {{ element }}
-
-{% endfor %}
-
-{% for element in data['elements'] %}
-
-.. datatemplate:yaml:: /_data/element/{{ element }}.yaml
-   :template: element.rst.jinja
+* :doc:`/element/{{ element }}`
 
 {% endfor %}

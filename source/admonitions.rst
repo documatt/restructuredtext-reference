@@ -4,6 +4,11 @@ Admonitions
 
 Admonitions are visually bold blocks like "tip", "note", "important". They can appear anywhere an ordinary body element can. Readers will appreciate if you spice up your text with admonitions like tip for extra information or warning to raise their attention.
 
+Admonition elements include:
+
+.. datatemplate:yaml:: /_data/collection/admonitions.yaml
+   :template: collection.rst.jinja
+
 Specific or generic?
 ********************
 
@@ -84,9 +89,3 @@ The following specific admonition markups are all valid. For example, attention 
   .. attention: I'm attention text
 
      that continues bellow after the blank line
-
-List of admonitions
-*******************
-
-.. datatemplate:yaml:: /_data/collection/admonitions.yaml
-   :template: collection.rst.jinja
