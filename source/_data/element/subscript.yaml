@@ -1,0 +1,28 @@
+title: subscript
+
+desc: |
+  Subscript role displays its text as subscript (with a lowered baseline using smaller text). Subscript is used in e.g., chemical formulas.
+
+collections:
+  - inline-elements
+
+url: https://docutils.sourceforge.io/docs/ref/rst/roles.html#subscript
+
+examples:
+  - name: Subscript syntax
+    desc: |
+      Subscript syntax itself is simple: ``:sub:`text as subscript```.
+    source: |
+      In vino veritas, in H\ :sub:`2`\ O sanitas.
+    more: |
+      .. note:: See bellow the meaning of awkward :samp:`\\\\{space}`.
+
+  - name: Requires whitespace or punctation around ``:sub:``
+    desc: |
+      The ``:sub:`` role requires whitespace or punctation around its text (as all roles). Without it, |rst| will not recognize a role name from the surrounding text.
+
+      Unfortunatelly, it is often not desired with subscripts and superscripts. As workaround, you have to backslash-escape whitespace before or after a role name. Backslash-espaced whitespace will be removed from the output document.
+    source: |
+      BAD: In vino veritas, in H:sub:`2`O sanitas.
+
+      OK: In vino veritas, in H\ :sub:`2`\ O sanitas.

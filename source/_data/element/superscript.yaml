@@ -1,0 +1,28 @@
+title: superscript
+
+desc: |
+  Superscript role displays its text as superscript (with a raised baseline using smaller text). Superscript is used in e.g., math equations.
+
+collections:
+  - inline-elements
+
+url: https://docutils.sourceforge.io/docs/ref/rst/roles.html#superscript
+
+examples:
+  - name: Superscript syntax
+    desc: |
+      Superscript syntax itself is simple: ``:sup:`text as subscript```.
+    source: |
+      The E = mc\ :sup:`2` explains everything.
+    more: |
+      .. note:: See bellow the meaning of awkward :samp:`\\\\{space}`.
+
+  - name: Requires whitespace or punctation around ``:sup:``
+    desc: |
+      The ``:sup:`` role requires whitespace or punctation around its text (as all roles). Without it, |rst| will not recognize a role name from the surrounding text.
+
+      Unfortunatelly, it is often not desired with subscripts and superscripts. As workaround, you have to backslash-escape whitespace before or after a role name. Backslash-espaced whitespace will be removed from the output document.
+    source: |
+      BAD: The E = mc:sup:`2` explains everything.
+
+      OK: The E = mc\ :sup:`2` explains everything.
