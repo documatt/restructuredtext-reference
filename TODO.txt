@@ -1,1 +1,3 @@
-todo: note visitors that examples may look different with different theme
+Note visitors that examples may look different with different theme.
+Add "Edit on GitLab" button.
+Licence under public domain (CC0, https://creativecommons.org/publicdomain/zero/1.0/).
