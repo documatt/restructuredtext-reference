@@ -1,3 +1,4 @@
-Note visitors that examples may look different with different theme.
-Add "Edit on GitLab" button.
-Licence under public domain (CC0, https://creativecommons.org/publicdomain/zero/1.0/).
+Note visitors that examples may look different with different theme. +text
+Add "Edit on GitLab" button. +theme
+Licence under public domain (CC0, https://creativecommons.org/publicdomain/zero/1.0/). +text
+Inline markup recognition gotchas (migrate from blog) +inline-elements
