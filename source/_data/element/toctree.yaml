@@ -126,8 +126,8 @@ examples:
 
       See the above illustrated:
       
-      .. image:: /img/toctree-over-multiple-files.svg
-         :scale: 100%
+      .. image:: /img/toctree-over-multiple-files.png
+         :width: 100%
 
   - name: All documents must belong to some toctree
     desc: |
