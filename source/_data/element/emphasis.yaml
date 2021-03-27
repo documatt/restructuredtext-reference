@@ -3,18 +3,22 @@ title: emphasis
 desc: |
   (Also known as *italic* or *cursive*.)
 
-  Cursive fonts mimic the style of human penmanship where the letters flow together. Letters may be joined or unjoined. The cursive handwriting style is functional and intended to be used for everyday writing. For more artistic styles, you will want to look at calligraphy or hand-lettering.
+  Emphasis element is for words that have a stressed emphasis compared to surrounding text. Emphasis is typically displayed in italic.
 
 collections:
   - inline-elements
 
-url: "https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions"
+url: https://docutils.sourceforge.io/docs/ref/rst/roles.html#emphasis
 
 examples:
-  - name: "Requires title and content"
+  - name: Emphasis syntax
     desc: |
-      admonition has strict syntax. You need to pass a title after ``admonition::`` (note the space after ``::``), and a content bellow the blank line.
+      Emphasis syntax is simple: wrap the text between two ``*``.
     source: |
-      .. admonition:: Generic admonitions has a title
+      Get out of bed *now*, John!
 
-         A content follows under the blank line.
+  - name: Alternative syntax
+    desc: |
+      Alternative to enclosing into ``*`` is to use a full role syntax: ``:emphasis:`text to emphasis```.
+    source: |
+      Get out of bed :emphasis:`now`, John!
