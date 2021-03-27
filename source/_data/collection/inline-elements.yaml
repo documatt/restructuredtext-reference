@@ -3,3 +3,4 @@ elements:
   - strong-emphasis
   - subscript
   - superscript
+  - inline-literal
