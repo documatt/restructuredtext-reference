@@ -3,20 +3,22 @@ title: strong emphasis
 desc: |
   (Also known as *bold*.)
 
-  Use bold fonts to emphasize text or to make a contrast between body and headline text. We have a huge selection of faux-bold and real bold fonts.
-
-  admonition is |rst|'s so-called generic :doc:`admonition </admonitions>`. It is visually bold block often rendered in neutral colors. Unlike specific admonitions like :doc:`/element/danger`, :doc:`/element/note`, or :doc:`/element/tip`, generic admonition has a title and usually neutral appereance.
+  Strong emphasis element is for words that have strong importance compared to surrounding text. Emphasis is typically displayed in bold font.
 
 collections:
   - inline-elements
 
-url: "https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions"
+url: https://docutils.sourceforge.io/docs/ref/rst/roles.html#strong
 
 examples:
-  - name: "Requires title and content"
+  - name: Strong emphasis syntax
     desc: |
-      admonition has strict syntax. You need to pass a title after ``admonition::`` (note the space after ``::``), and a content bellow the blank line.
+      Strong emphasis syntax is simple: wrap the text between two ``**``.
     source: |
-      .. admonition:: Generic admonitions has a title
-
-         A content follows under the blank line.
+      Before proceeding, **make sure you put on your safety goggles**.
+      
+  - name: Alternative syntax
+    desc: |
+      Alternative to enclosing into ``**`` is to use a full role syntax: ``:strong:`important text```.
+    source: |
+      Before proceeding, :strong:`make sure you put on your safety goggles`.
