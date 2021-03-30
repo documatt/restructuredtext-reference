@@ -4,3 +4,4 @@ elements:
   - subscript
   - superscript
   - inline-literal
+  - inline-image

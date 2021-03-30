@@ -5,6 +5,7 @@ desc: |
 
 collections:
   - parts
+  - body-elements
 
 url: "https://docutils.sourceforge.io/docs/ref/rst/directives.html#topic"
 

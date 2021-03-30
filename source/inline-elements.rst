@@ -2,7 +2,7 @@
 Inline elements
 ################################################################################
 
-Document part elements constitute overall organization of the document. For example, headings make up sections, topic and sidebar.
+Inline elements are part of the line of a text. They occupy only the space they need and they only may been seen inside parent :doc:`body element </body-elements>` like paragraph, bullet list, table, etc.
 
 Inline elements include:
 

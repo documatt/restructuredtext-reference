@@ -3,6 +3,7 @@ desc: |
   important is one of |rst|'s specific :doc:`admonitions </admonitions>`. They are all visually bold blocks often rendered in colors according to their type. Readers will appreciate if you spice up your text with admonitions like this for extra information or to raise their attention.
 collections:
   - admonitions
+  - body-elements
 url: "https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions"
 examples:
   - tags: []

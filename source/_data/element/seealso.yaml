@@ -4,6 +4,7 @@ desc: |
 collections:
   - admonitions
   - sphinx
+  - body-elements
 url: "https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-seealso"
 examples:
   - tags: []

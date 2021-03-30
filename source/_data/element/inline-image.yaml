@@ -1,0 +1,27 @@
+title: inline image
+
+desc: |
+  Inline images are used for showing small images as part of the line of a text - for example, an icons. They are similar to normal block-level :doc:`image </element/image>`.
+
+collections:
+  - inline-elements
+  - images
+
+url: https://docutils.sourceforge.io/docs/ref/rst/roles.html#literal
+
+examples:
+  - name: Inline image syntax
+    desc: |
+      Inline image has almost identical normal block-level :doc:`image </element/image>`
+    source: |
+      To search on your disk, use ``find`` command.
+
+  - name: Requires whitespace or punctation around
+    desc: |
+      The inline literal requires whitespace or punctation around its text (as all inline-level markup). Without the delimiter, |rst| will not recognize markup from a surrounding text.
+
+      Unfortunatelly, it is often not desired. As workaround, you have to backslash-escape whitespace before or after a role name. Backslash-espaced whitespace will be removed from the output document.
+    source: |
+      BAD: The class is similar to the remaining ``array``s.
+
+      OK: The class is similar to the remaining ``array``\ s.

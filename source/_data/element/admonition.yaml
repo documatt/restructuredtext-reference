@@ -3,6 +3,7 @@ desc: |
   admonition is |rst|'s so-called generic :doc:`admonition </admonitions>`. It is visually bold block often rendered in neutral colors. Unlike specific admonitions like :doc:`/element/danger`, :doc:`/element/note`, or :doc:`/element/tip`, generic admonition has a title and usually neutral appereance.
 collections:
   - admonitions
+  - body-elements
 url: "https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions"
 examples:
   - tags: []
