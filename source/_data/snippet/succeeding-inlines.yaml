@@ -1,0 +1,9 @@
+class: bad
+source: |
+  Be careful, use ``list``s and
+
+  love *re***Structured***Text*.
+result_html: |
+  <p>Be careful, use ``list``s and</p>
+
+  <p>love <em>re***Structured***Text</em>.</p>
