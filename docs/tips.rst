@@ -17,3 +17,10 @@ Or, repeat full problematic part::
        {{ line }}
        {% endfor %}
        </pre>
+
+Render to file
+**************
+
+::
+    
+    $ datatemplate render source/_templates/element.rst.jinja source/_data/element/inline-literal.yaml > test.rst
