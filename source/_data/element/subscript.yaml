@@ -15,14 +15,30 @@ examples:
     source: |
       In vino veritas, in H\ :sub:`2`\ O sanitas.
     more: |
-      .. note:: See bellow the meaning of awkward :samp:`\\\\{space}`.
+      .. note:: See bellow the meaning of awkward ``\<space>``.
 
-  - name: Requires whitespace or punctation around ``:sub:``
+  - name: No inline element nesting
     desc: |
-      The ``:sub:`` role requires whitespace or punctation around its text (as all roles). Without it, |rst| will not recognize a role name from the surrounding text.
+      The annoying |rst| limitation is  you :ref:`can't nest inline element <no-nested-inlines>` into another, e.g. subscript into strong emphasis, etc. Unfortunately, there is no workaround.
 
-      Unfortunatelly, it is often not desired with subscripts and superscripts. As workaround, you have to backslash-escape whitespace before or after a role name. Backslash-espaced whitespace will be removed from the output document.
+      Some examples of inline markup nesting that *don't work*:
+
+      .. datatemplate:yaml:: /_data/snippet/no-nested-inlines.yaml
+         :template: snippet.rst.jinja
+
+  - name: Requires whitespace or punctation around
+    desc: |
+      The subscript :ref:`requires whitespace or punctation around <inline-markup-recognition>` (as all inline-level elements). Without the delimination, |rst| will not recognize markup properly from a surrounding text.
+
+      The following examples miss delimination both at the and beginning and end. It will cause the ``WARNING: Inline interpreted text or phrase reference start-string without end-string.``.
+
+      .. code-block::
+         :class: bad
+
+         In vino veritas, in H:sub:`2`O sanitas.
+      
+      Fortunately, two inline elements without no whitespace/punctation in-between are possible with *escaping mechanism* using backslash-escaped whitespace (backslash is ``\``). Backslash-espaced whitespace will be removed from the output document.
+
+      Previous example fixed:
     source: |
-      BAD: In vino veritas, in H:sub:`2`O sanitas.
-
-      OK: In vino veritas, in H\ :sub:`2`\ O sanitas.
+      In vino veritas, in H\ :sub:`2`\ O sanitas.

@@ -22,3 +22,37 @@ examples:
       Alternative to enclosing into ``*`` is to use a full role syntax: ``:emphasis:`text to emphasis```.
     source: |
       Get out of bed :emphasis:`now`, John!
+  
+  - name: No inline element nesting
+    desc: |
+      The annoying |rst| limitation is  you :ref:`can't nest inline element <no-nested-inlines>` into another, e.g. emphasis into strong emphasis, etc. Unfortunately, there is no workaround.
+
+      Some examples of inline markup nesting that *don't work*:
+
+      .. datatemplate:yaml:: /_data/snippet/no-nested-inlines.yaml
+         :template: snippet.rst.jinja
+
+  - name: Requires whitespace or punctation around
+    desc: |
+      The emphasis :ref:`requires whitespace or punctation around <inline-markup-recognition>` (as all inline-level elements). Without the delimination, |rst| will not recognize markup properly from a surrounding text.
+
+      The following examples miss delimination at the end, the beginning, and at the both. They will cause the ``WARNING: Inline emphasis start-string without end-string``.
+
+      .. code-block::
+         :class: bad
+
+         Don't get out of bed *before*six.
+
+         Don't get out of bed*before* six.
+         
+         Don't get out of bed*before*six.
+      
+      Fortunately, two inline elements without no whitespace/punctation in-between are possible with *escaping mechanism* using backslash-escaped whitespace (backslash is ``\``). Backslash-espaced whitespace will be removed from the output document.
+
+      Previous example fixed:
+    source: |
+      Don't get out of bed *before*\ six.
+
+      Don't get out of bed\ *before* six.
+
+      Don't get out of bed\ *before*\ six.

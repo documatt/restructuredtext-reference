@@ -2,7 +2,7 @@
 Code examples
 ################################################################################
 
-Code example elements include:
+.. sidebar:: Code example elements
 
-.. datatemplate:yaml:: /_data/collection/code-examples.yaml
-   :template: collection.rst.jinja
+   .. datatemplate:yaml:: /_data/collection/code-examples.yaml
+      :template: collection.rst.jinja

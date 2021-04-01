@@ -16,13 +16,29 @@ examples:
       The E = mc\ :sup:`2` explains everything.
     more: |
       .. note:: See bellow the meaning of awkward :samp:`\\\\{space}`.
-
-  - name: Requires whitespace or punctation around ``:sup:``
+  
+  - name: No inline element nesting
     desc: |
-      The ``:sup:`` role requires whitespace or punctation around its text (as all roles). Without it, |rst| will not recognize a role name from the surrounding text.
+      The annoying |rst| limitation is  you :ref:`can't nest inline element <no-nested-inlines>` into another, e.g. superscript into strong emphasis, etc. Unfortunately, there is no workaround.
 
-      Unfortunatelly, it is often not desired with subscripts and superscripts. As workaround, you have to backslash-escape whitespace before or after a role name. Backslash-espaced whitespace will be removed from the output document.
+      Some examples of inline markup nesting that *don't work*:
+
+      .. datatemplate:yaml:: /_data/snippet/no-nested-inlines.yaml
+         :template: snippet.rst.jinja
+
+  - name: Requires whitespace or punctation around
+    desc: |
+      The inline literal :ref:`requires whitespace or punctation around <inline-markup-recognition>` (as all inline-level elements). Without the delimination, |rst| will not recognize markup properly from a surrounding text.
+
+      The following examples miss delimination at the beginning. It will even not cause any warning and prints ``The E = mc:sup:2 explains everything.``.
+
+      .. code-block::
+         :class: bad
+
+         The E = mc:sup:`2` explains everything.
+      
+      Fortunately, two inline elements without no whitespace/punctation in-between are possible with *escaping mechanism* using backslash-escaped whitespace (backslash is ``\``). Backslash-espaced whitespace will be removed from the output document.
+
+      Previous example fixed:
     source: |
-      BAD: The E = mc:sup:`2` explains everything.
-
-      OK: The E = mc\ :sup:`2` explains everything.
+      The E = mc\ :sup:`2` explains everything.

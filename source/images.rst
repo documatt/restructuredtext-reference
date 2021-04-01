@@ -2,9 +2,8 @@
 Images
 ################################################################################
 
-...
+.. sidebar:: Image elements
 
-Image elements include:
+   .. datatemplate:yaml:: /_data/collection/images.yaml
+      :template: collection.rst.jinja
 
-.. datatemplate:yaml:: /_data/collection/images.yaml
-   :template: collection.rst.jinja

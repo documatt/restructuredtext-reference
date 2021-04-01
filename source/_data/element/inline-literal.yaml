@@ -16,12 +16,42 @@ examples:
     source: |
       To search on your disk, use ``find`` command.
 
+  - name: Alternative syntax
+    desc: |
+      Alternative to enclosing into `````` is to use a full role syntax: ``:literal:`text```.
+    source: |
+      To search on your disk, use :literal:`find` command.
+
+  - name: No inline element nesting
+    desc: |
+      The annoying |rst| limitation is  you :ref:`can't nest inline element <no-nested-inlines>` into another, e.g. inline literal into strong emphasis, etc. Unfortunately, there is no workaround.
+
+      Some examples of inline markup nesting that *don't work*:
+
+      .. datatemplate:yaml:: /_data/snippet/no-nested-inlines.yaml
+         :template: snippet.rst.jinja
+
   - name: Requires whitespace or punctation around
     desc: |
-      The inline literal requires whitespace or punctation around its text (as all inline-level markup). Without the delimiter, |rst| will not recognize markup from a surrounding text.
+      The inline literal :ref:`requires whitespace or punctation around <inline-markup-recognition>` (as all inline-level elements). Without the delimination, |rst| will not recognize markup properly from a surrounding text.
 
-      Unfortunatelly, it is often not desired. As workaround, you have to backslash-escape whitespace before or after a role name. Backslash-espaced whitespace will be removed from the output document.
+      The following examples miss delimination at the end, the beginning, and at the both. They will cause the ``WARNING: Inline literal start-string without end-string``.
+
+      .. code-block::
+         :class: bad
+
+         Any ``array``s will suffice.
+
+         Any``array`` will suffice.
+
+         Any``array``s will suffice.
+      
+      Fortunately, two inline elements without no whitespace/punctation in-between are possible with *escaping mechanism* using backslash-escaped whitespace (backslash is ``\``). Backslash-espaced whitespace will be removed from the output document.
+
+      Previous example fixed:
     source: |
-      BAD: The class is similar to the remaining ``array``s.
+      Any ``array``\ s will suffice.
 
-      OK: The class is similar to the remaining ``array``\ s.
+      Any\ ``array`` will suffice.
+        
+      Any\ ``array``\ s will suffice.
