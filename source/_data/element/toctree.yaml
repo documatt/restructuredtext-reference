@@ -129,9 +129,9 @@ examples:
       .. image:: /img/toctree-over-multiple-files.png
          :width: 100%
 
-  - name: All documents must belong to some toctree
+  - name: All documents must belong to some toctree or be included
     desc: |
-      In the end, all documents must appear in some toctree. Actually, a document can be included in more toctree directives.
+      In the end, all documents must appear in some toctree or be included with ``include::`` directive. Actually, a document can be included in more toctree directives.
       
       If it is not, a reader can't reach the document via normal navigation (no links will refer to the document), thus you will get
 
