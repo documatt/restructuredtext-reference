@@ -8,15 +8,7 @@ Inline elements
 
 Inline elements are part of the text line. They occupy only the space they need and they only may appear inside parent :doc:`body element </body-elements>` like paragraph, bullet list, table, etc.
 
-Unfortunately, there are serious inline elements pitfalls, and it’s handy if you will know its limitations in advance.
-
-Inline and block elements
-*************************
-
-It is very intuitive to differentiate between inline and block elements.
-
-.. image:: /img/block-vs-inline-elements.png
-   :width: 75%
+.. include:: /inc/block-vs-inline.rst
 
 .. _no-nested-inlines:
 
