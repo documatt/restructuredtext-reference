@@ -1,7 +1,7 @@
 title: figure
 
 desc: |
-  ...todo..
+  Figure is formal more "formal" variant of :doc:`/element/image` used often in academic publications or text books. Unlike the image, it allows to add a caption, be referrenced from the other text, etc.
 
 collections:
   - body-elements
@@ -10,10 +10,90 @@ collections:
 url: https://docutils.sourceforge.io/docs/ref/rst/roles.html#literal
 
 examples:
-  - name: Inline image syntax
+  - name: Figure without a caption
     desc: |
-      Inline image is actually the on :doc:`/element/substitution`, i.e. it has two parts -- the definition and usage:
+      Basically, you need only to specify a file to display in the ``figure::`` directive argument (please note the space after ``::``). Without options, ``figure::`` directive displays image as-is, i.e. in original size.
     source: |
-        .. |favicon1| image:: /img/favicon.ico
+      .. figure:: /img/banana.png
+    more: |
+      Without a caption, figure looks the same as :doc:`/element/image`.
 
-        Click to the |favicon1| to return home.
+  - name: Figure with caption
+    desc: |
+      The main figure's advantage over :doc:`/element/image` is it supports a caption, a description of the figure. There must be a blank line before the properly indented caption text.
+    source: |
+      .. figure:: /img/banana.png
+
+         This is the caption of the figure.
+    more: |
+      .. tip:: Notice there is permalink to this image after the caption. In some themes, it may appear in different positions or after mouse hover the caption.
+      
+      The blank line is important, otherwise a caption is actually recognized as image file, and causes ``WARNING: image file not readable: img/netplan-schema.pngThisisthecaptionofthefigure.``. For example:
+
+      .. code-block::
+         :class: bad
+
+         .. figure:: /img/banana.png
+            This is the caption of the figure.
+      
+  - name: Caption is single paragraph
+    desc: |
+      The caption can be arbitrary long, but limited to a single paragraph.
+    source: |
+      .. figure:: /img/banana.png
+
+         Very very long caption. Lorem occaecat tempor incididunt culpa fugiat labore tempor veniam occaecat veniam reprehenderit eu Lorem magna. Do fugiat dolore sit fugiat sint enim laboris aute laboris proident. Veniam ullamco mollit exercitation cupidatat et nulla reprehenderit. Qui cillum in nulla reprehenderit pariatur proident officia cillum ut esse occaecat adipisicing. Et nulla fugiat sit consectetur velit enim anim dolor. Deserunt veniam esse duis do commodo cupidatat.
+    more: |
+      Caption can't be longer than the first paragraph. Another paragraph inside ``figure::`` directive content is actually a legend (see bellow).
+
+      .. code-block::
+         :class: bad
+
+         .. figure:: /img/banana.png
+
+            This is the caption of the figure because it's first paragraph.
+
+            But this is a legend (see bellow).
+
+  - name: Figure legend
+    desc: |
+      Figure directive also support a legend, arbitrary complex description of a figure. There must be a blank line before the legend.
+    source: |
+      .. figure:: /img/noticeboard.png
+         
+         This is the caption of the figure (a simple paragraph).
+         The legend consists of all elements after the caption.  In this
+         case, the legend consists of this paragraph and the following
+         table:
+
+         +------------------------------+-----------------------+
+         | Symbol                       | Meaning               |
+         +==============================+=======================+
+         | .. image:: /img/banana.png   | Banana                |
+         +------------------------------+-----------------------+
+         | .. image:: /img/rocket.png   | Rocket                |
+         +------------------------------+-----------------------+
+         | .. image:: /img/cupcake.png  | Cupcake               |
+         +------------------------------+-----------------------+
+         | .. image:: /img/pumkin.png   | Pumkin                |
+         +------------------------------+-----------------------+
+    more: |
+      Without a caption, figure looks the same as :doc:`/element/image`.
+
+  - name: Figure options
+    desc: |
+      Figure directive support all of the options of the :doc:`/element/image` directive - modifying dimensions or alignment.
+    source: |
+      Consectetur cillum ipsum laborum nisi id. Enim sunt fugiat eiusmod commodo proident culpa.
+      
+      .. figure:: /img/banana.png
+         :width: 25%
+      
+      .. figure:: /img/rocket.png
+         :height: 200px
+         :align: right
+
+      Do aliqua quis non fugiat reprehenderit ut veniam nulla qui quis proident consectetur dolor. Cupidatat occaecat est officia non eu. Cillum dolore elit incididunt ullamco reprehenderit adipisicing tempor aliqua quis minim ullamco qui Lorem magna. Est enim nostrud velit sit proident est ex fugiat. Deserunt nostrud consequat mollit ut occaecat veniam duis veniam duis aliqua laboris ipsum do. Cillum id nostrud sint elit reprehenderit incididunt velit consequat. Duis Lorem nisi ex elit ut et excepteur laboris ex ea cillum.
+
+      .. figure:: /img/pumkin.png
+         :scale: 150%

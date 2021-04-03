@@ -1,5 +1,10 @@
 Note visitors that examples may look different with different theme. +text
 Add "Edit on GitLab" button. +theme
 Licence under public domain (CC0, https://creativecommons.org/publicdomain/zero/1.0/). +text
-Inline markup recognition gotchas (migrate from blog) +inline-elements
-Do všech inline elementů: chyby jako "*permission *", nebo "Upload a new `import`_ as a`CSV file for import`_ in the required format" způsobí "without end-string"
+Inline markup recognition gotchas (migrate from blog) +inline_elements
+x Do všech inline elementů: chyby jako "*permission *", nebo "Upload a new `import`_ as a`CSV file for import`_ in the required format" způsobí "without end-string"
+DataURI instead of path to a file +image
+Add :alt: for visually impaired users +image +figure +inline-image
+How use :ref: in image's :target:? +sphinx +image
+:align: left, center, right +image
+How to reference a figure +figure

@@ -14,7 +14,7 @@ url: https://docutils.sourceforge.io/docs/ref/rst/directives.html#image
 examples:
   - name: Image syntax
     desc: |
-      Basically, you need only to specify image to display in the ``image::`` directive argument (please note the space after ``::``). Without options, ``image::`` directive displays image as-is, i.e. in original size.
+      Basically, you need only to specify a file to display in the ``image::`` directive argument (please note the space after ``::``). Without options, ``image::`` directive displays image as-is, i.e. in original size.
     source: |
         .. image:: /img/netplan-schema.png
 
