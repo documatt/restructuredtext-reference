@@ -1,4 +1,4 @@
 elements:
+  - image
   - inline-image
-  # - image
-  # - figure
+  - figure

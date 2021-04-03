@@ -28,12 +28,28 @@ examples:
 
   - name: Setting image options
     desc: |
-      Inline image accepts all options as their block :doc:`/element/image` counterpart. For example, you want limit icon height to fit into the line:
+      Inline image accepts all options as their block :doc:`/element/image` counterpart.
+      
+      For example, to limit icon height to fit text line height, use ``ex`` unit:
     source: |
       .. |favicon3| image:: /img/favicon.ico
-         :height: 1em
+         :height: 2ex
       
       Click to the |favicon3| to return home.
+    more: |
+      .. note::
+         
+         Resized images are by default links to original image files. This is usually undesired for inline images like icons. To prevent it for a particular icon, add ``:class: no-scaled-link`` option to the ``image::`` directive.
+
+         ::
+
+            .. |favicon3| image:: /img/favicon.ico
+               :height: 2ex
+               :class: no-scaled-link
+      
+            Click to the |favicon3| to return home.
+         
+         See more at :ref:`Resized image without a link to the original file <no-scaled-image-link>`.
 
   - name: No inline element nesting
     desc: |

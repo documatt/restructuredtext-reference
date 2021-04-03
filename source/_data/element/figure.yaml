@@ -1,0 +1,19 @@
+title: figure
+
+desc: |
+  ...todo..
+
+collections:
+  - body-elements
+  - images
+
+url: https://docutils.sourceforge.io/docs/ref/rst/roles.html#literal
+
+examples:
+  - name: Inline image syntax
+    desc: |
+      Inline image is actually the on :doc:`/element/substitution`, i.e. it has two parts -- the definition and usage:
+    source: |
+        .. |favicon1| image:: /img/favicon.ico
+
+        Click to the |favicon1| to return home.
