@@ -14,7 +14,7 @@ examples:
     desc: |
       Inline image is actually the on :doc:`/element/substitution`, i.e. it has two parts -- the definition and usage:
     source: |
-        .. |favicon1| image:: /img/favicon.ico
+        .. |favicon1| image:: /img/small-banana.png
 
         Click to the |favicon1| to return home.
 
@@ -24,7 +24,7 @@ examples:
     source: |
       The inline image |favicon2| usage may even come before the image definition.
 
-      .. |favicon2| image:: /img/favicon.ico
+      .. |favicon2| image:: /img/small-banana.png
 
   - name: Setting image options
     desc: |
@@ -32,7 +32,7 @@ examples:
       
       For example, to limit icon height to fit text line height, use ``ex`` unit:
     source: |
-      .. |favicon3| image:: /img/favicon.ico
+      .. |favicon3| image:: /img/small-banana.png
          :height: 2ex
       
       Click to the |favicon3| to return home.
@@ -43,7 +43,7 @@ examples:
 
          ::
 
-            .. |favicon3| image:: /img/favicon.ico
+            .. |favicon3| image:: /img/small-banana.png
                :height: 2ex
                :class: no-scaled-link
       
@@ -79,7 +79,7 @@ examples:
 
       Previous example fixed:
     source: |
-      .. |favicon4| image:: /img/favicon.ico
+      .. |favicon4| image:: /img/small-banana.png
          :height: 1em
 
       Click to the |favicon4|\ to return home.

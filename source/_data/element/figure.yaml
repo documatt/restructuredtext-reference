@@ -75,7 +75,7 @@ examples:
          +------------------------------+-----------------------+
          | .. image:: /img/cupcake.png  | Cupcake               |
          +------------------------------+-----------------------+
-         | .. image:: /img/pumkin.png   | Pumkin                |
+         | .. image:: /img/pumpkin.png  | Pumpkin               |
          +------------------------------+-----------------------+
     more: |
       Without a caption, figure looks the same as :doc:`/element/image`.
@@ -95,5 +95,5 @@ examples:
 
       Do aliqua quis non fugiat reprehenderit ut veniam nulla qui quis proident consectetur dolor. Cupidatat occaecat est officia non eu. Cillum dolore elit incididunt ullamco reprehenderit adipisicing tempor aliqua quis minim ullamco qui Lorem magna. Est enim nostrud velit sit proident est ex fugiat. Deserunt nostrud consequat mollit ut occaecat veniam duis veniam duis aliqua laboris ipsum do. Cillum id nostrud sint elit reprehenderit incididunt velit consequat. Duis Lorem nisi ex elit ut et excepteur laboris ex ea cillum.
 
-      .. figure:: /img/pumkin.png
+      .. figure:: /img/pumpkin.png
          :scale: 150%

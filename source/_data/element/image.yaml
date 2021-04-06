@@ -16,7 +16,7 @@ examples:
     desc: |
       Basically, you need only to specify a file to display in the ``image::`` directive argument (please note the space after ``::``). Without options, ``image::`` directive displays image as-is, i.e. in original size.
     source: |
-        .. image:: /img/netplan-schema.png
+        .. image:: /img/banana.png
 
   - name: Setting image width
     desc: |
@@ -24,7 +24,7 @@ examples:
 
       You can enter desired value either as `length unit <length units_>`_ (e.g., ``px``, ``em``), or as percentage of available width (e.g, ``50%``).
     source: |
-      .. image:: /img/netplan-schema.png
+      .. image:: /img/rocket.png
          :width: 50%
     more: |
       .. note:: For example, in the HTML output the file is not actually resized. New dimensions are modified just in the browser by applying CSS style like ``width: 50%;``.
@@ -35,7 +35,7 @@ examples:
 
       You must enter desired value as `length unit <length units_>`_ (e.g., ``px``, ``em``). Values without a unit (e.g., ``50``) are ``px`` for HTML output (e.g., ``50px``).
     source: |
-      .. image:: /img/netplan-schema.png
+      .. image:: /img/pumpkin.png
          :height: 250px
     more: |
       .. note:: Specifiying percentages causes a warning similar to the following:
@@ -49,7 +49,7 @@ examples:
   - name: Don't maintain aspect ration
     desc: If you specify either width or height, image will maintain its aspect ration. To turn it off, set both the ``:width:`` and ``:height:`` manually.
     source: |
-      .. image:: /img/netplan-schema.png
+      .. image:: /img/banana.png
          :width: 150px
          :height: 250px
 
@@ -59,14 +59,39 @@ examples:
 
       For example, the image ``netplan-schema.png`` has 1272x920 pixels. Setting ``:scale: 25%`` will set its width to 318px and height to 230px.
     source: |
-      .. image:: /img/netplan-schema.png
+      .. image:: /img/rocket.png
          :scale: 25%
+
+  - name: Image alignment
+    desc: |
+      With ``:align:`` option the image will float and have the text flow (wrap) around it. Possible values are ``left``, ``right``, and ``center``.
+    source: |
+      .. image:: /img/small-banana.png
+
+      Dolor occaecat tempor nostrud enim velit laborum anim. Ut veniam fugiat consectetur ea. Fugiat commodo elit reprehenderit non pariatur officia velit dolore consectetur minim irure ad ex.
+
+      .. image:: /img/small-banana.png
+         :align: left
+
+      Consectetur cillum ipsum laborum nisi id. Enim sunt fugiat eiusmod commodo proident culpa. Sit culpa deserunt cupidatat reprehenderit ex voluptate excepteur consectetur do. Proident est veniam occaecat reprehenderit occaecat Lorem eu. Sunt ad nisi velit tempor proident nulla exercitation voluptate exercitation.
+
+      .. image:: /img/small-banana.png
+         :align: right
+
+      Do aliqua quis non fugiat reprehenderit ut veniam nulla qui quis proident consectetur dolor. Aliqua duis laboris minim nisi occaecat tempor dolor et consectetur voluptate. Nulla nostrud fugiat occaecat nostrud qui labore duis nisi aute. Sint pariatur qui incididunt minim.
+
+      .. image:: /img/small-banana.png
+         :align: center
+
+      Do aliqua quis non fugiat reprehenderit ut veniam nulla qui quis proident consectetur dolor.Deserunt nisi quis amet veniam mollit adipisicing adipisicing fugiat ad dolor.
+    more: |
+       .. caution:: The exact behavior and appearance depends on ouput format and theme. For example, in the most HTML themes, the ``center`` value center the image but don't float (wrap).
   
   - name: Image as external link
     desc: |
       With ``:target:`` option, you transform an image into the link to an external URL.
     source: |
-      .. image:: /img/netplan-schema.png
+      .. image:: /img/pumpkin.png
          :width: 50%
          :target: https://techwriter.documatt.com
   
@@ -76,11 +101,11 @@ examples:
 
       Maybe you have noticed that images resized with ``:width:``, ``:height:``, or ``:scale:`` are links to the original image file. This is normally useful. If you want to turn it off, add ``:class: no-scaled-link`` option to the ``image::`` directive.
     source: |
-      .. image:: /img/netplan-schema.png
-         :width: 50%
+      .. image:: /img/cupcake.png
+         :width: 25%
 
-      .. image:: /img/netplan-schema.png
-         :width: 50%
+      .. image:: /img/cupcake.png
+         :width: 25%
          :class: no-scaled-link
     more: |
       .. important::
