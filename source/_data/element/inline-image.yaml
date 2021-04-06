@@ -14,17 +14,17 @@ examples:
     desc: |
       Inline image is actually the on :doc:`/element/substitution`, i.e. it has two parts -- the definition and usage:
     source: |
-        .. |favicon1| image:: /img/small-banana.png
+        .. |ico1| image:: /img/small-banana.png
 
-        Click to the |favicon1| to return home.
+        Click to the |ico1| to return home.
 
   - name: Image definition and usage
     desc: |
       The inline image usage may even come before the image definition.
     source: |
-      The inline image |favicon2| usage may even come before the image definition.
+      The inline image |ico2| usage may even come before the image definition.
 
-      .. |favicon2| image:: /img/small-banana.png
+      .. |ico2| image:: /img/small-banana.png
 
   - name: Setting image options
     desc: |
@@ -32,10 +32,10 @@ examples:
       
       For example, to limit icon height to fit text line height, use ``ex`` unit:
     source: |
-      .. |favicon3| image:: /img/small-banana.png
+      .. |ico3| image:: /img/small-banana.png
          :height: 2ex
       
-      Click to the |favicon3| to return home.
+      Click to the |ico3| to return home.
     more: |
       .. note::
          
@@ -43,11 +43,11 @@ examples:
 
          ::
 
-            .. |favicon3| image:: /img/small-banana.png
+            .. |ico3| image:: /img/small-banana.png
                :height: 2ex
                :class: no-scaled-link
       
-            Click to the |favicon3| to return home.
+            Click to the |ico3| to return home.
          
          See more at :ref:`Resized image without a link to the original file <no-scaled-image-link>`.
 
@@ -69,21 +69,21 @@ examples:
       .. code-block::
          :class: bad
 
-         Click to the |favicon|to return home.
+         Click to the |ico|to return home.
 
-         Click to the|favicon| to return home.
+         Click to the|ico| to return home.
 
-         Click to the|favicon|to return home.
+         Click to the|ico|to return home.
       
       Fortunately, two inline elements without no whitespace/punctation in-between are possible with *escaping mechanism* using backslash-escaped whitespace (backslash is ``\``). Backslash-espaced whitespace will be removed from the output document.
 
       Previous example fixed:
     source: |
-      .. |favicon4| image:: /img/small-banana.png
+      .. |ico4| image:: /img/small-banana.png
          :height: 1em
 
-      Click to the |favicon4|\ to return home.
+      Click to the |ico4|\ to return home.
 
-      Click to the\ |favicon4| to return home.
+      Click to the\ |ico4| to return home.
 
-      Click to the\ |favicon4|\ to return home.
+      Click to the\ |ico4|\ to return home.
