@@ -9,10 +9,6 @@ Admonitions
 
 Admonitions are visually bold blocks like "tip", "note", "important". They can appear anywhere an ordinary body element can. Readers will appreciate if you spice up your text with admonitions like tip for extra information or warning to raise their attention.
 
-.. raw:: html
-   
-   <div style="clear: both;"></div>
-
 Specific or generic?
 ********************
 
@@ -53,8 +49,8 @@ Any |rst| elements can be in admonition content. As always, you need only to kee
 .. datatemplate:yaml:: /_data/snippet/admonitions2.yaml
    :template: snippet.rst.jinja
 
-Content on the same line, or bellow :sup:`specific admonitions only`
-********************************************************************
+Content on the same line, or bellow
+***********************************
 
 You can't type specific admonition incorrectly. They accept its text in on the same line, bellow (optionally separated by a blank line), or on both places (strings are concatenated).
 

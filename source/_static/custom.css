@@ -1,48 +1,49 @@
+/* === Snippets ======================================================= */
+
 /* Snippet source and result displayed as columns */
 .snippet {
   display: flex;
+  margin: 1rem 0;
 }
 
+/* Split source/result to exact horizontal halves */
 .snippet .source,
 .snippet .result,
 .snippet .result-in-new-window {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  padding: 0.75rem;
   width: 50%;
 }
 
-/* Bad code examples */
+/* 1rem margin between source and result halves */
+.snippet .source {
+  margin-right: 0.5rem;
+}
+.snippet .result,
+.snippet .result-in-new-window {
+  margin-left: 0.5rem;
+}
 
-.bad [class^="highlight"] {
+/* === Bad code-blocks ================================================== */
+
+.bad [class^="highlight"] pre {
   border-color: red;
   background-color: #f5e4e4;
   position: relative;
 }
 
-.bad [class^="highlight"]::after {
-  content: "x";
+.bad [class^="highlight"] pre::before {
+  content: "☹︎";
+  font-size: 3em;
+  color: lightgray;
   position: absolute;
-  right: 1em;
-  top: 1em;
+  right: 0.2em;
+  top: 45%;
 }
 
-/* Maximally wide main content */
-.wy-nav-content {
-  max-width: initial;
-}
+/* === Sidebar with collection members ================================ */
 
-/* :sup: in headings show as tags */
-h1 sup,
-h2 sup,
-h3 sup,
-h4 sup,
-h5 sup,
-h6 sup {
-  background-color: yellowgreen;
-  border-radius: 0.25em;
-  padding: 0.25em;
-  font-size: 0.5em;
-  font-weight: normal;
+article section h1 + aside {
+  margin-top: 0 !important;
 }
