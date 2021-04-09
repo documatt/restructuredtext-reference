@@ -9,7 +9,7 @@ desc: |
   Global and local ToC
   ********************
 
-  Many, but not all, Sphinx themes shows global table of contents in left sidebar next to the current document.
+  Many, but not all, Sphinx themes show global table of contents in left sidebar next to the current document.
 
   .. image:: /img/global-toc-in-sidebar.png
      :width: 50%
