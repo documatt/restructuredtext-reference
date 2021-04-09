@@ -6,3 +6,15 @@ Code examples
 
    .. datatemplate:yaml:: /_data/collection/code-examples.yaml
       :template: collection.rst.jinja
+
+
+
+.. raw:: html
+
+      <video controls width="100%">
+           <source src="video/hard-wrapped-code-examples-problem.mp4" type="video/mp4">
+      </video>
+
+      <video controls width="100%">
+           <source src="video/hard-wrapped-code-examples-problem-fixed.mp4" type="video/mp4">
+      </video>
