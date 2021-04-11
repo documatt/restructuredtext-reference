@@ -2,6 +2,21 @@
 {{ data['title'] }}
 ################################################################################
 
+{# INFO SIDEBAR #}
+
+.. sidebar:: In collections
+
+{% set collections = data['collections'] %}
+{% for col in collections %}
+
+   * :doc:`/{{ col }}`
+
+{% endfor %}
+
+   See `official docs <{{ data['url'] }}>`_.
+
+{# .INFO SIDEBAR #}
+
 .. raw:: html
    
    <div class="desc">
@@ -11,34 +26,6 @@
 .. raw:: html
 
    </div>
-
-.. raw:: html
-   
-   <div class="info">
-
-{% set collections = data['collections'] %}
-{% if collections %}
-
-.. raw:: html
-   
-   <div class="collections">
-
-Belongs to
-
-{% for col in collections %}
-
-* :doc:`/{{ col }}`
-
-{% endfor %}
-{% endif %}
-
-.. raw:: html
-   
-   </div>{# .collections #}
-   
-   <p class="url"><a href="{{ data['url'] }}" target="_blank">docs</a></p>
-
-   </div>{# .info #}
 
 {% for example in data['examples'] %}
 {# EXAMPLE #}
