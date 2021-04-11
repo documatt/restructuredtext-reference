@@ -32,13 +32,14 @@ examples:
       .. datatemplate:yaml:: /_data/snippet/no-nested-inlines.yaml
          :template: snippet.rst.jinja
 
-  - name: Requires whitespace or punctation around
+  - name: Requires whitespace or punctuation around
     desc: |
-      The strong emphasis :ref:`requires whitespace or punctation around <inline-markup-recognition>` (as all inline-level elements). Without the delimination, |rst| will not recognize markup properly from a surrounding text.
+      The strong emphasis :ref:`requires whitespace or punctuation around <inline-markup-recognition>` (as all inline-level elements). Without the delimiter, |rst| will not recognize markup properly from a surrounding text.
 
-      The following examples miss delimination at the end, the beginning, and at the both. They will cause the ``WARNING: Inline strong start-string without end-string``.
+      The following examples miss a delimiter at the end, the beginning, and at the both. They will cause the ``WARNING: Inline strong start-string without end-string``.
 
       .. code-block::
+         :linenos:
          :class: bad
 
          Put on **safety goggles**before proceeding.
@@ -47,7 +48,7 @@ examples:
 
          Put on**safety goggles**before proceeding.
       
-      Fortunately, two inline elements without no whitespace/punctation in-between are possible with *escaping mechanism* using backslash-escaped whitespace (backslash is ``\``). Backslash-espaced whitespace will be removed from the output document.
+      Fortunately, two inline elements without no whitespace/punctuation in-between are possible with *escaping mechanism* using backslash-escaped whitespace (backslash is ``\``). Backslash-spaced whitespace will be removed from the output document.
 
       Previous example fixed:
     source: |

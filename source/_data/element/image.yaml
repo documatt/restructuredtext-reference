@@ -38,13 +38,11 @@ examples:
       .. image:: /img/pumpkin.png
          :height: 250px
     more: |
-      .. note:: Specifiying percentages causes a warning similar to the following:
-
-         ::
-   
-           WARNING: Error in "image" directive: invalid option value: (option:
-           "height"; value: '50%') not a positive measure of one of the following
-           units: "em" "ex" "px" "in" "cm" "mm" "pt" "pc" "".
+      .. caution::
+         
+         Specifying percentages causes a warning similar to the following error::
+         
+            WARNING: Error in "image" directive: invalid option value: (option: "height"; value: '50%') not a positive measure of one of the following units: "em" "ex" "px" "in" "cm" "mm" "pt" "pc" "".
 
   - name: Don't maintain aspect ration
     desc: If you specify either width or height, image will maintain its aspect ration. To turn it off, set both the ``:width:`` and ``:height:`` manually.
@@ -57,7 +55,7 @@ examples:
     desc: |
       Instead of setting width, height, or both, you might want to scale the image based on its original dimensions.
 
-      For example, the image ``netplan-schema.png`` has 1272x920 pixels. Setting ``:scale: 25%`` will set its width to 318px and height to 230px.
+      For example, the image ``rocket.png`` has 1272x920 pixels. Setting ``:scale: 25%`` will set its width to 318px and height to 230px.
     source: |
       .. image:: /img/rocket.png
          :scale: 25%
@@ -65,6 +63,7 @@ examples:
   - name: Image alignment
     desc: |
       With ``:align:`` option the image will float and have the text flow (wrap) around it. Possible values are ``left``, ``right``, and ``center``.
+    # cspell:disable
     source: |
       .. image:: /img/small-banana.png
 
@@ -84,8 +83,9 @@ examples:
          :align: center
 
       Do aliqua quis non fugiat reprehenderit ut veniam nulla qui quis proident consectetur dolor.Deserunt nisi quis amet veniam mollit adipisicing adipisicing fugiat ad dolor.
+    # cspell:enable
     more: |
-       .. caution:: The exact behavior and appearance depends on ouput format and theme. For example, in the most HTML themes, the ``center`` value center the image but don't float (wrap).
+       .. caution:: The exact behavior and appearance depends on output format and theme. For example, in the most HTML themes, the ``center`` value center the image but don't float (wrap).
   
   - name: Image as external link
     desc: |
@@ -93,7 +93,7 @@ examples:
     source: |
       .. image:: /img/pumpkin.png
          :width: 50%
-         :target: https://techwriter.documatt.com
+         :target: https://en.wikipedia.org/wiki/Pumpkin
   
   - name: Resized image without a link to the original file
     desc: |
@@ -109,4 +109,5 @@ examples:
          :class: no-scaled-link
     more: |
       .. important::
+      
          Scaled image link feature is added by Sphinx and not supported in pure Docutils. It is enabled by default. To turn it off completely, set `html_scaled_image_link <https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_scaled_image_link>`_ option to ``False`` in your ``conf.py``.

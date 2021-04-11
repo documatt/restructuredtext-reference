@@ -1,7 +1,7 @@
 title: figure
 
 desc: |
-  Figure is formal more "formal" variant of :doc:`/element/image` used often in academic publications or text books. Unlike the image, it allows to add a caption, be referrenced from the other text, etc.
+  Figure is formal more "formal" variant of :doc:`/element/image` used often in academic publications or text books. Unlike the image, it allows to add a caption, be referenced from the other text, etc.
 
 collections:
   - body-elements
@@ -25,12 +25,14 @@ examples:
       .. figure:: /img/banana.png
 
          This is the caption of the figure.
+    # cSpell:ignore Thisisthecaptionofthefigure
     more: |
       .. tip:: Notice there is permalink to this image after the caption. In some themes, it may appear in different positions or after mouse hover the caption.
       
-      The blank line is important, otherwise a caption is actually recognized as image file, and causes ``WARNING: image file not readable: img/netplan-schema.pngThisisthecaptionofthefigure.``. For example:
+      The blank line is important, otherwise a caption is actually recognized as image file, and causes ``WARNING: image file not readable: img/banana.pngThisisthecaptionofthefigure.``. For example:
 
-      .. code-block::
+      .. code-block:: rst
+         :linenos:
          :class: bad
 
          .. figure:: /img/banana.png
@@ -39,14 +41,17 @@ examples:
   - name: Caption is single paragraph
     desc: |
       The caption can be arbitrary long, but limited to a single paragraph.
+    # cspell:disable
     source: |
       .. figure:: /img/banana.png
 
          Very very long caption. Lorem occaecat tempor incididunt culpa fugiat labore tempor veniam occaecat veniam reprehenderit eu Lorem magna. Do fugiat dolore sit fugiat sint enim laboris aute laboris proident. Veniam ullamco mollit exercitation cupidatat et nulla reprehenderit. Qui cillum in nulla reprehenderit pariatur proident officia cillum ut esse occaecat adipisicing. Et nulla fugiat sit consectetur velit enim anim dolor. Deserunt veniam esse duis do commodo cupidatat.
+    # cspell:enable
     more: |
       Caption can't be longer than the first paragraph. Another paragraph inside ``figure::`` directive content is actually a legend (see bellow).
 
-      .. code-block::
+      .. code-block:: rst
+         :linenos:
          :class: bad
 
          .. figure:: /img/banana.png
@@ -64,25 +69,23 @@ examples:
          This is the caption of the figure (a simple paragraph).
          The legend consists of all elements after the caption.  In this
          case, the legend consists of this paragraph and the following
-         table:
+         images:
 
-         +------------------------------+-----------------------+
-         | Symbol                       | Meaning               |
-         +==============================+=======================+
-         | .. image:: /img/banana.png   | Banana                |
-         +------------------------------+-----------------------+
-         | .. image:: /img/rocket.png   | Rocket                |
-         +------------------------------+-----------------------+
-         | .. image:: /img/cupcake.png  | Cupcake               |
-         +------------------------------+-----------------------+
-         | .. image:: /img/pumpkin.png  | Pumpkin               |
-         +------------------------------+-----------------------+
+         .. image:: /img/banana.png
+         
+         .. image:: /img/rocket.png
+
+         .. image:: /img/cupcake.png
+
+         .. image:: /img/pumpkin.png
+
     more: |
       Without a caption, figure looks the same as :doc:`/element/image`.
 
   - name: Figure options
     desc: |
       Figure directive support all of the options of the :doc:`/element/image` directive - modifying dimensions or alignment.
+    # cspell:disable
     source: |
       Consectetur cillum ipsum laborum nisi id. Enim sunt fugiat eiusmod commodo proident culpa.
       
@@ -97,3 +100,4 @@ examples:
 
       .. figure:: /img/pumpkin.png
          :scale: 150%
+    # cspell:enable

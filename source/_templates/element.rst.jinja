@@ -47,28 +47,6 @@ Belongs to
 {{ example.name }}
 ********************************************************************************
 
-{# EXAMPLE TAGS #}
-{% set tags = example.tags %}
-{% if tags %}
-
-.. raw:: html
-   
-   <div class="tags">
-
-{% for tag in tags %}
-
-* {{ tag }}
-
-{% endfor %}
-
-.. raw:: html
-   
-   </div>{#. tags #}
-
-{% endif %}
-
-{# .EXAMPLE TAGS #}
-
 .. raw:: html
    
    <div class="desc">
@@ -87,7 +65,8 @@ Belongs to
    <div class="snippet">
    <div class="source">
 
-::
+.. code-block:: rst
+   :linenos:
 
    {% for line in example.source.split('\n') %}
    {{ line -}}

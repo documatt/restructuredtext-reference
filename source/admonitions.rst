@@ -19,7 +19,7 @@ Specific admonitions are often rendered in colors according to their severity. T
 .. datatemplate:yaml:: /_data/snippet/admonitions1.yaml
    :template: snippet.rst.jinja
 
-Generic admonition has a title and usually neutral appereance.
+Generic admonition has a title and usually neutral appearance.
 
 .. datatemplate:yaml:: /_data/snippet/admonitions2.yaml
    :template: snippet.rst.jinja
@@ -29,17 +29,17 @@ Admonitions in uppercase
 
 Admonition directives are case insensitive (like all directive and role names). Most documentation and book authors prefer typing directives and roles all in lowercase.
 
-::
+.. code-block:: rst
+   :linenos:
 
-   .. imporant:: Most reStructuredText authors write directives like note
-      in lowercase
+   .. important:: Most reStructuredText authors write directives like note in lowercase
 
 However, writing admonitions directive in uppercase corresponds with their “raise attention” objective.
 
-::
+.. code-block:: rst
+   :linenos:
 
-   .. IMPORTANT:: However writing admonitions uppercase can be considered as
-      reasonable exception to "everything-lowercase" rule.
+   .. IMPORTANT:: However writing admonitions uppercase can be considered as reasonable exception to "everything-lowercase" rule.
 
 Complex admonition
 ******************
@@ -56,36 +56,43 @@ You can't type specific admonition incorrectly. They accept its text in on the s
 
 .. danger:: On the opposite, :doc:`generic admonition has very strict syntax </element/admonition>`.
 
-The following specific admonition markups are all valid. For example, attention admonition::
+The following specific admonition markups are all valid. For example, attention admonition:
 
-  .. attention: I'm attention text on the same line
+.. code-block:: rst
+   :linenos:
 
-..
-
-::
-
-  .. attention:
-     I'm attention text on the line bellow
+   .. attention:: I'm attention text on the same line
 
 ..
 
-::
+.. code-block:: rst
+   :linenos:
 
-  .. attention:
+   .. attention::
+      I'm attention text on the line bellow
+
+..
+
+.. code-block:: rst
+   :linenos:
+
+   .. attention::
       
-     I'm attention text bellow separated by the blank line
+      I'm attention text bellow separated by the blank line
 
 ..
 
-::
+.. code-block:: rst
+   :linenos:
 
-  .. attention: I'm attention text
-     that continues bellow
+   .. attention:: I'm attention text
+      that continues bellow
 
 ..
 
-::
+.. code-block:: rst
+   :linenos:
 
-  .. attention: I'm attention text
+   .. attention:: I'm attention text
 
-     that continues bellow after the blank line
+      that continues bellow after the blank line

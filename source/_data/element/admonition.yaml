@@ -1,13 +1,16 @@
 title: admonition
+
 desc: |
-  admonition is |rst|'s so-called generic :doc:`admonition </admonitions>`. It is visually bold block often rendered in neutral colors. Unlike specific admonitions like :doc:`/element/danger`, :doc:`/element/note`, or :doc:`/element/tip`, generic admonition has a title and usually neutral appereance.
+  admonition is |rst|'s so-called generic :doc:`admonition </admonitions>`. It is visually bold block often rendered in neutral colors. Unlike specific admonitions like :doc:`/element/danger`, :doc:`/element/note`, or :doc:`/element/tip`, generic admonition has a title and usually neutral appearance.
+
 collections:
   - admonitions
   - body-elements
+  
 url: "https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions"
+
 examples:
-  - tags: []
-    name: "Requires title and content"
+  - name: "Requires title and content"
     desc: |
       admonition has strict syntax. You need to pass a title after ``admonition::`` (note the space after ``::``), and a content bellow the blank line.
     source: |
@@ -17,39 +20,42 @@ examples:
     more: |
       All the following variants are **invalid**:
 
-      .. code-block::
+      .. code-block:: rst
+         :linenos:
          :class: bad
       
          .. admonition:: title
       
-      .. code-block::
+      .. code-block:: rst
+         :linenos:
          :class: bad
 
          .. admonition::
             content
 
-      .. code-block::
+      .. code-block:: rst
+         :linenos:
          :class: bad
 
          .. admonition::
             
             content
       
-      .. code-block::
+      .. code-block:: rst
+         :linenos:
          :class: bad
       
          .. admonition:: title
             content
-  - tags: []
-    name: Directive name in uppercase
-    desc: "Directive name is case insensitive (like all directive and role names). Most documentation and book authors prefer typing directives and roles all in lowercase. However, writing directive name in uppercase corresponds with their “raise attention” objective and improves |rst| code readibility."
+
+  - name: Directive name in uppercase
+    desc: "Directive name is case insensitive (like all directive and role names). Most documentation and book authors prefer typing directives and roles all in lowercase. However, writing directive name in uppercase corresponds with their “raise attention” objective and improves |rst| code readability."
     source: |
       .. ADMONITION:: Uppercase title
         
-         However writing admonitions uppercase can be considered as
-         reasonable exception to "all-lowercase" rule.
-  - tags: []
-    name: Complex content
+         However writing admonitions uppercase can be considered as reasonable exception to "all-lowercase" rule.
+         
+  - name: Complex content
     desc: Any |rst| elements can be in admonition content. As always, you need only to keep correct indentation.
     source: |
       .. admonition:: Complex content

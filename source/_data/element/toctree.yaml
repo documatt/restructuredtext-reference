@@ -29,7 +29,7 @@ examples:
 
       Document name is basically a file path without extension. For example, file ``element/toctree.rst`` is document name ``element/toctree``. (Use forward slash ``/`` even on Windows.)
       
-      Almost everytime, you put toctree in a *root document* usually called ``index``\(``.rst``).
+      Almost every time, you put toctree in a *root document* usually called ``index``\(``.rst``).
     source_file: /example/toctree1
       
   - name: Relative and absolute document names
@@ -133,11 +133,7 @@ examples:
     desc: |
       In the end, all documents must appear in some toctree or be included with ``include::`` directive. Actually, a document can be included in more toctree directives.
       
-      If it is not, a reader can't reach the document via normal navigation (no links will refer to the document), thus you will get
-
-      ::
-
-        WARNING: document isn't included in any toctree
+      If it is not, a reader can't reach the document via normal navigation (no links will refer to the document), thus you will get ``WARNING: document isn't included in any toctree``.
   
   - name: Exclude a document from the ToC
     desc: |
@@ -154,9 +150,10 @@ examples:
       
       To open the excluded document in the output folder, you need to enter its path (or URL). For example, if previous document name is ``etc/excluded``, for HTML the output file will be ``etc/excluded.html``.
 
-  - name: Section numering
+  - name: Section numbering
+    # cspell:words toctrees
     desc: |
-      If you want section numering like "1. Europe", "1.2 Germany", "1.2.1 Berlin", use ``:numbered:`` option to tocree directive. It starts numbering on the toctree and its sub-toctrees. To auto-number all sections, use the option on the toctree in root document.
+      If you want section numbering like "1. Europe", "1.2 Germany", "1.2.1 Berlin", use ``:numbered:`` option to tocree directive. It starts numbering on the toctree and its sub-toctrees. To auto-number all sections, use the option on the toctree in root document.
     source_file: /example/toctree2
   
   - name: Hide ToC printing at the location where toctree used

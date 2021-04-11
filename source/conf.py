@@ -80,3 +80,5 @@ html_show_sourcelink = False
 # They are copied to the output directory. They will overwrite any existing file of the same name.
 # As these files are not meant to be built, they are automatically excluded from source files.
 html_extra_path = ['_extra']
+
+html_codeblock_linenos_style = 'inline'

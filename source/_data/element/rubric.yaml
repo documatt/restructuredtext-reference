@@ -9,11 +9,11 @@ collections:
 url: "https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions"
 
 examples:
-  - tags: []
-    name: "Rubric is simple"
+  - name: "Rubric is simple"
     desc: "Rubric title is typed right after ``rubric::`` (note the space after ``::``)."
+    # cspell:disable
     source: |
-      Adipisicing excepteur Lorem exercitation do.
+      excepteur excepteur Lorem exercitation do.
 
       .. rubric:: Rubric looks like a minor section title
 
@@ -22,6 +22,7 @@ examples:
       .. rubric:: But don't make up the table of contents
 
       Minim culpa aliqua culpa deserunt sint fugiat et.
+    # cspell:enable
   
   - name: Rubric or strong emphasis?
     desc: |
@@ -35,23 +36,24 @@ examples:
   
   - name: Rubric or minor level section?
     desc: |
-      Minor level :doc:`sections </element/section>` looks often almost as the rubric. Many tech writers prefer sections are more meaningul. They also provide easy navigation, because they make up the table of contents.
+      Minor level :doc:`sections </element/section>` looks often almost as the rubric. Many tech writers prefer sections are more meaningful. They also provide easy navigation, because they make up the table of contents.
     
       For example instead
 
-      ::
+      .. code-block:: rst
+         :linenos:
 
-          .. rubric:: Hidden files
+         .. rubric:: Hidden files
 
-             Linux doesn't have hidden files. There is only convention that...
+            Linux doesn't have hidden files. There is only convention that...
 
       you might use minor section
 
-      ::
+      .. code-block:: rst
+         :linenos:
 
-        Hidden files
-        ^^^^^^^^^^^^
+         Hidden files
+         ^^^^^^^^^^^^
 
-        Linux doesn't have hidden files. There is only convention that...
+         Linux doesn't have hidden files. There is only convention that...
     source_file: /example/rubric1
-

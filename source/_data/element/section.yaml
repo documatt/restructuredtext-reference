@@ -11,16 +11,14 @@ collections:
 url: "https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#sections"
 
 examples:
-  - tags: []
-    name: "Syntax"
+  - name: "Syntax"
     desc: |
       Section is text of title that is underlined, or both underlined and overlined, with same punctuation character. Decoration character is usually one of the following::
 
           = - ` : . ' " ~ ^ _ * + #
     source_file: /example/sections1
   
-  - tags: []
-    name: Recognizing section level
+  - name: Recognizing section level
     desc: |
       Level is importance of section in the document. For example, in HTML every section level has own element like ``<h1>``, ``<h2>`` and so on. |rst| has different approach.
 
@@ -34,8 +32,7 @@ examples:
       If above example each decoration style is used just once. First style will  become level 1, second level 2 and so on. If decoration style is used once again later, it's still the same level. 
     source_file: /example/sections2
 
-  - tags: []
-    name: Section convetions
+  - name: Section conventions
     desc: |
       This flexibility is difficult at writing time to remember what style is what  level. Therefore almost all |rst| tech-writers adhere the following prevalence convention (we used it in above examples too).
 
@@ -95,6 +92,7 @@ issues:
 
       .. code-block::
          :class: bad
+         :linenos:
 
          #########################
          Correct length decoration
@@ -113,38 +111,37 @@ issues:
 
       .. code-block::
          :class: bad
+         :linenos:
 
-          ================
-          Will cause error
+         ================
+         Will cause error
       
-      and will cause
-
-      ::
-
-          Missing matching underline for section title overline.
+      and will cause ``WARNING: Missing matching underline for section title overline.``.
   
   - name: Under- and overline section are different levels
     desc: |
       Decoration style is couple of used character + underline or overline. The following decoration styles (and levels) are thus different:
 
-      ::
+      .. code-block::
+         :linenos:
 
-        ################################
-        Level 1 is under- and over-lined
-        ################################
-
-        ********************************
-        Level 2 is under- and over-lined
-        ********************************
-
-        Level 3 because it's only overlined
-        ***********************************
+         ################################
+         Level 1 is under- and over-lined
+         ################################
+ 
+         ********************************
+         Level 2 is under- and over-lined
+         ********************************
+ 
+         Level 3 because it's only overlined
+         ***********************************
   
   - name: Section on multiple single lines
     desc: |
       Multiline section titles are actually recognized by |rst| as paragraph so no error or warning is thrown.
 
       .. code-block::
+         :linenos:
          :class: bad
 
          This is not multiline

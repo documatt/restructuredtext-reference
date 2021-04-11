@@ -1,38 +1,41 @@
 title: seealso
+
 desc: |
   seealso is one of specific :doc:`admonitions </admonitions>`. They are all visually bold blocks often rendered in colors according to their type. seealso is suitable to list links to another documents or external URLs.
+
 collections:
   - admonitions
   - sphinx
   - body-elements
+
 url: "https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-seealso"
+
 examples:
-  - tags: []
-    name: "Content on the same line"
+  - name: "Content on the same line"
     desc: "Short text can be typed right after ``seealso::`` (note the space after ``::``)."
     source: |
-      .. seealso:: List of :doc:`/admonitions`.
-  - tags: []
-    name: Content bellow the directive
+      .. seealso:: List of admonitions.
+
+  - name: Content bellow the directive
     desc: "For longer text more fits to put it the line bellow."
     source: |
       .. seealso::
-         List of :doc:`/admonitions`.
-  - tags: []
-    name: Content bellow the directive with blank line
+         List of admonitions.
+
+  - name: Content bellow the directive with blank line
     desc: "Optionally, you can place a blank line before the text itself."
     source: |
       .. seealso::
 
-         List of :doc:`/admonitions`.
-  - tags: []
-    name: Directive name in uppercase
-    desc: "Directive name is case insensitive (like all directive and role names). Most documentation and book authors prefer typing directives and roles all in lowercase. However, writing directive name in uppercase corresponds with their “raise attention” objective and improves |rst| code readibility."
+         List of admonitions.
+
+  - name: Directive name in uppercase
+    desc: "Directive name is case insensitive (like all directive and role names). Most documentation and book authors prefer typing directives and roles all in lowercase. However, writing directive name in uppercase corresponds with their “raise attention” objective and improves |rst| code readability."
+
     source: |
-      .. SEEALSO:: However writing admonitions uppercase can be considered as
-         reasonable exception to "all-lowercase" rule.
-  - tags: []
-    name: Complex content
+      .. SEEALSO:: However writing admonitions uppercase can be considered as reasonable exception to "all-lowercase" rule.
+      
+  - name: Complex content
     desc: Any |rst| elements can be in admonition content. As always, you need only to keep correct indentation.
     source: |
       .. seealso::

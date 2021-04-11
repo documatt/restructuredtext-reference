@@ -12,9 +12,9 @@ collections:
 url: "https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-seealso"
 
 examples:
-  - tags: []
-    name: "Requires title and content"
+  - name: "Requires title and content"
     desc: "Sidebars need a title right after ``sidebar::`` (note the space after ``::``) and a content bellow the blank line."
+    # cspell:disable
     source: |
       Sunt cupidatat do esse incididunt cupidatat incididunt nisi anim sint elit incididunt laborum nisi enim. Dolore culpa veniam nulla ullamco. Laboris veniam dolor minim magna.
 
@@ -23,10 +23,11 @@ examples:
          Sidebar content is bellow.
 
       Cillum reprehenderit dolor fugiat irure aute qui commodo excepteur ea incididunt minim voluptate ex anim. Enim irure dolor nulla laboris sint deserunt ex. Dolor fugiat officia dolor qui nisi ex. Sit pariatur duis duis exercitation consequat sint. Nisi labore amet eiusmod consequat excepteur excepteur. Voluptate incididunt dolore pariatur nisi eu ipsum amet ullamco id consectetur commodo in velit. Pariatur tempor officia minim officia.
+    # cspell:enable
 
-  - tags: []
-    name: "Optional subtitle"
+  - name: "Optional subtitle"
     desc: "You might pass an optional subtitle with the ``subtitle`` option."
+    # cspell:disable
     source: |
       Sunt cupidatat do esse incididunt cupidatat incididunt nisi anim sint elit incididunt laborum nisi enim. Dolore culpa veniam nulla ullamco. Laboris veniam dolor minim magna.
 
@@ -36,23 +37,24 @@ examples:
          Sidebar content is bellow.
 
       Cillum reprehenderit dolor fugiat irure aute qui commodo excepteur ea incididunt minim voluptate ex anim. Enim irure dolor nulla laboris sint deserunt ex. Dolor fugiat officia dolor qui nisi ex. Sit pariatur duis duis exercitation consequat sint. Nisi labore amet eiusmod consequat excepteur excepteur. Voluptate incididunt dolore pariatur nisi eu ipsum amet ullamco id consectetur commodo in velit.
+    # cspell:enable
 
-  - tags: []
-    name: Directive name in uppercase
+  - name: Directive name in uppercase
     desc: |
-      Directive name is case insensitive (like all directive and role names). Most documentation and book authors prefer typing directives and roles all in lowercase. However, writing directive name in uppercase corresponds with their “raise attention” objective and improves |rst| code readibility."
+      Directive name is case insensitive (like all directive and role names). Most documentation and book authors prefer typing directives and roles all in lowercase. However, writing directive name in uppercase corresponds with their “raise attention” objective and improves |rst| code readability."
 
-      ::
+      .. code-block:: rst
+         :linenos:
     
-          .. SIDEBAR:: Sidebar title
-            
-             Writing sidebar in uppercase can be considered as
-             reasonable exception to "all-lowercase" rule.
+         .. SIDEBAR:: Sidebar title
+           
+            Writing sidebar in uppercase can be considered as
+            reasonable exception to "all-lowercase" rule.
 
-  - tags: []
-    name: Complex content
+  - name: Complex content
     desc: |
       Any |rst| elements can be in sidebar content. As always, you need only to keep correct indentation.
+    # cspell:disable
     source: |
       Sunt cupidatat do esse incididunt cupidatat incididunt nisi anim sint elit incididunt laborum nisi enim. Dolore culpa veniam nulla ullamco. Laboris veniam dolor minim magna.
 
@@ -68,3 +70,4 @@ examples:
              $ nano ~/.bash_aliases
 
       Cillum reprehenderit dolor fugiat irure aute qui commodo excepteur ea incididunt minim voluptate ex anim. Enim irure dolor nulla laboris sint deserunt ex. Dolor fugiat officia dolor qui nisi ex. Sit pariatur duis duis exercitation consequat sint. Nisi labore amet eiusmod consequat excepteur excepteur. Voluptate incididunt dolore pariatur nisi eu ipsum amet ullamco id consectetur commodo in velit. Pariatur tempor officia minim officia. Pariatur occaecat nulla enim occaecat incididunt. Elit ea ea excepteur deserunt in et. Consequat amet non ullamco laborum laborum veniam enim est. In anim dolor aliqua esse irure officia sunt reprehenderit nulla fugiat. Adipisicing magna consequat ullamco qui.
+    # cspell:enable

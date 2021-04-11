@@ -1,37 +1,39 @@
 title: attention
+
 desc: |
   attention is one of |rst|'s specific :doc:`admonitions </admonitions>`. They are all visually bold blocks often rendered in colors according to their type. Readers will appreciate if you spice up your text with admonitions like this for extra information or to raise their attention.
+
 collections:
   - admonitions
   - body-elements
+
 url: "https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions"
+
 examples:
-  - tags: []
-    name: "Content on the same line"
+  - name: "Content on the same line"
     desc: "Short text can be typed right after ``attention::`` (note the space after ``::``)."
     source: |
       .. attention:: I'm attention
-  - tags: []
-    name: Content bellow the directive
+
+  - name: Content bellow the directive
     desc: "For longer text more fits to put it the line bellow."
     source: |
       .. attention::
          I'm attention
-  - tags: []
-    name: Content bellow the directive with blank line
+
+  - name: Content bellow the directive with blank line
     desc: "Optionally, you can place a blank line before the text itself."
     source: |
       .. attention::
 
          I'm attention
-  - tags: []
-    name: Directive name in uppercase
-    desc: "Directive name is case insensitive (like all directive and role names). Most documentation and book authors prefer typing directives and roles all in lowercase. However, writing directive name in uppercase corresponds with their “raise attention” objective and improves |rst| code readibility."
+
+  - name: Directive name in uppercase
+    desc: "Directive name is case insensitive (like all directive and role names). Most documentation and book authors prefer typing directives and roles all in lowercase. However, writing directive name in uppercase corresponds with their “raise attention” objective and improves |rst| code readability."
     source: |
-      .. ATTENTION:: However writing admonitions uppercase can be considered as
-         reasonable exception to "all-lowercase" rule.
-  - tags: []
-    name: Complex content
+      .. ATTENTION:: However writing admonitions uppercase can be considered as reasonable exception to "all-lowercase" rule.
+      
+  - name: Complex content
     desc: Any |rst| elements can be in admonition content. As always, you need only to keep correct indentation.
     source: |
       .. attention::

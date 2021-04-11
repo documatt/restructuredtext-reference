@@ -1,7 +1,7 @@
 title: transition
 
 desc: |
-  (Also known as *divider* or *horizontal rule*, or *horizonal line*.)
+  (Also known as *divider* or *horizontal rule*, or *horizontal line*.)
 
   Transitions separate body elements and section. They are commonly seen in novels, as a gap spanning one or more lines, with or without a ornament. For example, in HTML they correspond to the ``<hr>``.
 
@@ -15,13 +15,13 @@ examples:
     desc: |
       The syntax for a transition marker is a horizontal line of 4 or more repeated punctuation characters.
     source: |
-      Transition marker is 4 or more repeated ``-``.
+      Transition marker is 4 or more repeated ``-`` character.
 
       ----
 
       But often you type more characters.
 
-      -----------------------------------------------
+      --------------------------
 
       The result will be the same.
 
@@ -58,11 +58,7 @@ examples:
 
          Para.
       
-      Both above examples causes
-
-      ::
-
-        WARNING: unknown document: body element
+      Both above examples causes ``WARNING: unknown document: body element``.
 
   - name: Cannot be followed by another transition
     desc: |
@@ -79,11 +75,7 @@ examples:
 
          Para.
 
-      Above example causes
-
-      ::
-
-        WARNING: At least one body element must separate transitions; adjacent transitions are not allowed.
+      Above example causes ``WARNING: At least one body element must separate transitions; adjacent transitions are not allowed``.
 
   - name: Cannot be used in sidebar, topic, etc.
     desc: |
@@ -100,8 +92,4 @@ examples:
 
             elements like sidebar
 
-      The above will cause error
-
-      ::
-
-        WARNING: Unexpected section title or transition.
+      The above will cause error ``WARNING: Unexpected section title or transition``.

@@ -11,3 +11,16 @@ How use :ref: in image's :target:? +sphinx +image
 How to reference a figure +figure
 Check with Grammarly @beforeMerge
 Are all links valid and correct? @beforeMerge
+Don't manual wrap in code examples, keep it on CSS +code-examples
+Syntax highlighted inline code (see https://sphinxawesome.xyz/demo/code/#syntax-highlighted-inline-code) +code-examples
+include:: with :literal: +code-examples
+Showing diffs with pygment lexer +code-examples
+
+Chybné odsazení těla direktivy způsobí WARNING: Error in "code-block" directive: maximum 1 argument(s) allowed, 2 supplied.
+
+      .. code-block:: rst
+         :linenos:
+
+        ################################
+        Level 1 is under- and over-lined
+        ################################

@@ -10,10 +10,10 @@ collections:
 url: "https://docutils.sourceforge.io/docs/ref/rst/directives.html#topic"
 
 examples:
-  - tags: []
-    name: "Requires title and content"
+  - name: "Requires title and content"
     desc: |
       You need to pass a title after ``topic::`` (note the space after ``::``), and a content bellow the blank line.
+    # cspell:disable
     source: |
       Nisi occaecat sit reprehenderit incididunt fugiat in sunt. Velit irure et amet aliquip sunt.
 
@@ -22,13 +22,13 @@ examples:
          Pariatur nulla officia culpa qui commodo cupidatat ea elit aliqua cillum amet elit.
           
       Dolor adipisicing irure et sit ullamco veniam aliqua. Non laboris duis veniam quis occaecat.
+    # cspell:enable
 
-  - tags: []
-    name: Cannot occur inside body elements or other topic
+  - name: Cannot occur inside body elements or other topic
     desc: |
       topic may only occur anywhere a section or transition may occur. Nesting topic inside body element or topic, e.g.:
 
-      .. code-block::
+      .. code-block:: rst
          :class: bad
          
          .. topic:: Topic
@@ -39,30 +39,25 @@ examples:
       
                Another topic content.
     
-      causes the following error
+      causes the following error ``WARNING: The "topic" directive may not be used within topics or body elements``.
 
-      ::
-
-        WARNING: The "topic" directive may not be used within topics or body elements.
-
-  - tags: []
-    name: Directive name in uppercase
+  - name: Directive name in uppercase
     desc: |
-      Directive name is case insensitive (like all directive and role names). Most documentation and book authors prefer typing directives and roles all in lowercase. However, writing directive name in uppercase corresponds with their “raise attention” objective and improves |rst| code readibility.
+      Directive name is case insensitive (like all directive and role names). Most documentation and book authors prefer typing directives and roles all in lowercase. However, writing directive name in uppercase corresponds with their “raise attention” objective and improves |rst| code readability.
 
-      .. code-block::
+      .. code-block:: rst
+         :linenos:
         
          .. TOPIC::
         
-            Writing topic uppercase can be considered as
-            reasonable exception to "all-lowercase" rule.
+            Writing topic uppercase can be considered as reasonable exception to "all-lowercase" rule.
 
-  - tags: []
-    name: Complex content
+  - name: Complex content
     desc: |
       Any |rst| elements can be in topic content. As always, you need only to keep correct indentation.
 
-      .. code-block::
+      .. code-block:: rst
+         :linenos:
 
          .. topic:: Complex content
              

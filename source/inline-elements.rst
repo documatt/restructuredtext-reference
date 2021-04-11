@@ -35,24 +35,24 @@ You can’t also intentionally "highlight" a text in certain color. Colors are r
 
 .. _inline-markup-recognition:
 
-Requires whitespace or punctation around
-****************************************
+Requires whitespace or punctuation around
+*****************************************
 
-Any inline element must be precceded and succeeded by one or more whitespace (e.g., the space character) or punctation character (e.g., ``!``, ``?`` or ``.``). In other words: **an inline element needs to be separated from another one from both sides with whitespace or punctation, therefore two inline elements cannot be appear immediately succeeding**.
+Any inline element must be preceded and succeeded by one or more whitespace (e.g., the space character) or punctuation character (e.g., ``!``, ``?`` or ``.``). In other words: **an inline element needs to be separated from another one from both sides with whitespace or punctuation, therefore two inline elements cannot be appear immediately succeeding**.
 
-Choosing whitespace or puncation as a separator is clever. Usually you don't have to think of it. Most inline elements are naturally separated by the space, period, exlamation or question mark at the end of sentence.
+Choosing whitespace or punctuation as a separator is clever. Usually you don't have to think of it. Most inline elements are naturally separated by the space, period, exclamation or question mark at the end of sentence.
 
-However, there are edge cases. If you forgot this rule and place two adjecent inline elements without surrinding separator, they can't be properly recognized:
+However, there are edge cases. If you forgot this rule and place two adjacent inline elements without surrounding separator, they can't be properly recognized:
 
 .. image:: img/succeeding-inlines.png
    :width: 75%
 
-First line causes ``WARNING: Inline literal start-string without end-string.``. It is helpful. The second line is more tricky because doesn't generates a warning and :literal:`**re***Structured***Text*` is silently misinterpreted as one long emphasis word - strong emphasised :literal:`**Structured**` is not recognized!
+First line causes ``WARNING: Inline literal start-string without end-string.``. It is helpful. The second line is more tricky because doesn't generates a warning and :literal:`**re***Structured***Text*` is silently misinterpreted as one long emphasis word - strong emphasized :literal:`**Structured**` is not recognized!
 
 .. datatemplate:yaml:: /_data/snippet/succeeding-inlines.yaml
    :template: snippet.rst.jinja
 
-Fortunately, two inline elements without no whitespace/punctation in-between are possible with *escaping mechanism* using backslash-escaped whitespace (backslash is ``\``). Backslash-espaced whitespace will be removed from the output document.
+Fortunately, two inline elements without no whitespace/punctuation in-between are possible with *escaping mechanism* using backslash-escaped whitespace (backslash is ``\``). Backslash-spaced whitespace will be removed from the output document.
 
 Previous example fixed:
 
