@@ -17,18 +17,10 @@
 
 {# .INFO SIDEBAR #}
 
-.. raw:: html
-   
-   <div class="desc">
-
 {{ data['desc'] }}
 
-.. raw:: html
-
-   </div>
-
+{# EXAMPLES #}
 {% for example in data['examples'] %}
-{# EXAMPLE #}
 
 ********************************************************************************
 {{ example.name }}
@@ -117,9 +109,8 @@ just a idea how to display output HTML as iframe
 {{ example.more }}
 {% endif %}
 
-{# .EXAMPLE #}
 {% endfor %}
-
+{# .EXAMPLES #}
 
 {% set issues = data['issues'] %}
 {% if issues %}
