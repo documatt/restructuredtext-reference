@@ -16,7 +16,7 @@ sys.path.insert(0, os.path.abspath('./_extensions'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'Sphinx Reference Project'
+project = 'reStructuredText and Sphinx Guide'
 copyright = '2020, Matt from Documatt'
 author = 'Matt from Documatt'
 

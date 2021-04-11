@@ -11,9 +11,9 @@ collections:
 url: "https://docutils.sourceforge.io/docs/ref/rst/directives.html#specific-admonitions"
 
 examples:
-  - name: Transition is at least four ``-`` characters
+  - name: Transition syntax
     desc: |
-      The syntax for a transition marker is a horizontal line of 4 or more repeated punctuation characters.
+      The syntax for a transition marker is a horizontal line of 4 or more repeated punctuation characters - typically ``-`` character.
     source: |
       Transition marker is 4 or more repeated ``-`` character.
 
