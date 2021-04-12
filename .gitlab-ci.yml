@@ -1,0 +1,19 @@
+pages:
+  # only:
+  #   - master
+  image: python:3.6
+  variables:
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  cache:
+    paths:
+      - .cache/pip
+      - venv
+  script:
+    # GitLab CI has problem with links. "--copies" use copy of Python executable instead of links
+    - python3 -m venv --copies venv
+    - source venv/bin/activate
+    - pip3 install -r requirements.txt
+    - sphinx-build -b html -q source public
+  artifacts:
+    paths:
+      - public
