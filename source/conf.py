@@ -28,7 +28,8 @@ author = 'Matt from Documatt'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinxcontrib.datatemplates'
+    'sphinxcontrib.datatemplates',
+    'sphinx_sitemap'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -87,6 +88,6 @@ html_show_sourcelink = False
 # robots.txt or .htaccess. Relative paths are taken as relative to the configuration directory.
 # They are copied to the output directory. They will overwrite any existing file of the same name.
 # As these files are not meant to be built, they are automatically excluded from source files.
-html_extra_path = ['_extra']
+html_extra_path = ['_extra', 'robots.txt']
 
 html_codeblock_linenos_style = 'inline'

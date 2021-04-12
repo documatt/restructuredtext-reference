@@ -1,3 +1,4 @@
 sphinx==3.5.4
 sphinxcontrib.datatemplates==0.7.2
 sphinx_documatt_theme==0.0.5
+sphinx-sitemap
