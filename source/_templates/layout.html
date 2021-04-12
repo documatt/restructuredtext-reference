@@ -1,0 +1,23 @@
+{% extends "!layout.html" %}
+
+{% block navbarmenu %}
+    <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-end">
+            <a class="navbar-item" href="https://documatt.com">Documatt</a>
+            <a class="navbar-item" href="https://snippets.documatt.com">Snippets</a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-active" href="https://restructuredtext.documatt.com">
+                    reStructuredText
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" href="https://techwriter.documatt.com">
+                        Tech writer blog
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock navbarmenu %}

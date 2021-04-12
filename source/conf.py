@@ -16,7 +16,7 @@ sys.path.insert(0, os.path.abspath('./_extensions'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'reStructuredText and Sphinx Guide'
+project = 'reStructuredText and Sphinx Reference'
 copyright = '2020, Matt from Documatt'
 author = 'Matt from Documatt'
 
@@ -53,6 +53,14 @@ rst_epilog = '''
 # html_theme = "learn_basic"
 
 html_theme = "sphinx_documatt_theme"
+
+html_logo = '../logo.svg'
+
+html_theme_options = {
+    'motto': 'Example based gentle reference of the reStructuredText and <a href="https://www.sphinx-doc.org">Sphinx</a> syntax, directives, roles and common issues. It demonstrates almost all the markup making it also good for testing Sphinx themes. Free and <a href="https://gitlab.com/documatt/sphinx-reference-project">open-source</a>.',
+    'header_logo_style': 'width: 4rem;',
+    'footer_logo_style': 'width: 4rem;',
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
