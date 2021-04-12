@@ -1,4 +1,9 @@
+#########################
+Guide to |rst| and Sphinx
+#########################
+
 .. include:: ../README.rst
+   :start-line: 6
 
 .. toctree::
    :caption: Collections
@@ -13,10 +18,3 @@
    :glob:
 
    element/*
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

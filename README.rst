@@ -4,13 +4,18 @@
 |project|
 #########
 
-.. image:: logo.png
+.. image:: logo.svg
    :align: right
+   :width: 20%
 
 Example based gentle reference of the reStructuredText and Sphinx syntax, directives, roles and common issues. It demonstrates almost all the markup making it also good for testing Sphinx themes. Free and open-source.
 
 * source code: https://gitlab.com/documatt/sphinx-demo-project where issues and contributions are welcome
 * homepage: https://restructuredtext.documatt.com
+
+*****
+About
+*****
 
 |project| is a showcase of `Sphinx <https://www.sphinx-doc.org/>`_ documentation project possibilities. It demonstrates almost all standard reStructuredText syntax with Sphinx additions.
 

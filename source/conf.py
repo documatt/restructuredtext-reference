@@ -17,7 +17,7 @@ sys.path.insert(0, os.path.abspath('./_extensions'))
 # -- Project information -----------------------------------------------------
 
 project = 'reStructuredText and Sphinx Reference'
-copyright = '2020, Matt from Documatt'
+copyright = '2021, Matt from Documatt'
 author = 'Matt from Documatt'
 
 
@@ -42,7 +42,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.rst']
 
 highlight_language = 'none'
 
-rst_epilog = '''
+rst_epilog = f'''
+.. |project| replace:: {project}
 .. |rst| replace:: reStructuredText
 '''
 
@@ -52,6 +53,10 @@ rst_epilog = '''
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 # html_theme = "learn_basic"
+
+html_baseurl = 'https://restructuredtext.documatt.com'
+
+html_title = project
 
 html_theme = "sphinx_documatt_theme"
 
@@ -72,9 +77,9 @@ html_css_files = ['custom.css']
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
-html_additional_pages = {
-    'index': 'index.html',
-}
+# html_additional_pages = {
+#     'index': 'index.html',
+# }
 
 # Enables sectionauthor and codeauthor roles
 show_authors = True
