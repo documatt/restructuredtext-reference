@@ -21,3 +21,16 @@
         </div>
     </div>
 {% endblock navbarmenu %}
+
+{% block coverrightcolumn %}
+    <a href="https://twitter.com/documattcom?ref_src=twsrc%5Etfw"
+       class="twitter-follow-button" data-show-count="false">Follow us</a>
+    <script async src="https://platform.twitter.com/widgets.js"
+            charset="utf-8"></script>
+{% endblock %}
+
+{% block rightsidebar %}
+    <div class="mb-5"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+    {{ super() }}
+{% endblock %}
