@@ -34,3 +34,27 @@
 
     {{ super() }}
 {% endblock %}
+
+{% block extrafooter %}
+    {{ super() }}
+    <!-- Default Statcounter code for
+    restructuredtext.documatt.com
+    http://restructuredtext.documatt.com -->
+    <script type="text/javascript">
+    var sc_project=12511645; 
+    var sc_invisible=1; 
+    var sc_security="74ed3944"; 
+    </script>
+    <script type="text/javascript"
+    src="https://www.statcounter.com/counter/counter.js"
+    async></script>
+    <noscript><div class="statcounter"><a title="web counter"
+    href="https://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="https://c.statcounter.com/12511645/0/74ed3944/1/"
+    alt="web counter"></a></div></noscript>
+    <!-- End of Statcounter Code -->
+
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?theme=grey&tracking=1&thirdparty=1&always=1&hideDetailsBtn=1&showPolicyLink=1&privacyPage=https%3A%2F%2Fdocumatt.com%2Fabout%2Flegal%2Fprivacy%2F"></script>
+{% endblock %}
