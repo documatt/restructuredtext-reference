@@ -10,7 +10,7 @@
 
 Example based gentle reference of the reStructuredText and Sphinx syntax, directives, roles and common issues. It demonstrates almost all the markup making it also good for testing Sphinx themes. Free and open-source.
 
-* source code: https://gitlab.com/documatt/sphinx-demo-project where issues and contributions are welcome
+* source code: https://gitlab.com/documatt/sphinx-reference-project where issues and contributions are welcome
 * homepage: https://restructuredtext.documatt.com
 
 *****
