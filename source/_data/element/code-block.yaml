@@ -1,0 +1,30 @@
+title: code-block
+
+desc: |
+  Code examples blocks with code-block offers much more options that plain :doc:`literal-block`. It allows syntax highlighting, line numbering, emphasis particular lines and using captions.
+
+collections:
+  - code-examples
+
+examples:
+  - name: Emphasising lines
+    desc: |
+      With ``:emphasize-lines:`` you can highlight one or more lines.
+
+      .. important:: Only non-empty lines are counted. For example, the following snippet we want to actually highlight line 8, but skipping two empty lines it is ``:emphasize-lines: 6``.
+
+    source: |
+      .. code-block::
+         :emphasize-lines: 6
+
+         $ make gettext
+
+         $ cd _build/gettext
+
+         $ ls
+         calling.pot
+         configuration.pot
+         constdata.pot
+         glossary.pot
+         index.pot
+         ...

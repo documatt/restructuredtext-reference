@@ -8,7 +8,6 @@ Code examples
       :template: collection.rst.jinja
 
 
-
 .. raw:: html
 
       <video controls width="100%">
