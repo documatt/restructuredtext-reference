@@ -17,11 +17,11 @@ Example based gentle reference of the reStructuredText and Sphinx syntax, direct
 About
 *****
 
-|project| is a showcase of `Sphinx <https://www.sphinx-doc.org/>`_ documentation project possibilities. It demonstrates almost all standard reStructuredText syntax with Sphinx additions.
+|project| is a showcase of `Sphinx <https://www.sphinx-doc.org/>`_ documentation projects possibilities. It demonstrates almost all standard reStructuredText syntax with Sphinx additions.
 
 |project| is useful if you are creating a `custom Sphinx HTML theme <https://techwriter.documatt.com/sphinx-theming/index.html>`_ and want to be sure your theme style doesn't forgot to style some part of Sphinx generated HTML.
 
-.. tip:: Checkout also my `Sphinx Themes Collection <https://documatt.gitlab.io/sphinx-themes/>`_ suitable both for documentation and prose.
+.. tip:: You can read about my other Sphinx documentation tools and tech writing tips, tricks, and insights at `Tech writer at work <https://techwriter.documatt.com>`_ blog.
 
 *********
 Impressum

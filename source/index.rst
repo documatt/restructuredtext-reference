@@ -18,3 +18,11 @@ Guide to |rst| and Sphinx
    :glob:
 
    element/*
+
+.. toctree::
+   :caption: Etc.
+   :hidden:
+   :glob:
+
+   etc/*
+
