@@ -17,7 +17,9 @@ On-disk file structure
            element/ - YAMLs descripting elements
            snippets/ - YAMLs describing snippets
        _static/ - theme overrides
-       _templates/ - sphinxcontrib.datatemplates' templates
+       _templates/ - sphinxcontrib.datatemplates' templates (.rst.jinja),
+                     Sphinx Theme templates (.html), and
+                     description YAML templates (.yaml.jinja)
        element/ - RST skeletons for elements
        example/ - RST examples that must be open in the
                   the separate page (e.g., examples of sections)
@@ -63,7 +65,15 @@ YAML schema for element:
 
 Example:
 
-.. literalinclude:: _data/element/hint.yaml
+.. literalinclude:: /_data/element/hint.yaml
+
+How to add element
+==================
+
+#. Create element description ``_data/element/<element-name>.yaml``. Template is at ``_templates/element.yaml.jinja``.
+#. Add element to ``collections`` attribute in YAML. Items are filenames (without suffix) from ``source/_data/_collection``.
+#. Add element to list in ``_data/collection/<collection-name>.yaml``. Items are filenames (without suffix) of element skeleton.
+#. Create element skeleton ``element/<element-name>.yaml``. Template is at ``_templates/element-skeleton.rst.jinja``.
 
 ***********
 Collections
@@ -90,6 +100,12 @@ Collection on the disk comprises:
 
     .. datatemplate:json:: /_data/element/<collection-name>.yaml
        :template: collection.rst.jinja
+
+How to add collection
+=====================
+
+#. Create collection description ``_data/collection/<collection-name>.yaml``. Template is at ``_templates/collection.yaml.jinja``. Content are elements belonging to it.
+#. Create element skeleton ``<collection-name>.yaml``. Template is at ``_templates/collection-skeleton.rst.jinja``.
 
 ***************
 Tips and tricks
