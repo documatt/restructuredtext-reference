@@ -31,7 +31,7 @@ examples:
         ``text``
         :literal:`text`
 
-      In the basic syntax, backslashes are preserved. In alternative syntax backslash is an escaping character. Backslash alone escape immediatelly following character, e.g. a space. To use backslash, you must escaped it too which results in doubled backslash.
+      In the basic syntax, backslashes are preserved. In alternative syntax backslash is the escaping character. Backslash alone escape immediatelly following character, e.g. the space. To use backslash, you must escaped it too, which results in doubled backslash.
 
     source: |
       Not escaped backslashes:
