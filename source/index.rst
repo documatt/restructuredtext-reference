@@ -3,7 +3,7 @@ Guide to |rst| and Sphinx
 #########################
 
 .. include:: ../README.rst
-   :start-line: 6
+   :start-after: everything bellow will be included to source/index.rst
 
 .. toctree::
    :caption: Collections

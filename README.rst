@@ -4,6 +4,8 @@
 |project|
 #########
 
+.. everything bellow will be included to source/index.rst
+
 .. image:: logo.svg
    :align: right
    :width: 20%
