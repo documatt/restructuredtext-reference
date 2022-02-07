@@ -1,4 +1,4 @@
-Inline and block elements
+Block and inline elements
 *************************
 
 |rst| contains two types of elements: block and inline-level.

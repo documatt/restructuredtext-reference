@@ -1,15 +1,47 @@
 title: literal-block
 
 desc: |
-  Sunt dolor non ullamco nostrud ullamco officia fugiat elit incididunt pariatur aute pariatur cupidatat consequat. Qui aliquip aute voluptate mollit. Commodo quis pariatur id velit nulla.
+  To show code example as :ref:`block element <syntax-block-vs-inline>`, the most basic is the literal block. They are fast to type, but doesn't support advanced features as a syntax highlighting.
 
 collections:
   - code-examples
 
+url: https://docutils.sourceforge.io/docs/ref/doctree.html#literal-block
+
 examples:
-  - name: Empty line between ``::`` and content
+  - name: Basic (expanded) syntax
     desc: |
-      Pariatur do elit magna non qui deserunt enim officia. Ad duis pariatur anim ex reprehenderit aliqua duis magna.
+      Simplest are literal blocks that has two colons ``::`` followed by a indented content block. Above and bellow content must be the blank line. Block ends with a line back at to the original indentation.
+
+    source: |
+      Build project with
+
+      ::
+
+        $ make html
+
+      command.
+
+  - name: Paragraph followed by literal block
+    desc: |
+      Ending paragraph with colon followed by code example is very common. |rst| has special literal block syntax for it. If it find two colons at the end of paragraph followed by intented block, colons will replaced with one.
+    source: |
+      Build project with::
+
+        $ make html
+
+      command.
+
+  - name: Consider alternatives
+    desc: |
+      The plain literal block may not suffice for you. For example, if you want syntax highlighting, see :doc:`/element/code-block`.
+
+      Others may prefer putting code examples into external files and including them with :doc:`/element/literalinclude`.
+
+issues:
+  - name: No empty line between ``::`` and content
+    desc: |
+      Omitting separatating content from ``::`` with empty line
 
       .. code-block::
          :class: bad
@@ -17,8 +49,26 @@ examples:
          ::
             $ make html
 
-      Previous example fixed:
-    source: |
-      ::
+      not cause any warning because it actually creates definition-list with term ":" and definition "$ make html".
+
+      Fixed:
+
+      .. code-block::
+
+         ::
 
             $ make html
+
+  - name: No indented content
+    desc: |
+      Another typical issue is to forgot indent content after ``::``. Fortunatelly, Sphinx will tell you with ``WARNING: Literal block expected; none found.``.
+
+      For example, the result will be three plain paragraphs:
+
+      .. datatemplate:yaml:: /_data/snippet/literal-block-no-indented-content1.yaml
+         :template: snippet.rst.jinja
+
+      But interesting accidents can happen. For example, the following snippet will cause the same warning and, because the function is now normal text, it creates the definition-list that has, by coincedence, the same syntax as the function (a term followed by ``:``, newline, and an indented definition).
+
+      .. datatemplate:yaml:: /_data/snippet/literal-block-no-indented-content2.yaml
+         :template: snippet.rst.jinja
