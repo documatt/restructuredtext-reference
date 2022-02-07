@@ -12,7 +12,7 @@ url: https://docutils.sourceforge.io/docs/ref/rst/roles.html#literal
 examples:
   - name: Inline image syntax
     desc: |
-      Inline image is actually the on :doc:`/element/substitution`, i.e. it has two parts -- the definition and usage:
+      Inline image is actually the substitution, i.e. it has two parts -- the definition and usage:
     source: |
         .. |ico1| image:: /img/small-banana.png
 
@@ -29,16 +29,16 @@ examples:
   - name: Setting image options
     desc: |
       Inline image accepts all options as their block :doc:`/element/image` counterpart.
-      
+
       For example, to limit icon height to fit text line height, use ``ex`` unit:
     source: |
       .. |ico3| image:: /img/small-banana.png
          :height: 2ex
-      
+
       Click to the |ico3| to return home.
     more: |
       .. note::
-         
+
          Resized images are by default links to original image files. This is usually undesired for inline images like icons. To prevent it for a particular icon, add ``:class: no-scaled-link`` option to the ``image::`` directive.
 
          ::
@@ -46,9 +46,9 @@ examples:
             .. |ico3| image:: /img/small-banana.png
                :height: 2ex
                :class: no-scaled-link
-      
+
             Click to the |ico3| to return home.
-         
+
          See more at :ref:`Resized image without a link to the original file <no-scaled-image-link>`.
 
   - name: No inline element nesting
@@ -74,7 +74,7 @@ examples:
          Click to the|ico| to return home.
 
          Click to the|ico|to return home.
-      
+
       Fortunately, two inline elements without no whitespace/punctuation in-between are possible with *escaping mechanism* using backslash-escaped whitespace (backslash is ``\``). Backslash-escaped whitespace will be removed from the output document.
 
       Previous example fixed:
