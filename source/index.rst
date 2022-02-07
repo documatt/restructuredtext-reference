@@ -6,6 +6,16 @@ Guide to |rst| and Sphinx
    :start-after: everything bellow will be included to source/index.rst
 
 .. toctree::
+   :caption: Intro
+   :hidden:
+   :glob:
+
+   intro/syntax
+   intro/directives-roles
+   intro/sphinx-docutils
+   intro/tools
+
+.. toctree::
    :caption: Collections
    :hidden:
    :glob:
@@ -25,4 +35,3 @@ Guide to |rst| and Sphinx
    :glob:
 
    etc/*
-
