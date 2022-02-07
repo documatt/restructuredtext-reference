@@ -16,6 +16,14 @@ examples:
     source: |
       To search on your disk, use ``find`` command.
 
+  - name: Tricky examples
+    desc: |
+      Writing inline literals containing ````` seems complicated, but it is not if you realize everything starting `````` and ending `````` is rendered as-is - no need to doubling ``````, no backslash-escaping ``\```, etc.
+    source: |
+      Single backtick: `````
+
+      Double backtick: ``````
+
   - name: Alternative syntax
     desc: |
       Alternative to enclosing into `````` is to use a full role syntax: ``:literal:`text```.
@@ -35,13 +43,13 @@ examples:
 
     source: |
       Not escaped backslashes:
-      :literal:`C:\Users\matt\AppData\`
+      :literal:`C:\Users\matt\AppData`
 
       Properly escaped:
-      :literal:`C:\\Users\\matt\\AppData\\`
+      :literal:`C:\\Users\\matt\\AppData`
 
       Or, easiest use classic syntax:
-      ``C:\Users\matt\AppData\``
+      ``C:\Users\matt\AppData``
 
       That preserves backslashes as-is
       ``text \ and \ backslashes``
