@@ -3,6 +3,8 @@ title: parsed-literal-block
 desc: |
   Sunt dolor non ullamco nostrud ullamco officia fugiat elit incididunt pariatur aute pariatur cupidatat consequat. Qui aliquip aute voluptate mollit. Commodo quis pariatur id velit nulla.
 
+url: https://docutils.sourceforge.io/docs/ref/rst/directives.html#parsed-literal-block
+
 collections:
   - code-examples
 
