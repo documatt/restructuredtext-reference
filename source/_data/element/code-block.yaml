@@ -6,6 +6,8 @@ desc: |
 collections:
   - code-examples
 
+url: https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-code-block
+
 examples:
   - name: Emphasising lines
     desc: |
