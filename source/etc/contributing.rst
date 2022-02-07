@@ -105,7 +105,8 @@ How to add collection
 =====================
 
 #. Create collection description ``_data/collection/<collection-name>.yaml``. Template is at ``_templates/collection.yaml.jinja``. Content are elements belonging to it.
-#. Create element skeleton ``<collection-name>.yaml``. Template is at ``_templates/collection-skeleton.rst.jinja``.
+#. Create element skeleton ``<collection-name>.rst``. Template is at ``_templates/collection-skeleton.rst.jinja``.
+#. Add element skeleton to toctree in master document ``index.rst``.
 
 ***************
 Tips and tricks

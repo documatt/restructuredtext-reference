@@ -27,20 +27,20 @@
 ********************************************************************************
 
 .. raw:: html
-   
+
    <div class="desc">
 
 {{ example.desc }}
 
 .. raw:: html
-   
+
    </div>
 
 {# EXAMPLE SNIPPET RENDERABLE IN THE DOCUMENT #}
 {% if example.source %}
 
 .. raw:: html
-   
+
    <div class="snippet">
    <div class="source">
 
@@ -52,7 +52,7 @@
    {% endfor %}
 
 .. raw:: html
-   
+
    </div>{#. source #}
    <div class="result">
 
@@ -61,7 +61,7 @@
 {% endfor %}
 
 .. raw:: html
-   
+
    </div>{#. result #}
    </div>{#. snippet #}
 
@@ -73,7 +73,7 @@
 {% if source_file %}
 
 .. raw:: html
-   
+
    <div class="snippet">
    <div class="source">
 
@@ -81,24 +81,24 @@
    :literal:
 
 .. raw:: html
-   
+
    </div>{#. source #}
    <div class="result-in-new-window">
-      
+
 :doc:`open example <{{ source_file }}>`
 
 {#
 just a idea how to display output HTML as iframe
 
 .. raw:: html
-   
+
    <iframe src="..{{ source_file }}.html">
       To see the example result, your browser must support IFRAMEs.
    </iframe>
 #}
 
 .. raw:: html
-   
+
    </div>{#. result-in-a-new-window #}
    </div>{#. snippet #}
 
@@ -126,13 +126,13 @@ Common issues
 ================================================================================
 
 .. raw:: html
-   
+
    <div class="desc">
 
 {{ issue.desc }}
 
 .. raw:: html
-   
+
    </div>{#. desc #}
 
 {# .ISSUE #}
