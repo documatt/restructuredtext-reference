@@ -1,0 +1,15 @@
+title: literalinclude
+
+desc: |
+  bla
+
+collections:
+  - code-examples
+  - sphinx
+
+url: https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-literalinclude
+
+examples:
+  - name: bla
+    desc: |
+      bla

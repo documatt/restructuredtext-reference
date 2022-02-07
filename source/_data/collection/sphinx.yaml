@@ -2,3 +2,4 @@ elements:
   - seealso
   - toctree
   - file
+  - literalinclude
