@@ -2,6 +2,13 @@
 Directives and roles
 ####################
 
+.. _directive-anatomy:
+
+Directive anatomy
+*****************
+
+todo
+
 .. _role-anatomy:
 
 Role anatomy

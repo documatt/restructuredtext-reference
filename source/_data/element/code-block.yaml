@@ -1,14 +1,54 @@
 title: code-block
 
 desc: |
-  Code examples blocks with code-block offers much more options that plain :doc:`literal-block`. It allows syntax highlighting, line numbering, emphasis particular lines and using captions.
+  Code examples blocks with code-blockx offers much more options that plain :doc:`literal-block`. It allows syntax highlighting, line numbering, emphasis particular lines and using captions.
 
 collections:
   - code-examples
+  - sphinx
 
 url: https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-code-block
 
 examples:
+  - name: Basic usage
+    desc: |
+      Basic usage of code-block is as simple as:
+
+    source: |
+      .. code-block::
+
+         i = 256 + 256
+         print('The value of i is', i)
+
+  - name: Syntax highlighting
+    desc: |
+      Set language to highlight as the :ref:`directive argument <directive-anatomy>`, i.e. :samp:`.. code-block:: {language}`.
+
+    source: |
+      .. code-block:: python3
+
+         i = 256 + 256
+         print('The value of i is', i)
+
+    more: |
+      Syntax highlighting uses library Pygments. Pygments calls supported highlight languages as lexers and it has a lexer for almost any language you might imagine - just use ``python`` (Python 2), ``python3``, ``java``, ``javascript``, ``c++``, ``html``, ``json``, ... as a code-block argument.
+
+      tip:: If you don't want any highlighting, use none or text.
+
+      See `Pygments's available lexers <https://pygments.org/docs/lexers/>`_ page for exhaustive reference. Argument for code-block is one of “short names” (the look of webpage at the time of writing):
+
+      .. image:: /img/pygments-lexers-webpage.png
+
+  - name: Line numbering
+    desc: |
+      code-block example can be automatically line numbered by ``:linenos:`` option.
+    source: |
+      .. code-block::
+         :linenos:
+
+         i = 256 + 256
+         print('The value of i is', i)
+
   - name: Emphasising lines
     desc: |
       With ``:emphasize-lines:`` you can highlight one or more lines.
@@ -30,3 +70,46 @@ examples:
          glossary.pot
          index.pot
          ...
+
+  - name: Captions
+    desc: |
+      If you write more formal documentation, maybe you look for examples with :samp:`:caption: {caption}` option.
+
+      Caption may contain formatting with any :doc:`inline element </inline-elements>`.
+
+      After the caption, an anchor will be displayed. Users can copy direct URL to the example ("permalink").
+    source: |
+      .. code-block::
+         :caption: The ``print()`` function.
+
+         i = 256 + 256
+         print('The value of i is', i)
+
+  - name: Complex example
+    desc: |
+      You can combine all possibilities together, indeed.
+    source: |
+      .. code-block:: python3
+         :caption: The ``print()`` function.
+         :emphasize-lines: 2
+         :linenos:
+
+         i = 256 + 256
+         print('The value of i is', i)
+
+issues:
+  - name: Always specify highlight language
+    desc: |
+      Code-block highlight even if you don't specify a language. It is not "autodetect" or "none" (plain text) as you might expect.
+
+      .. code-block::
+
+         .. code-block::
+
+            Nobody knows what highlight language will be used.
+
+      Usually default highlight mode for Sphinx is ``python3``. It's better to always specify language with every code-block or turn off syntax highlighting in :ref:`conf.py <conf-py>` with::
+
+        highlight_language = 'none'
+
+      See more at `Techwriter at work <https://techwriter.documatt.com/2021/sphinx-conf-py-tips.html#turn-off-or-set-different-default-syntax-highlighting>`_ blog.

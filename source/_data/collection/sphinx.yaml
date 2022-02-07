@@ -3,3 +3,4 @@ elements:
   - toctree
   - file
   - literalinclude
+  - code-block
