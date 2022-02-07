@@ -5,20 +5,21 @@ desc: |
 
 collections:
   - code-examples
-  - sphinx-additions
+  - sphinx
+  - semantic
 
 url: https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-file
 
 examples:
   - name: Troubles with backslash
     desc: |
-      Inside ``:file``, backslashes (``\``) are maybe treat differently than you expect.
+      Text inside ``:file`` as in all :ref:`roles <role-anatomy>`, backslashes (``\``) are maybe treat differently than you expect.
 
-      Because backslash is the escaping character. Backslash alone escape immediatelly following character, e.g. the space. To use backslash, you must escaped it too, which results in doubled backslash.
+      Because backslash is the :ref:`escaping character <role-escaping>`. Backslash alone escape immediatelly following character, e.g. the space. To use backslash, you must escaped it too, which results in doubled backslash.
 
     source: |
       Not escaped backslashes:
-      :file:`C:\Users\matt\AppData\`
+      :file:`C:\Users\matt\AppData`
 
       Properly escaped:
-      :file:`C:\\Users\\matt\\AppData\\`
+      :file:`C:\\Users\\matt\\AppData`
