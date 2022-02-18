@@ -7,6 +7,27 @@
 .. include:: /inc/block-vs-inline.rst
 
 
+Blank lines
+===========
+
+Blank lines are important. For example, they create :doc:`/element/paragraph/`.
+
+Paragraphs
+**********
+
+* shortened to "para" and corresponds to ``<p>`` HTML tag
+* are basic processing "units", e.g. for translattion
+* paragraph is created by blank line
+* do long single-lined paras (easier diffs in Git)
+
+::
+
+    this is the
+    first paragraph
+
+    second paragraph
+
+
 US-ASCII characters
 *******************
 
