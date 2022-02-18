@@ -40,3 +40,12 @@ examples:
          .. image:: /img/cupcake.png
             :width: 25%
             :alt: |product-name| has the same taste.
+
+  - name: Global subsitutions available everywhere
+    desc: |
+      conf.py::
+
+        rst_epilog = f'''
+        .. |project| replace:: {project}
+        .. |rst| replace:: reStructuredText
+        '''
