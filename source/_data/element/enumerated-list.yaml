@@ -1,0 +1,22 @@
+title: enumerated-list
+
+desc: |
+  (aka ordered or numbered list)
+
+  * shortened to "para" and corresponds to ``<p>`` HTML tag
+  * are basic processing "units", e.g. for translattion
+  * paragraph is created by blank line
+  * do long single-lined paras (easier diffs in Git)
+
+collections:
+  - body-elements
+  - lists
+
+url: "https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#paragraphs"
+
+examples:
+  - name: Can't change enumeration style.
+    desc: |
+      Impossible is:
+
+      .. image:: /img/paragraph-mixing-enum-style.png
