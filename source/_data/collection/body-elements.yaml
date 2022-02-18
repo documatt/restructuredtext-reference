@@ -16,3 +16,4 @@ elements:
   - figure
   - paragraph
   - enumerated-list
+  - substitution
