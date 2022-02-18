@@ -15,8 +15,44 @@ collections:
 url: "https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#paragraphs"
 
 examples:
+  - name: Paragraph beginning with enumerator
+    desc: |
+      If the paragraph begins with enumerator symbol ("A", "1.", "(b)", etc.), the first character have to be ``\``\-escaped , otherwise it will be interpreted as the list item.
+
+    source: |
+      A) is a correct answer.
+
+      B) and C) are invalid.
+
+      .. Roman numeral "E" means arabic 5
+
+      E. coli is coliform bacterium.
+
+      .. Now, properly escaped:
+
+      \A) is a correct answer.
+
+      \B) and C) are invalid.
+
+      .. Roman numeral "E" means arabic 5
+
+      \E. coli is coliform bacterium.
+
   - name: Can't change enumeration style.
     desc: |
       Impossible is:
 
       .. image:: /img/paragraph-mixing-enum-style.png
+
+    more: |
+      The only way to mimic it is creating four paragraphs.
+
+      ::
+
+        \1. User A tries to call or meet with user B.
+
+        2a. Teams notify the recorder which perform policy check.
+
+        2b. Recorder intrude the call, if the interaction is subject of the compliance recording.
+
+        \3. User B accept the call.
