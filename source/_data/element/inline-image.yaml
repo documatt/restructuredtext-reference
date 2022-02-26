@@ -12,7 +12,7 @@ url: https://docutils.sourceforge.io/docs/ref/rst/roles.html#literal
 examples:
   - name: Inline image syntax
     desc: |
-      Inline image is actually the substitution, i.e. it has two parts -- the definition and usage:
+      Inline image is actually the :doc:`/element/substitution`, i.e. it has two parts -- the definition and usage:
     source: |
         .. |ico1| image:: /img/small-banana.png
 
