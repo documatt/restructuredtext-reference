@@ -1,98 +1,154 @@
 # Configuration file for the Sphinx documentation builder.
 #
-# This file only contains a selection of the most common options. For a full
-# list see the documentation:
+# For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
-# -- Path setup --------------------------------------------------------------
-
-# If extensions (or modules to document with autodoc) are in another directory,
-# add these directories to sys.path here. If the directory is relative to the
-# documentation root, use os.path.abspath to make it absolute, like shown here.
-#
-import os
-import sys
-sys.path.insert(0, os.path.abspath('./_extensions'))
-
 # -- Project information -----------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'reStructuredText and Sphinx Reference'
-copyright = '2023, Documatt.com'
-author = 'Matt Warrick and contributors'
+project = "reStructuredText Reference"
+author = "Documatt.com, s.r.o. and contributors"
+version = "0.1.0"
+copyright = f"%Y, {author}"
 
 
 # -- General configuration ---------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-# Add any Sphinx extension module names here, as strings. They can be
-# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
-# ones.
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinxcontrib.datatemplates',
-    'sphinx_sitemap'
+    # builtin
+    "sphinx.ext.autodoc",
+    # 3rd party
+    "sphinxcontrib.datatemplates",
+    # "myst_parser",
+    # "sphinx_design",
+    # "sphinxcontrib.mermaid",
+    # "sphinx_reredirects",
+    "sphinx_sitemap",
+    "sphinx_copybutton",
+    "sphinxcontrib.video"
 ]
 
-# Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+nitpicky = True
 
-# List of patterns, relative to source directory, that match files and
-# directories to ignore when looking for source files.
-# This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'README.rst']
+highlight_language = "none"
 
-highlight_language = 'none'
+exclude_patterns = [
+    # Hide files beginning with a dot
+    "[.]*",
+    # List remaining to exclude from the build
+    "_build",
+    "Thumbs.db",
+    ".DS_Store",
+]
 
-rst_epilog = f'''
-.. |project| replace:: {project}
-.. |rst| replace:: reStructuredText
-'''
+suppress_warnings = ["myst.strikethrough"]
+
+
+# -- Options for internationalisation ----------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-internationalisation
+
+language = "en"
+# Due to sphinx-intl issue, we need to explicitly set the locale_dirs to its default value
+# https://github.com/sphinx-doc/sphinx-intl/issues/116
+locale_dirs = ["locales/"]
+gettext_compact = False
+translation_progress_classes = False
 
 
 # -- Options for HTML output -------------------------------------------------
-
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-# html_theme = "learn_basic"
-
-html_baseurl = 'https://documatt.com/restructuredtext-reference/'
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_title = project
 
-html_theme = "sphinx_documatt_theme"
+html_baseurl = "https://documatt.com/restructuredtext-reference"
+if not html_baseurl.endswith("/"):
+    html_baseurl += "/"
 
-html_logo = '../logo.svg'
+html_permalinks_icon = "#"
+html_copy_source = False
+html_logo = html_favicon = "_static/images/logo.svg"
+html_static_path = ["_static"]
+html_extra_path = ["_extra", "robots.txt"]
 
+html_theme = "sphinx_documattcom_theme"
 html_theme_options = {
-    'motto': 'Example based gentle reference of the reStructuredText and <a href="https://www.sphinx-doc.org">Sphinx</a> syntax, directives, roles and common issues. It demonstrates almost all the markup making it also good for testing Sphinx themes. Free and <a href="https://github.com/documatt/restructuredtext-reference/">open-source</a>.',
-    'header_logo_style': 'width: 4rem;',
-    'footer_logo_style': 'width: 4rem;',
+    "hero_title": project,
+    "hero_subtitle": 'Example based gentle <em>reference of the reStructuredText and Sphinx</em> syntax, directives, roles and common issues. It demonstrates almost all the markup making it also good for testing Sphinx themes. Free and open-source.',
 }
 
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+templates_path = ["_templates"]
 
-html_css_files = ['custom.css']
+html_css_files = [
+    "styles/custom.css"
+]
 
-# Additional templates that should be rendered to pages, maps page names to
-# template names.
-# html_additional_pages = {
-#     'index': 'index.html',
-# }
+# -- Options for Markdown ----------------------------------------------------
+# https://myst-parser.readthedocs.io/en/latest/configuration.html
 
-# Enables sectionauthor and codeauthor roles
-show_authors = True
+myst_enable_extensions = [
+    "attrs_inline",
+    "attrs_block",
+    "deflist",
+    "tasklist",
+    "linkify",
+    "substitution",
+    "html_image",
+    "colon_fence",
+    "strikethrough",
+]
 
-# Don't copy sources, hide "Show Source"
-html_copy_source = False
-html_show_sourcelink = False
+# Auto-generated heading anchors
+# Allows
+#       See settings's [HOME option](../ref/settings.md#HOME).
+myst_heading_anchors = 6
+
+# Linky only those that begin with a schema (http://, etc.). Now `documatt.com` will not be converted to a link.
+myst_linkify_fuzzy_links = False
 
 
-# A list of paths that contain extra files not directly related to the documentation, such as
-# robots.txt or .htaccess. Relative paths are taken as relative to the configuration directory.
-# They are copied to the output directory. They will overwrite any existing file of the same name.
-# As these files are not meant to be built, they are automatically excluded from source files.
-html_extra_path = ['_extra', 'robots.txt']
+# -- Substitutions ----------------------------------------------------------
 
-html_codeblock_linenos_style = 'inline'
+rst_epilog = f"""
+.. |project| replace:: {project}
+.. |author| replace:: {author}
+.. |version| replace:: {version}
+.. |rst| replace:: reStructuredText
+"""
+
+myst_substitutions = {
+    "project": project,
+    "author": author,
+    "version": version,
+    "rst": "reStructuredText",
+}
+
+
+# -- Options for Mermaid ----------------------------------------------------
+# https://pypi.org/project/sphinxcontrib-mermaid/
+
+mermaid_version = "11.0.1"
+
+# -- Options for sitemap ----------------------------------------------------
+# https://sphinx-sitemap.readthedocs.io/
+
+# Turn off language alternatives in sitemap
+# https://github.com/documatt/sphinx-doc-template/issues/1
+sitemap_locales = [None]
+
+# Default is {lang}{version}{link}, but version is not used in URLs in this project
+sitemap_url_scheme = "{link}"
+
+# Exclude these files from the sitemap
+# search and genindex are special pages not generated from content
+# <name>.html is for html builder, <name>/ for dirhtml builder
+sitemap_excludes = [
+    "search.html",
+    "search/",
+    "genindex.html",
+    "genindex/",
+]
+
+# -- Options for reredirect -------------------------------------------------
+redirects = {
+}

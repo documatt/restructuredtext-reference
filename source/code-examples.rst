@@ -23,19 +23,13 @@ If you are developing Sphinx theme, ensure your theme behave properly to wrappin
 
 Code examples wrapping problem:
 
-.. raw:: html
-
-      <video controls width="100%">
-           <source src="video/hard-wrapped-code-examples-problem.mp4" type="video/mp4">
-      </video>
+.. video:: video/hard-wrapped-code-examples-problem.mp4
+   :autoplay:
 
 Code examples wrapping problem fixed:
 
-.. raw:: html
-
-      <video controls width="100%">
-           <source src="video/hard-wrapped-code-examples-problem-fixed.mp4" type="video/mp4">
-      </video>
+.. video:: video/hard-wrapped-code-examples-problem-fixed.mp4
+   :autoplay:
 
 Long line numbering problem:
 

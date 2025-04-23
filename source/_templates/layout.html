@@ -1,6 +1,6 @@
 {% extends "!layout.html" %}
 
-{% block extrahead %}
+{% block head_tag_end %}
     <meta itemprop="**[[!!IAMUP!!]]**">
 
     <!-- Google Tag Manager -->
@@ -12,44 +12,9 @@
     <!-- End Google Tag Manager -->
 {% endblock %}
 
-{% block extrabody %}
+{% block body_tag_end %}
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M7755KNG"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-{% endblock %}
-
-{% block navbarmenu %}
-    <div id="navbarMenu" class="navbar-menu">
-        <div class="navbar-end">
-            <a class="navbar-item" href="https://documatt.com">Documatt</a>
-            <a class="navbar-item" href="https://snippets.documatt.com">Snippets</a>
-
-            <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link is-active" href="https://documatt.com/restructuredtext-reference">
-                    reStructuredText
-                </a>
-
-                <div class="navbar-dropdown">
-                    <a class="navbar-item" href="https://documatt.com/blog">
-                        Tech writer blog
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-{% endblock navbarmenu %}
-
-{% block coverrightcolumn %}
-    <a href="https://twitter.com/documattcom?ref_src=twsrc%5Etfw"
-       class="twitter-follow-button" data-show-count="false">Follow us</a>
-    <script async src="https://platform.twitter.com/widgets.js"
-            charset="utf-8"></script>
-{% endblock %}
-
-{% block rightsidebar %}
-    <div class="mb-5"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
-
-    {{ super() }}
 {% endblock %}

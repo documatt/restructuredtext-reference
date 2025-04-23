@@ -1,0 +1,19 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v0.2.0-42-gfb3883b
+_src_path: .
+default_builder: dirhtml
+default_language: en
+flat: false
+html_baseurl: https://documatt.com/restructuredtext-reference
+html_theme: alabaster
+license: MIT
+other_builders: []
+other_languages: []
+package_json: false
+project_author: Documatt.com, s.r.o. and contributors
+project_name: reStructuredText and Sphinx Reference
+project_slug: rst-ref
+project_version: 0.1.0
+vscode: true
+with_sample: false
+year: 2025
