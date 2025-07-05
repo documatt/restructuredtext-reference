@@ -157,4 +157,4 @@ redirects = {
 # --- OpenGraph options ---------------------------------------------------
 
 ogp_site_url = html_baseurl
-ogp_image = "_static/ogp_image.png"
+ogp_image = "_static/images/ogp_image.png"
