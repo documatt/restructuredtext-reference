@@ -26,7 +26,8 @@ extensions = [
     # "sphinx_reredirects",
     "sphinx_sitemap",
     "sphinx_copybutton",
-    "sphinxcontrib.video"
+    "sphinxcontrib.video",
+    "sphinxext.opengraph",
 ]
 
 nitpicky = True
@@ -152,3 +153,8 @@ sitemap_excludes = [
 # -- Options for reredirect -------------------------------------------------
 redirects = {
 }
+
+# --- OpenGraph options ---------------------------------------------------
+
+ogp_site_url = html_baseurl
+ogp_image = "_static/ogp_image.png"
