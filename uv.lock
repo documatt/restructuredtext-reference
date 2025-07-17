@@ -457,7 +457,6 @@ dependencies = [
     { name = "sphinx-copybutton" },
     { name = "sphinx-design" },
     { name = "sphinx-documattcom-theme" },
-    { name = "sphinx-null-theme" },
     { name = "sphinx-reredirects" },
     { name = "sphinx-sitemap" },
     { name = "sphinxcontrib-datatemplates" },
@@ -480,8 +479,7 @@ requires-dist = [
     { name = "sphinx", specifier = "==8.1.3" },
     { name = "sphinx-copybutton", specifier = "==0.5.2" },
     { name = "sphinx-design", specifier = "==0.6.1" },
-    { name = "sphinx-documattcom-theme", path = "vendors/sphinx_documattcom_theme-1.1.1-py3-none-any.whl" },
-    { name = "sphinx-null-theme", path = "vendors/sphinx_null_theme-0.1.0-py3-none-any.whl" },
+    { name = "sphinx-documattcom-theme", git = "https://github.com/documatt/sphinx-themes.git?subdirectory=documattcom" },
     { name = "sphinx-reredirects", specifier = "==0.1.6" },
     { name = "sphinx-sitemap", specifier = "==2.6.0" },
     { name = "sphinxcontrib-datatemplates", specifier = "==0.11.0" },
@@ -604,19 +602,10 @@ wheels = [
 [[package]]
 name = "sphinx-documattcom-theme"
 version = "1.1.1"
-source = { path = "vendors/sphinx_documattcom_theme-1.1.1-py3-none-any.whl" }
+source = { git = "https://github.com/documatt/sphinx-themes.git?subdirectory=documattcom#006d7faafe88210d2ee7481951428437e1e4bf21" }
 dependencies = [
     { name = "sphinx" },
     { name = "sphinx-null-theme" },
-]
-wheels = [
-    { filename = "sphinx_documattcom_theme-1.1.1-py3-none-any.whl", hash = "sha256:d93cc13441d688b7c5cb3965e62d8e44bbb939cc027bd66f4f2588da497a973f" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "sphinx", specifier = ">=8.0" },
-    { name = "sphinx-null-theme", specifier = ">=0.1.0" },
 ]
 
 [[package]]
@@ -637,19 +626,10 @@ wheels = [
 [[package]]
 name = "sphinx-null-theme"
 version = "0.1.0"
-source = { path = "vendors/sphinx_null_theme-0.1.0-py3-none-any.whl" }
+source = { git = "https://github.com/documatt/sphinx-themes.git?subdirectory=null#006d7faafe88210d2ee7481951428437e1e4bf21" }
 dependencies = [
     { name = "beautifulsoup4" },
     { name = "sphinx" },
-]
-wheels = [
-    { filename = "sphinx_null_theme-0.1.0-py3-none-any.whl", hash = "sha256:9ee9c19e2d444f0160d93f648f82c39acab7465939f3098f3bc80d97c128f6f0" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "beautifulsoup4", specifier = ">=4.13.3" },
-    { name = "sphinx", specifier = ">=8.0" },
 ]
 
 [[package]]
