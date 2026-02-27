@@ -60,7 +60,7 @@ translation_progress_classes = False
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_title = project
+html_title = "reStructuredText and Sphinx Reference"
 
 html_baseurl = "https://documatt.com/restructuredtext-reference"
 if not html_baseurl.endswith("/"):
@@ -72,10 +72,24 @@ html_logo = html_favicon = "_static/images/logo.svg"
 html_static_path = ["_static"]
 html_extra_path = ["_extra", "robots.txt"]
 
-html_theme = "sphinx_documattcom_theme"
+html_theme = "sphinx_clarity_theme"
 html_theme_options = {
-    "hero_title": project,
-    "hero_subtitle": 'Example based gentle <em>reference of the reStructuredText and Sphinx</em> syntax, directives, roles and common issues. It demonstrates almost all the markup making it also good for testing Sphinx themes. Free and open-source.',
+    "header_menu": [
+        {
+            "label": "Documatt.com",
+            "url": "https://documatt.com",
+        },
+        {
+            "label": "Sphinx Themes",
+            "url": "https://readcraft.io",
+        },
+        # {
+        #     "label": """Try Documatt <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z" fill-rule="nonzero"></path>
+        #     </svg>""",
+        #     "url": "some/url",
+        #     "as": "button",
+        # },
+    ],
 }
 
 templates_path = ["_templates"]
